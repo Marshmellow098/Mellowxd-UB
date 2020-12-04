@@ -667,7 +667,7 @@ async def vapor(vpr):
 @register(outgoing=True, pattern="^.repo$")
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("[Marshmellow Userbot](https://github.com/Marshmellow098/MY-THINGS)")
+        await e.edit("[Marshmellow Userbot](https://github.com/Marshmellow098/MARSHMELLOW-USERBOT.git)")
 			  
 			  
 @register(outgoing=True, pattern="^.str(?: |$)(.*)")
