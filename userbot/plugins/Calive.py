@@ -1,6 +1,5 @@
-# Thanks to Sipak bro and Aryan.. 
-# animation Idea by @NOOB_GUY_OP (Sipakisking) && @Hell boy_pikachu
-# Made by @hellboi_atul ....
+# Thanks to @Mrconfused
+# THX TO @hellboi_atul ....
 # Kang with credits else gay...
 
 import os
@@ -31,7 +30,7 @@ pm_caption += "जली को आग🔥 और बूझी को राख�
 
         
 @borg.on(admin_cmd(pattern=r"calive"))
-async def amireallyalive(alive):
+async def lol(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
     await borg.send_file(alive.chat_id,file=ALIVE_PIC,caption=pm_caption)
