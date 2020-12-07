@@ -1,7 +1,7 @@
 {
   "name": "MARSHMALLOW Userbot",
   "description": "A Bot for Security, Management and Fun",
-  "logo": "https://telegra.ph/file/8370cc126f0b4cd6ae5a1.jpg ",
+  "logo": "https://telegra.ph/file/815e018dc949131ed9118.jpg ",
 
 
 
@@ -44,12 +44,12 @@
     },
     "PMPERMIT_PIC": {
       "description": "put here any telegraph media link for pmpermit custom pic.",
-      "value": "",
+      "value": "https://telegra.ph/file/815e018dc949131ed9118.jpg",
       "required": false
     },
      "ALIVE_PIC": {
       "description": "put here any telegraph media link for Media to show with .alive Command",
-      "value": "",
+      "value": "https://telegra.ph/file/815e018dc949131ed9118.jpg",
       "required": false
     },
     "PM_PERMIT_GROUP_ID": {
