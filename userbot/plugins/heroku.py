@@ -26,7 +26,7 @@ HEROKU_API_KEY = Config.HEROKU_API_KEY
 Heroku = heroku3.from_key(Var.HEROKU_API_KEY)
 heroku_api = "https://api.heroku.com"
 
-thumb_img_path = "./Resources/8370cc126f0b4cd6ae5a1.jpg"
+thumb_img_path = "./Resources/PicsArt_12-07-03.35.32.jpg"
 thumb = thumb_img_path
 
 @borg.on(admin_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True))
