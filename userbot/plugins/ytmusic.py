@@ -9,7 +9,7 @@ from youtubesearchpython import SearchVideos
 
 from userbot import CMD_HELP
 from userbot.uniborgConfig import Config
-from userbot.utils import edit_or_reply, admin_cmd, sudo_cmd
+from userbot.utils import edit_or_reply, admin_cmd
 
 
 @bot.on(admin_cmd(pattern="ytmusic ?(.*)"))
