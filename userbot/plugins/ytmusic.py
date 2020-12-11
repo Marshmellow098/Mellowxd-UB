@@ -34,7 +34,7 @@ async def _(event):
         os.makedirs("./music/")
     path = Config.TMP_DOWNLOAD_DIRECTORY
     sedlyf = wget.download(kekme, out=path)
-    aryan = (
+    ✖𐌑𐌀𐍂𐍃𐋏‿𐌑𐌄𐌋𐌋𐍈✖ = (
         f'youtube-dl --force-ipv4 -q -o "./music/%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 320k '
         + mo
     )
@@ -56,7 +56,7 @@ async def _(event):
         performer=thums,
         supports_streaming=True,
     )
-    await myself_aryan.edit("`Song Uploaded. By (C) @marshmellowsupport`")
+    await myself_✖𐌑𐌀𐍂𐍃𐋏‿𐌑𐌄𐌋𐌋𐍈✖.edit("`Song Uploaded. By (C) @marshmellowsupport`")
     for files in (sedlyf, km):
         if files and os.path.exists(files):
             os.remove(files)
