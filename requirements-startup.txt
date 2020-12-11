@@ -60,7 +60,7 @@ validators
 wikipedia>=1.4.0
 wget
 youtube-dl
-youtubesearchpython
+youtube-search-python
 covid
 tswift
 opencv-contrib-python
