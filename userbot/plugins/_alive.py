@@ -13,7 +13,7 @@ from userbot import ALIVE_NAME, ALIVE_PIC
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MARSHMELLOW USER"
 
-MARSHMALLOW_PIC="https://telegra.ph/file/870c6afc1a4a484d2f8a4.jpg"
+MARSHMALLOW_PIC="https://telegra.ph/file/815e018dc949131ed9118.jpg"
 
 if ALIVE_PIC is None:
     ALIVE_PIC=MARSHMALLOW_PIC
@@ -30,7 +30,7 @@ pm_caption +=f"**Telethon Version => 1.15.0**\n\n"
 pm_caption +=f"**[Support Group](https://t.me/marshmellowsupport)**\n\n"
 pm_caption +=f"**[Channel for Updates](https://t.me/marshmellowuserbot)**\n\n"
 pm_caption +=f"**Wanna deploy your owm Marshmellow pay me 10000 dollar**\n\n"
-
+pm_caption += "[REPO](https://github.com/Marshmellow098/MARSHMELLOW-USERBOT)"
 @borg.on(admin_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
     chat = await alive.get_chat()
