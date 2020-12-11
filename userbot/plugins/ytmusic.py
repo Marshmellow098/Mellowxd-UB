@@ -4,14 +4,14 @@ import os
 import wget
 from youtubesearchpython import SearchVideos
 
-from fridaybot import CMD_HELP
-from fridaybot.Configs import Config
-from fridaybot.utils import edit_or_reply, friday_on_cmd, sudo_cmd
+from userbot import CMD_HELP
+from userbot.Configs import Config
+from userbot.utils import edit_or_reply, admin_cmd
 
 
-@friday.on(friday_on_cmd(pattern="ytmusic ?(.*)"))
-@friday.on(sudo_cmd(pattern="ytmusic ?(.*)", allow_sudo=True))
-async def _(event):
+@bot.on(admin_cmd(pattern="ytmusic ?(.*)"))
+
+
     if event.fwd_from:
         return
     urlissed = event.pattern_match.group(1)
