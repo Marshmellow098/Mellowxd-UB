@@ -209,7 +209,7 @@ def admin_cmd(pattern=None, **args):
 
     return events.NewMessage(**args)
 
-def phantom_cmd(pattern=None, **args):
+def mellow_cmd(pattern=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
