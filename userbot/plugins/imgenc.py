@@ -6,11 +6,11 @@
 from telethon.tl.types import MessageMediaPhoto
 import os, urllib, requests, re, asyncio
 from userbot.utils import mellow_cmd
-from userbot import CMD_HELP, ALIVE_NAME
+
 
 Marshmallow = Config.DEEP_AI if Config.DEEP_AI else "quickstart-QUdJIGlzIGNvbWluZy4uLi4K"
 """
-Deep_ai ={token}
+Deep_ai ={token} 
 """
 
 @bot.on(mellow_cmd(pattern="enc ?(.*)", outgoing=True))#hehe
