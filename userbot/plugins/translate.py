@@ -6,7 +6,7 @@ Available Commands:
 
 import emoji
 from googletrans import Translator
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from telethon import events
 
 
