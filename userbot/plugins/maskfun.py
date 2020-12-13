@@ -18,7 +18,7 @@ if not os.path.isdir("./dcobra/"):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kkait event.edit("its time for some fun")
 
 
     reply = await event.get_reply_message()
@@ -79,7 +79,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kk = await event.edit("time to become thug")
 
     reply = await event.get_reply_message()
     
@@ -137,7 +137,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kk = await event.edit("making prooooooo")
 
     reply = await event.get_reply_message()
     
@@ -196,7 +196,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kk = await event.edit("corona there put this")
 
 
     reply = await event.get_reply_message()
@@ -254,7 +254,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kk = await event.edit("old is golddddddd....")
 
 
     reply = await event.get_reply_message()
@@ -312,7 +312,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kk = await event.edit("making oldddddddddd")
 
 
     reply = await event.get_reply_message()
@@ -370,7 +370,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kk = await event.edit("lets make a superhero.....")
 
 
     reply = await event.get_reply_message()
@@ -428,7 +428,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("HeHe Lets give a Mask 🤪")
+    kk = await event.edit("waiting.......")
 
 
     reply = await event.get_reply_message()
