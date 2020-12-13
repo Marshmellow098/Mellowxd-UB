@@ -1,18 +1,19 @@
-# Made for DARK COBRA
+# took with permission 
 # Thanks to @THE_B_LACK_HAT
 # Fixed and Edited by @danish_00
 # Kang with credits else gay..
 
 from telethon.tl.types import MessageMediaPhoto
 import os, urllib, requests, re, asyncio
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import CMD_HELP, ALIVE_NAME
 
-DARKCOBRA = Config.DEEP_AI if Config.DEEP_AI else "quickstart-QUdJIGlzIGNvbWluZy4uLi4K"
+Marshmallow = Config.DEEP_AI if Config.DEEP_AI else "quickstart-QUdJIGlzIGNvbWluZy4uLi4K"
+"""
+Deep_ai ={token}
+"""
 
-
-KANG_KAREGA_MC = str(ALIVE_NAME) if ALIVE_NAME else "THIS NOOB"
-@bot.on(admin_cmd(pattern="enc ?(.*)", outgoing=True))#hehe
+@bot.on(mellow_cmd(pattern="enc ?(.*)", outgoing=True))#hehe
 async def _(event):                   
     reply = await event.get_reply_message()
     if not reply:
@@ -22,7 +23,7 @@ async def _(event):
         )
 
     input_str = event.pattern_match.group(1)
-    hm = input_str 
+    mellow = input_str 
     devent = await event.edit("yo let me downlaoad it....")
     media = await event.client.download_media(reply)
     if not media.endswith(("png", "jpg", "webp")):
@@ -35,10 +36,10 @@ async def _(event):
         r = requests.post(
           "https://api.deepai.org/api/neural-style",
         files={
-            'style': f"{hm}",
+            'style': f"{mellow}",
             'content': open(media, "rb"),
             },
-        headers={"api-key": DARKCOBRA},
+        headers={"api-key": Marshmallow},
     )
 
         os.remove(media)
@@ -63,7 +64,7 @@ async def _(event):
             'style': 'https://telegra.ph/file/aaaa686bd3acff51208d7.jpg',
             'content': open(media, "rb"),
             },
-      headers={"api-key": DARKCOBRA},
+      headers={"api-key": Marshmallow},
     )
 
       os.remove(media)
