@@ -18,7 +18,7 @@ if not os.path.isdir("./dcobra/"):
 async def scan(event):
     path = "dcobra"
      
-    kkait event.edit("its time for some fun")
+    kk = await event.edit("its time for some fun")
 
 
     reply = await event.get_reply_message()
@@ -79,7 +79,7 @@ async def scan(event):
 async def scan(event):
     path = "dcobra"
      
-    kk = await event.edit("time to become thug")
+    kk = await event.edit("time to become thug.....")
 
     reply = await event.get_reply_message()
     
