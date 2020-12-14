@@ -3,10 +3,10 @@ Syntax: .filext EXTENSION"""
 from telethon import events
 import requests
 from bs4 import BeautifulSoup
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="filext (.*)"))
+@mellow.on(mellow_cmd(pattern="filext (.*)"))
 async def _(event):
     if event.fwd_from:
         return

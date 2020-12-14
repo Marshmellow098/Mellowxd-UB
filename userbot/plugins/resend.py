@@ -6,7 +6,7 @@ from telethon import events, utils
 from telethon.tl import types
 from userbot.utils import mellow_cmd
 
-borg.on(mellow_cmd(pattern="resend"))
+@mellow.on(mellow_cmd(pattern="resend"))
 async def _(event):
     await event.delete()
     m = await event.get_reply_message()

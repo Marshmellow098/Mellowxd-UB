@@ -31,7 +31,7 @@ pm_caption +=f"**[Support Group](https://t.me/marshmellowsupport)**\n\n"
 pm_caption +=f"**[Channel for Updates](https://t.me/marshmellowuserbot)**\n\n"
 pm_caption +=f"**Wanna deploy your owm Marshmellow pay me 10000 dollar**\n\n"
 pm_caption += "[REPO](https://github.com/Marshmellow098/MARSHMELLOW-USERBOT)"
-borg.on(mellow_cmd(pattern=r"alive"))
+@mellow.on(mellow_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """

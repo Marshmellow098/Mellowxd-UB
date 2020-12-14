@@ -131,7 +131,7 @@ SLAP_TEMPLATES = [
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "@Sur_vivor"
 
-borg.on(mellow_cmd(pattern="mslap ?(.*)"))
+@mellow.on(mellow_cmd(pattern="mslap ?(.*)"))
 async def who(event):
     if event.fwd_from:
         return
@@ -194,31 +194,31 @@ async def slap(replied_user, event):
 
     return caption
 
-borg.on(mellow_cmd(outgoing=True, pattern="mrape"))
+@mellow.on(mellow_cmd(outgoing=True, pattern="mrape"))
 async def raping (raped):
         index = random.randint(0, len(RAPE_STRINGS) - 1)
         reply_text = RAPE_STRINGS[index]
         await raped.edit(reply_text)
 
-borg.on(mellow_cmd(outgoing=True, pattern="mshe"))
+@mellow.on(mellow_cmd(outgoing=True, pattern="mshe"))
 async def thanos (thanos):
         index = random.randint(0, len(THANOS_STRINGS) - 1)
         reply_text = THANOS_STRINGS[index]
         await thanos.edit(reply_text)
 
-borg.on(mellow_cmd(outgoing=True, pattern="mabuse"))
+@mellow.on(mellow_cmd(outgoing=True, pattern="mabuse"))
 async def fuckedd (abusehard):
         index = random.randint(0, len(ABUSEHARD_STRING) - 1)
         reply_text = ABUSEHARD_STRING[index]
         await abusehard.edit(reply_text)
 
-borg.on(mellow_cmd(outgoing=True, pattern="mruns"))
+@mellow.on(mellow_cmd(outgoing=True, pattern="mruns"))
 async def fuckedd (abusehard):
         index = random.randint(0, len(RUNSREACTS) - 1)
         reply_text = RUNSREACTS[index]
         await abusehard.edit(reply_text)        
         
-borg.on(mellow_cmd(outgoing=True, pattern="minsult$"))
+@mellow.on(mellow_cmd(outgoing=True, pattern="minsult$"))
 async def proo (pros):
         index = random.randint(0, len(PRO_STRINGS) - 1)
         reply_text = PRO_STRINGS[index]

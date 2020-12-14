@@ -2,16 +2,16 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="admins"))
+@mellow.on(mellow_cmd(pattern="admins"))
 async def _(event):
     if event.fwd_from:
         return
     mentions = "@admin: **Spam Spotted**"
     chat = await event.get_input_chat()
-    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+    async for x in @mellow.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f"[\u2063](tg://user?id={x.id})"
     reply_message = None
     if event.reply_to_msg_id:

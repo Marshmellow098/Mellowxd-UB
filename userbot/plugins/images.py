@@ -10,7 +10,7 @@ from re import findall
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="img ?(.*)"))
+@mellow.on(mellow_cmd(pattern="img ?(.*)"))
 async def img_sampler(event):
     await event.edit("`Processing...`")
     reply = await event.get_reply_message()

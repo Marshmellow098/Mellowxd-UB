@@ -10,7 +10,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
 from telethon import events
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
@@ -32,7 +32,7 @@ def get_video_thumb(file, output=None, width=320):
         return output
 
 
-borg.on(mellow_cmd(pattern="savethumbnail"))
+@mellow.on(mellow_cmd(pattern="savethumbnail"))
 async def _(event):
     if event.fwd_from:
         return
@@ -40,7 +40,7 @@ async def _(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
-        downloaded_file_name = await borg.download_media(
+        downloaded_file_name = await @mellow.download_media(
             await event.get_reply_message(),
             Config.TMP_DOWNLOAD_DIRECTORY
         )
@@ -71,7 +71,7 @@ async def _(event):
         await event.edit("Reply to a photo to save custom thumbnail")
 
 
-borg.on(mellow_cmd(pattern="clearthumbnail"))
+@mellow.on(mellow_cmd(pattern="clearthumbnail"))
 async def _(event):
     if event.fwd_from:
         return
@@ -80,21 +80,21 @@ async def _(event):
     await event.edit("✅ Custom thumbnail cleared succesfully.")
 
 
-borg.on(mellow_cmd(pattern="getthumbnail"))
+@mellow.on(mellow_cmd(pattern="getthumbnail"))
 async def _(event):
     if event.fwd_from:
         return
     if event.reply_to_msg_id:
         r = await event.get_reply_message()
         try:
-            a = await borg.download_media(
+            a = await @mellow.download_media(
                 r.media.document.thumbs[0],
                 Config.TMP_DOWNLOAD_DIRECTORY
             )
         except Exception as e:
             await event.edit(str(e))
         try:
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 a,
                 force_document=False,
@@ -107,7 +107,7 @@ async def _(event):
             await event.edit(str(e))
     elif os.path.exists(thumb_image_path):
         caption_str = "Currently Saved Thumbnail. Clear with `.clearthumbnail`"
-        await borg.send_file(
+        await @mellow.send_file(
             event.chat_id,
             thumb_image_path,
             caption=caption_str,

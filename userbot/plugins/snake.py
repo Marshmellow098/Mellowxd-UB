@@ -3,11 +3,11 @@ from telethon import events
 
 import asyncio
 
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
 
-borg.on(mellow_cmd(pattern=r"snake"))
+@mellow.on(mellow_cmd(pattern=r"snake"))
 
 async def _(event):
 

@@ -1,8 +1,8 @@
-# Uniborg Plugin for getting list of sites where you can watch a particular Movie or TV-Show
+# Uni@mellow Plugin for getting list of sites where you can watch a particular Movie or TV-Show
 # Author: Sumanjay (https://github.com/cyberboysumanjay) (@cyberboysumanjay)
 # All rights reserved.
 
-#imported from uniborg
+#imported from uni@mellow
 
 
 
@@ -69,7 +69,7 @@ def get_provider(url):
     url = url.split(".")[0]
     return url
 
-borg.on(mellow_cmd(pattern="watch (.*)"))
+@mellow.on(mellow_cmd(pattern="watch (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -107,5 +107,5 @@ async def _(event):
             link = link.replace(" ","%20")
         output_ += f"[{pretty(provider)}]({link})\n"
     
-    await borg.send_file(event.chat_id, caption=output_, file=thumb_link,force_document=False,allow_cache=False, silent=True)
+    await @mellow.send_file(event.chat_id, caption=output_, file=thumb_link,force_document=False,allow_cache=False, silent=True)
     await event.delete()

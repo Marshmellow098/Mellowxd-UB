@@ -96,7 +96,7 @@ async def animepp():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-borg.on(mellow_cmd(pattern="marveldp ?(.*)"))
+@mellow.on(mellow_cmd(pattern="marveldp ?(.*)"))
 
 async def main(event):
 

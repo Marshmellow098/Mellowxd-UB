@@ -14,7 +14,7 @@ import sys
 import random
 from userbot.utils import mellow_cmd
 
-borg.on(mellow_cmd(pattern="bbl", outgoing=True))
+@mellow.on(mellow_cmd(pattern="bbl", outgoing=True))
 
 async def _(event):
     if event.fwd_from:
@@ -293,7 +293,7 @@ async def _(event):
         
         
         
-borg.on(events.NewMessage(pattern=r"\.belo", outgoing=True))
+@mellow.on(events.NewMessage(pattern=r"\.belo", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

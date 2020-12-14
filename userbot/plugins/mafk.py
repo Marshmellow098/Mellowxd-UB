@@ -24,7 +24,7 @@ afk_start = {}
 # Originally by @NOOB_GUY_OP
 # I think its first for DARKCOBRA
 
-borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
+@mellow.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
 async def set_not_afk(event):
     global USER_AFK  # pylint:disable=E0602
     global afk_time  # pylint:disable=E0602
@@ -37,14 +37,14 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end - afk_start))
     current_message = event.message.message
     if ".mafk" not in current_message and "yes" in USER_AFK:  # pylint:disable=E0602
-        shite = await borg.send_message(
+        shite = await @mellow.send_message(
             event.chat_id,
             "__Back alive!__\n**No Longer afk.**\n `Was afk for:``"
             + total_afk_time
             + "`", file=pic
         )
         try:
-            await borg.send_message(  # pylint:disable=E0602
+            await @mellow.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
                 "#AFKFALSE \nSet AFK mode to False\n"
                 + "__Back alive!__\n**No Longer afk.**\n `Was afk for:``"
@@ -52,7 +52,7 @@ async def set_not_afk(event):
                 + "`", file=pic
             )
         except Exception as e:  # pylint:disable=C0103,W0703
-            await borg.send_message(  # pylint:disable=E0602 # Originally by @NOOB_GUY_OP
+            await @mellow.send_message(  # pylint:disable=E0602 # Originally by @NOOB_GUY_OP
 # I think its first for DARKCOBRA
                 event.chat_id,
                 "Please set `PRIVATE_GROUP_BOT_API_ID` "
@@ -67,7 +67,7 @@ async def set_not_afk(event):
         afk_time = None  # pylint:disable=E0602
 
 
-borg.on(
+@mellow.on(
     events.NewMessage(  # pylint:disable=E0602
         incoming=True, func=lambda e: bool(e.mentioned or e.is_private)
     )
@@ -105,7 +105,7 @@ async def on_afk(event):
         last_afk_message[event.chat_id] = msg  # pylint:disable=E0602
 
 
-borg.on(mellow_cmd(pattern=r"mafk (.*) (.*)", outgoing=True))  # pylint:disable=E0602
+@mellow.on(mellow_cmd(pattern=r"mafk (.*) (.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -126,7 +126,7 @@ async def _(event):
     reason = event.pattern_match.group(1)
     pic = event.pattern_match.group(2)
     if not USER_AFK:  # pylint:disable=E0602
-        last_seen_status = await borg(  # pylint:disable=E0602
+        last_seen_status = await @mellow(  # pylint:disable=E0602
             functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
         )# Originally by @NOOB_GUY_OP
 # I think its first for DARKCOBRA
@@ -134,15 +134,15 @@ async def _(event):
             afk_time = datetime.datetime.now()  # pylint:disable=E0602
         USER_AFK = f"yes: {reason} {pic}"  # pylint:disable=E0602
         if reason:
-            await borg.send_message(
+            await @mellow.send_message(
                 event.chat_id, f"**I shall be Going afk!** __because ~ {reason}__", file=pic
             )
         else:
-            await borg.send_message(event.chat_id, f"**I am Going afk!**", file=pic)
+            await @mellow.send_message(event.chat_id, f"**I am Going afk!**", file=pic)
         await asyncio.sleep(5)
         await event.delete()
         try:
-            await borg.send_message(  # pylint:disable=E0602
+            await @mellow.send_message(  # pylint:disable=E0602
                 Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
                 f"#MAFKTRUE \nSet MAFK mode to True, and Reason is {reason}",file=pic
             )

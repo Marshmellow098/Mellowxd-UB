@@ -18,7 +18,7 @@ import random
 
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 
-borg.on(mellow_cmd(pattern="bloom ?(.*)"))
+@mellow.on(mellow_cmd(pattern="bloom ?(.*)"))
 async def autopic(event): 
     await event.edit("Bloom colour profile pic have been enabled by my master") 
     downloaded_file_name = "userbot/original_pic.png"

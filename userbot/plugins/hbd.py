@@ -9,7 +9,7 @@ import importlib.util
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 
-borg.on(mellow_cmd(pattern="hbty$"))
+@mellow.on(mellow_cmd(pattern="hbty$"))
 
 async def _(event):
     if event.fwd_from:

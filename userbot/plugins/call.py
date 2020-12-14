@@ -19,7 +19,7 @@ from userbot import ALIVE_NAME
 USER =str(ALIVE_NAME)
 
 
-borg.on(mellow_cmd(pattern=r"call"))
+@mellow.on(mellow_cmd(pattern=r"call"))
 
 async def _(event):
 

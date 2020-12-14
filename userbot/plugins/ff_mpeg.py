@@ -10,10 +10,10 @@ from hachoir.parser import createParser
 from userbot.utils import mellow_cmd, progress
 
 
-FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uniborg.media.ffmpeg"
+FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uni@mellow.media.ffmpeg"
 
 
-borg.on(mellow_cmd("ffmpegsave"))
+@mellow.on(mellow_cmd("ffmpegsave"))
 async def ff_mpeg_trim_cmd(event):
     if event.fwd_from:
         return
@@ -25,7 +25,7 @@ async def ff_mpeg_trim_cmd(event):
             reply_message = await event.get_reply_message()
             try:
                 c_time = time.time()
-                downloaded_file_name = await borg.download_media(
+                downloaded_file_name = await @mellow.download_media(
                     reply_message,
                     FF_MPEG_DOWN_LOAD_MEDIA_PATH,
                     
@@ -42,7 +42,7 @@ async def ff_mpeg_trim_cmd(event):
         await event.edit(f"a media file already exists in path. Please remove the media and try again!\n`.exec rm {FF_MPEG_DOWN_LOAD_MEDIA_PATH}`")
 
 
-borg.on(mellow_cmd("ffmpegtrim"))
+@mellow.on(mellow_cmd("ffmpegtrim"))
 async def ff_mpeg_trim_cmd(event):
     if event.fwd_from:
         return
@@ -65,7 +65,7 @@ async def ff_mpeg_trim_cmd(event):
         logger.info(o)
         try:
             c_time = time.time()
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 o,
                 caption=" ".join(cmt[1:]),
@@ -89,7 +89,7 @@ async def ff_mpeg_trim_cmd(event):
         logger.info(o)
         try:
             c_time = time.time()
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 o,
                 caption=" ".join(cmt[1:]),

@@ -3,9 +3,9 @@
 from telethon import events
 import asyncio
 from collections import deque
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
-borg.on(mellow_cmd(pattern=r"lol"))
+@mellow.on(mellow_cmd(pattern=r"lol"))
 async def _(event):
 	if event.fwd_from:
 		return

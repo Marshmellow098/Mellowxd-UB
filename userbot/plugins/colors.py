@@ -6,7 +6,7 @@ from PIL import Image, ImageColor
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="color (.*)"))
+@mellow.on(mellow_cmd(pattern="color (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -24,7 +24,7 @@ async def _(event):
             im = Image.new(mode="RGB", size=(1280, 720), color=usercolor)
             im.save("UniBorg.png", "PNG")
             input_str = input_str.replace("#", "#COLOR_")
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 "UniBorg.png",
                 force_document=False,

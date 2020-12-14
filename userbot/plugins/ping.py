@@ -7,7 +7,7 @@ from ..utils import mellow_cmd, edit_or_reply
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "DARK COBRA"
 
 
-borg.on(mellow_cmd(pattern=f"ping$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"ping$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -55,7 +55,7 @@ async def _(event):
     )
 
 
-borg.on(mellow_cmd(pattern="marsh$"))
+@mellow.on(mellow_cmd(pattern="marsh$"))
 async def _(event):
     if event.fwd_from:
         return

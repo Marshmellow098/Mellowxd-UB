@@ -5,7 +5,7 @@ from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from userbot.utils import mellow_cmd
 from userbot import bot 
 
-borg.on(mellow_cmd(pattern="itos ?(.*)"))
+@mellow.on(mellow_cmd(pattern="itos ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
@@ -33,7 +33,7 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
           await bot.send_read_acknowledge(conv.chat_id)
             
-borg.on(mellow_cmd(pattern="stoi ?(.*)"))
+@mellow.on(mellow_cmd(pattern="stoi ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

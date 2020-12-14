@@ -5,7 +5,7 @@ import io
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd("json"))
+@mellow.on(mellow_cmd("json"))
 async def _(event):
     if event.fwd_from:
         return
@@ -21,7 +21,7 @@ async def _(event):
     if len(the_real_message) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(the_real_message)) as out_file:
             out_file.name = "json.text"
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,

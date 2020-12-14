@@ -119,7 +119,7 @@ def user_full_name(user):
 
 
 
-borg.on(mellow_cmd(pattern=r"inviteem ?(.*)"))
+@mellow.on(mellow_cmd(pattern=r"inviteem ?(.*)"))
 async def get_users(event):   
     sender = await event.get_sender() ; me = await event.client.get_me()
     if not sender.id == me.id:

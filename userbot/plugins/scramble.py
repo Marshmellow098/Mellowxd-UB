@@ -8,7 +8,7 @@ import re
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="scramble(\s+[\S\s]+|$)"))
+@mellow.on(mellow_cmd(pattern="scramble(\s+[\S\s]+|$)"))
 async def scramble_message(e):
     reply_message = await e.get_reply_message()
     text = e.pattern_match.group(1) or reply_message.text

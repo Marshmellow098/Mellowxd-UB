@@ -27,7 +27,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 
 from userbot.utils import mellow_cmd
 
-borg.on(mellow_cmd("phd ?(.*)"))
+@mellow.on(mellow_cmd("phd ?(.*)"))
 
 async def _(event):
 
@@ -79,11 +79,11 @@ async def _(event):
 
               if "language" in oop.text:
 
-                  await borg.send_message(event.chat_id, "**Please go to** @phsavebot **and select your language**")
+                  await @mellow.send_message(event.chat_id, "**Please go to** @phsavebot **and select your language**")
 
               await asyncio.sleep(2)
 
-              me = await borg.get_me()
+              me = await @mellow.get_me()
 
               my_id = me.id
 
@@ -91,9 +91,9 @@ async def _(event):
 
               try:
 
-                  await borg(JoinChannelRequest('Allsavernews'))
+                  await @mellow(JoinChannelRequest('Allsavernews'))
 
-                  await borg(ImportChatInviteRequest('AAAAAFZPuYvdW1A8mrT8Pg'))
+                  await @mellow(ImportChatInviteRequest('AAAAAFZPuYvdW1A8mrT8Pg'))
 
               except UserAlreadyParticipantError:
 
@@ -107,7 +107,7 @@ async def _(event):
 
                   video_hehe = await conv.get_response()
 
-                  await borg.send_file(event.chat_id, video_hehe, caption="`🤤 Video Uploaded by` [@anubisxx](https://github.com/Dark-Princ3/X-tra-Telegram)!🤤\n**Title:** `{}`".format(title))
+                  await @mellow.send_file(event.chat_id, video_hehe, caption="`🤤 Video Uploaded by` [@anubisxx](https://github.com/Dark-Princ3/X-tra-Telegram)!🤤\n**Title:** `{}`".format(title))
 
               elif "Unfortunately" in response.text:
 
@@ -115,7 +115,7 @@ async def _(event):
 
               elif "correct" in response.text:
 
-                  await borg.send_message(event.chat_id, response.text)
+                  await @mellow.send_message(event.chat_id, response.text)
 
           except YouBlockedUserError: 
 

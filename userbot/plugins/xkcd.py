@@ -5,10 +5,10 @@ import asyncio
 import json
 import requests
 from urllib.parse import quote
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="xkcd ?(.*)"))
+@mellow.on(mellow_cmd(pattern="xkcd ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

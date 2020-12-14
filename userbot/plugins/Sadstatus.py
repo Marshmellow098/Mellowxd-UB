@@ -24,7 +24,7 @@ img14=("https://telegra.ph/file/c66f5023373b2b9cbd86e.mp4")
 img15=("https://telegra.ph/file/bc4a93c3f35e982ce9977.mp4")
 
 
-borg.on(mellow_cmd(outgoing=True, pattern="sadstatus"))
+@mellow.on(mellow_cmd(outgoing=True, pattern="sadstatus"))
 async def _(event):
     if event.fwd_from:
         return
@@ -47,7 +47,7 @@ async def _(event):
         await mellow.send_file(event.chat_id,img4)
         await event.delete()
     if x==6:
-        await borg.send_file(event.chat_id,img5)
+        await @mellow.send_file(event.chat_id,img5)
         await event.delete()
     if x==7:
         await mellow.send_file(event.chat_id,img6)

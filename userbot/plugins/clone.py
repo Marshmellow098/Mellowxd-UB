@@ -31,7 +31,7 @@ DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else "Hmm"
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 
-borg.on(mellow_cmd(pattern="clone ?(.*)"))
+@mellow.on(mellow_cmd(pattern="clone ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -60,22 +60,22 @@ async def _(event):
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = replied_user.about
-    await borg(functions.account.UpdateProfileRequest(
+    await @mellow(functions.account.UpdateProfileRequest(
         first_name=first_name
     ))
-    await borg(functions.account.UpdateProfileRequest(
+    await @mellow(functions.account.UpdateProfileRequest(
         last_name=last_name
     ))
-    await borg(functions.account.UpdateProfileRequest(
+    await @mellow(functions.account.UpdateProfileRequest(
         about=user_bio
     ))
     n = 1
-    pfile = await borg.upload_file(profile_pic)  # pylint:disable=E060      
-    await borg(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
+    pfile = await @mellow.upload_file(profile_pic)  # pylint:disable=E060      
+    await @mellow(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
         pfile
     ))
     await event.delete()
-    await borg.send_message(
+    await @mellow.send_message(
       event.chat_id,
       "**Who Are You? .. **",
       reply_to=reply_message
@@ -83,16 +83,16 @@ async def _(event):
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, f"#CLONED\nSuccesfulley cloned [{first_name}](tg://user?id={user_id })")
     
-borg.on(mellow_cmd(pattern="revert$"))
+@mellow.on(mellow_cmd(pattern="revert$"))
 async def _(event):
     if event.fwd_from:
         return
     name = f"{DEFAULTUSER}"
     bio = f"{DEFAULTUSERBIO}"
     n = 1
-    await borg(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit= n)))    
-    await borg(functions.account.UpdateProfileRequest(about=f"{bio}"))
-    await borg(functions.account.UpdateProfileRequest(first_name=f"{name}"))
+    await @mellow(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit= n)))    
+    await @mellow(functions.account.UpdateProfileRequest(about=f"{bio}"))
+    await @mellow(functions.account.UpdateProfileRequest(first_name=f"{name}"))
     await event.edit("succesfully reverted to your account back")
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, f"#REVERT\nSuccessfully reverted back to your profile")

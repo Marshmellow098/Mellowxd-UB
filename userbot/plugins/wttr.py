@@ -20,7 +20,7 @@ from userbot.utils import mellow_cmd
 
 
 
-borg.on(mellow_cmd(pattern="weather (.*)"))
+@mellow.on(mellow_cmd(pattern="weather (.*)"))
 
 async def _(event):
 
@@ -104,7 +104,7 @@ async def _(event):
 
 
 
-borg.on(mellow_cmd(pattern="wttr (.*)"))
+@mellow.on(mellow_cmd(pattern="wttr (.*)"))
 
 async def _(event):
 

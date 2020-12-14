@@ -10,14 +10,14 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from google_images_download import google_images_download
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
 def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-borg.on(mellow_cmd(pattern="gs (.*)"))
+@mellow.on(mellow_cmd(pattern="gs (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -45,7 +45,7 @@ async def _(event):
 
 
 
-borg.on(mellow_cmd(pattern="grs"))
+@mellow.on(mellow_cmd(pattern="grs"))
 async def _(event):
     if event.fwd_from:
         return
@@ -57,7 +57,7 @@ async def _(event):
         previous_message = await event.get_reply_message()
         previous_message_text = previous_message.message
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY
             )

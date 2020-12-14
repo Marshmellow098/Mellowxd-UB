@@ -24,7 +24,7 @@ if not os.path.isdir(extracted):
     os.makedirs(extracted)
 
 
-borg.on(mellow_cmd(pattern="unzip"))
+@mellow.on(mellow_cmd(pattern="unzip"))
 async def _(event):
     if event.fwd_from:
         return
@@ -36,7 +36,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 
@@ -84,7 +84,7 @@ async def _(event):
                         )
                     ]
                 try:
-                    await borg.send_file(
+                    await @mellow.send_file(
                         event.chat_id,
                         single_file,
                         caption=f"UnZipped `{caption_rts}`",
@@ -98,7 +98,7 @@ async def _(event):
                         # )
                     )
                 except Exception as e:
-                    await borg.send_message(
+                    await @mellow.send_message(
                         event.chat_id,
                         "{} caused `{}`".format(caption_rts, str(e)),
                         reply_to=event.message.id

@@ -7,14 +7,14 @@ import asyncio
 from userbot.utils import mellow_cmd
 from telethon import events
 #@command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
-borg.on(mellow_cmd(pattern=r"gmute ?(\d+)?"))
+@mellow.on(mellow_cmd(pattern=r"gmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
         return
     reply = await event.get_reply_message()
     user_id = reply.from_id
-    if user_id == (await borg.get_me()).id:	
+    if user_id == (await @mellow.get_me()).id:	
         await event.edit(r"Btw Boss!!Why would I Gmute You. You are my Boss!!")	
         	
         return
@@ -43,7 +43,7 @@ async def startgmute(event):
         await event.edit("Successfully putted Duct Tape on that person's mouth😷")
 
 #@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
-borg.on(mellow_cmd(pattern=r"ungmute ?(\d+)?"))
+@mellow.on(mellow_cmd(pattern=r"ungmute ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:

@@ -72,7 +72,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ===========================Consts.=====================
 
 
-borg.on(mellow_cmd(pattern="(ban|unban) ?(.*)", allow_sudo=True))
+@mellow.on(mellow_cmd(pattern="(ban|unban) ?(.*)", allow_sudo=True))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".unban"
@@ -96,14 +96,14 @@ async def _(event):
     else:
         return False
     try:
-        await borg(EditBannedRequest(event.chat_id, to_ban_id, rights))
+        await @mellow(EditBannedRequest(event.chat_id, to_ban_id, rights))
     except (Exception) as exc:
         await event.edit(str(exc))
     else:
         await event.edit(f"{input_cmd}ned Successfully!")
 
 
-borg.on(mellow_cmd(pattern="pgs ?(.*)", allow_sudo=True))
+@mellow.on(mellow_cmd(pattern="pgs ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -113,9 +113,9 @@ async def _(event):
         from_user = None
         input_str = event.pattern_match.group(1)
         if input_str:
-            from_user = await borg.get_entity(input_str)
+            from_user = await @mellow.get_entity(input_str)
             logger.info(from_user)
-        async for message in borg.iter_messages(
+        async for message in @mellow.iter_messages(
             event.chat_id,
             min_id=event.reply_to_msg_id,
             from_user=from_user
@@ -123,17 +123,17 @@ async def _(event):
             i = i + 1
             msgs.append(message)
             if len(msgs) == 100:
-                await borg.delete_messages(event.chat_id, msgs, revoke=True)
+                await @mellow.delete_messages(event.chat_id, msgs, revoke=True)
                 msgs = []
         if len(msgs) <= 100:
-            await borg.delete_messages(event.chat_id, msgs, revoke=True)
+            await @mellow.delete_messages(event.chat_id, msgs, revoke=True)
             msgs = []
             await event.delete()
         else:
             await event.edit("**PURGE** Failed!")
 
 
-borg.on(mellow_cmd(pattern="(ban|unban) ?(.*)"))
+@mellow.on(mellow_cmd(pattern="(ban|unban) ?(.*)"))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".unban"
@@ -157,7 +157,7 @@ async def _(event):
     else:
         return False
     try:
-        await borg(EditBannedRequest(event.chat_id, to_ban_id, rights))
+        await @mellow(EditBannedRequest(event.chat_id, to_ban_id, rights))
     except (Exception) as exc:
         await event.edit(str(exc))
     else:

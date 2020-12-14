@@ -38,7 +38,7 @@ from userbot.utils import mellow_cmd
 
 
 
-borg.on(mellow_cmd(pattern=r"qt"))
+@mellow.on(mellow_cmd(pattern=r"qt"))
 
 
 

@@ -1,9 +1,9 @@
 import re
 import bs4
 import requests
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
-borg.on(mellow_cmd(pattern="giz ?(.*)"))
+@mellow.on(mellow_cmd(pattern="giz ?(.*)"))
 async def gizoogle(event):
     if event.fwd_from:
         return

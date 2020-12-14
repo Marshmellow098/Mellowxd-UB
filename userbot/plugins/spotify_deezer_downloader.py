@@ -7,7 +7,7 @@ from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from userbot.utils import mellow_cmd
 
-borg.on(mellow_cmd("sdd ?(.*)"))
+@mellow.on(mellow_cmd("sdd ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -18,20 +18,20 @@ async def _(event):
         await event.edit("🎶**Initiating Download!**🎶")
     bot = "@DeezLoadBot"
     
-    async with borg.conversation("@DeezLoadBot") as conv:
+    async with @mellow.conversation("@DeezLoadBot") as conv:
           try:
               await conv.send_message("/start")
               response = await conv.get_response()
               try:
-                  await borg(ImportChatInviteRequest('AAAAAFZPuYvdW1A8mrT8Pg'))
+                  await @mellow(ImportChatInviteRequest('AAAAAFZPuYvdW1A8mrT8Pg'))
               except UserAlreadyParticipantError:
                   await asyncio.sleep(0.00000069420)
               await conv.send_message(d_link)
               details = await conv.get_response()
-              await borg.send_message(event.chat_id, details)
+              await @mellow.send_message(event.chat_id, details)
               await conv.get_response()
               songh = await conv.get_response()
-              await borg.send_file(event.chat_id, songh, caption="🔆**Here's the requested song!**🔆\n")
+              await @mellow.send_file(event.chat_id, songh, caption="🔆**Here's the requested song!**🔆\n")
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @DeezLoadBot `and retry!`")

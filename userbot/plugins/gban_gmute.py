@@ -55,7 +55,7 @@ async def get_user_from_id(user, event):
         return None
     return user_obj
 
-borg.on(mellow_cmd(pattern="gben ?(.*)"))
+@mellow.on(mellow_cmd(pattern="gben ?(.*)"))
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -121,7 +121,7 @@ async def gben(userbot):
     )
 
 
-borg.on(mellow_cmd(pattern="ungben ?(.*)"))
+@mellow.on(mellow_cmd(pattern="ungben ?(.*)"))
 async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -187,7 +187,7 @@ async def gunben(userbot):
 
 
 
-borg.on(ChatAction)
+@mellow.on(ChatAction)
 async def handler(rkG): 
    if rkG.user_joined or rkG.user_added:      
        try:       	

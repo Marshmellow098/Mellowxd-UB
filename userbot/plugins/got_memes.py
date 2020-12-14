@@ -14,9 +14,9 @@ import sys
 
 import random
 
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
-borg.on(mellow_cmd(pattern=r"gotm"))
+@mellow.on(mellow_cmd(pattern=r"gotm"))
 
 async def _(event):
 

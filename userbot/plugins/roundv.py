@@ -16,7 +16,7 @@ from userbot.utils import mellow_cmd
 
 
 
-borg.on(mellow_cmd(r"roundv$"))
+@mellow.on(mellow_cmd(r"roundv$"))
 async def _(event):
     if event.fwd_from:
         return 

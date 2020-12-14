@@ -8,7 +8,7 @@ import urbandict
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd("ud (.*)"))
+@mellow.on(mellow_cmd("ud (.*)"))
 async def _(event):
     if event.fwd_from:
         return

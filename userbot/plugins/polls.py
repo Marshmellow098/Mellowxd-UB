@@ -2,10 +2,10 @@
 Syntax: .get_poll"""
 from telethon import events
 import asyncio
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="get_poll"))
+@mellow.on(mellow_cmd(pattern="get_poll"))
 async def _(event):
     reply_message = await event.get_reply_message()
     if reply_message.media is None:

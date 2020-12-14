@@ -13,7 +13,7 @@ from userbot.utils import mellow_cmd
 msg_cache = {}
 
 
-borg.on(mellow_cmd(pattern=r"fpost\s+(.*)"))
+@mellow.on(mellow_cmd(pattern=r"fpost\s+(.*)"))
 async def _(event):
     await event.delete()
     text = event.pattern_match.group(1)
@@ -23,8 +23,8 @@ async def _(event):
         if c not in string.ascii_lowercase:
             continue
         if c not in msg_cache:
-            async for msg in borg.iter_messages(None, search=c):
+            async for msg in @mellow.iter_messages(None, search=c):
                 if msg.raw_text.lower() == c and msg.media is None:
                     msg_cache[c] = msg
                     break
-        await borg.forward_messages(destination, msg_cache[c])
+        await @mellow.forward_messages(destination, msg_cache[c])

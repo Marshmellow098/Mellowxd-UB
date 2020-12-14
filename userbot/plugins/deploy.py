@@ -8,14 +8,14 @@ from telethon import events
 
 import asyncio
 
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 from userbot import AUTONAME
 
 
 DEFAULTUSER = str(AUTONAME) if AUTONAME else "Marshmellow User"
 
-borg.on(mellow_cmd(pattern=r"deploy"))
+@mellow.on(mellow_cmd(pattern=r"deploy"))
 
 async def _(event):
 
@@ -42,7 +42,7 @@ async def _(event):
             "**State changed from up to starting**",    
             "**Stopping all processes with SIGTERM**",
             "**Process exited with** `status 143`",
-            "**Starting process with command** `python3 -m stdborg`",
+            "**Starting process with command** `python3 -m std@mellow`",
             "**State changed from starting to up**",
             "__INFO:UserBot:Logged in as 557667062__",
             "__INFO:UserBot:Successfully loaded all plugins__",

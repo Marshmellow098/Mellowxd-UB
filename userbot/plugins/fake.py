@@ -18,7 +18,7 @@ from userbot.utils import mellow_cmd
 from userbot import CMD_HELP
 
  
-borg.on(mellow_cmd(pattern="fake ?(.*)"))
+@mellow.on(mellow_cmd(pattern="fake ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -27,7 +27,7 @@ async def _(event):
     action = "typing"
     if input_str:
         action = input_str
-    async with borg.action(event.chat_id, action):
+    async with @mellow.action(event.chat_id, action):
         await asyncio.sleep(86400)  # type for 10 seconds
         
         

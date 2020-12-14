@@ -9,25 +9,25 @@ from telethon import events
 import asyncio
 import os
 import sys
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="restart"))
+@mellow.on(mellow_cmd(pattern="restart"))
 async def _(event):
     await event.edit("Restarting [⏳⏳] ...")
     await asyncio.sleep(2)
     await event.edit("Restarting [⌛⌛⌛]...")
     await asyncio.sleep(2)
     await event.edit("Wait its getting restart it will take some time..")
-    await borg.disconnect()
+    await @mellow.disconnect()
     os.execl(sys.executable, sys.executable, *sys.argv)
     # You probably don't need it but whatever
     quit()
 
 
-borg.on(mellow_cmd(pattern="shutdown"))
+@mellow.on(mellow_cmd(pattern="shutdown"))
 async def _(event):
     if event.fwd_from:
         return
     await event.edit("Turning dyno off ...Manually turn me on later")
-    await borg.disconnect()
+    await @mellow.disconnect()

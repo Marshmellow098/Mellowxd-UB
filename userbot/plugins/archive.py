@@ -19,7 +19,7 @@ import shutil
 import subprocess
 import time
 from pySmartDL import SmartDL
-from userbot.uniborgConfig import Config
+from userbot.uni@mellowConfig import Config
 from telethon import events
 from userbot.utils import mellow_cmd, humanbytes, progress, time_formatter
 import subprocess
@@ -32,7 +32,7 @@ extracted = Config.TMP_DOWNLOAD_DIRECTORY + "extracted/"
 if not os.path.isdir(extracted):
     os.makedirs(extracted)
 
-borg.on(mellow_cmd(pattern="compress"))
+@mellow.on(mellow_cmd(pattern="compress"))
 async def _(event):
     if event.fwd_from:
         return
@@ -46,7 +46,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -58,7 +58,7 @@ async def _(event):
         except Exception as e:  # pylint:disable=C0103,W0703
             await mone.edit(str(e))
     zipfile.ZipFile(directory_name + '.zip', 'w', zipfile.ZIP_DEFLATED).write(directory_name)
-    await borg.send_file(
+    await @mellow.send_file(
         event.chat_id,
         directory_name + ".zip",
         caption="Zipped By cat",
@@ -78,7 +78,7 @@ def zipdir(path, ziph):
             ziph.write(os.path.join(root, file))
             os.remove(os.path.join(root, file))
     
-borg.on(mellow_cmd(pattern=("rar ?(.*)")))
+@mellow.on(mellow_cmd(pattern=("rar ?(.*)")))
 async def _(event):
     if event.fwd_from:
         return
@@ -90,7 +90,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -102,7 +102,7 @@ async def _(event):
             # patoolib.create_archive(directory_name + '.7z',directory_name)
             patoolib.create_archive(directory_name + ".rar",(directory_name,Config.TMP_DOWNLOAD_DIRECTORY))
             # patoolib.create_archive("/content/21.yy Avrupa (1).pdf.zip",("/content/21.yy Avrupa (1).pdf","/content/"))
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 directory_name + ".rar",
                 caption="rarred By cat",
@@ -128,7 +128,7 @@ async def _(event):
 
 
 
-borg.on(mellow_cmd(pattern=("7z ?(.*)")))
+@mellow.on(mellow_cmd(pattern=("7z ?(.*)")))
 async def _(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -152,7 +152,7 @@ async def _(event):
             # patoolib.create_archive(directory_name + '.7z',directory_name)
             patoolib.create_archive(directory_name + ".7z",(directory_name,Config.TMP_DOWNLOAD_DIRECTORY))
             # patoolib.create_archive("/content/21.yy Avrupa (1).pdf.zip",("/content/21.yy Avrupa (1).pdf","/content/"))
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 directory_name + ".7z",
                 caption="7z archived By cat",
@@ -178,7 +178,7 @@ async def _(event):
 
 
 
-borg.on(mellow_cmd(pattern=("tar ?(.*)")))
+@mellow.on(mellow_cmd(pattern=("tar ?(.*)")))
 async def _(event):
     if event.fwd_from:
         return
@@ -190,7 +190,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -206,7 +206,7 @@ async def _(event):
                 check_if_file = await create_archive(to_upload_file)
                 if check_if_file is not None:
                     to_upload_file = check_if_file
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 output,
                 caption="TAR By cat",
@@ -265,7 +265,7 @@ async def create_archive(input_directory):
     return return_name
 
 
-borg.on(mellow_cmd(pattern="unzip"))
+@mellow.on(mellow_cmd(pattern="unzip"))
 async def _(event):
     if event.fwd_from:
         return
@@ -277,7 +277,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -328,7 +328,7 @@ async def _(event):
                         )
                     ]
                 try:
-                    await borg.send_file(
+                    await @mellow.send_file(
                         event.chat_id,
                         single_file,
                         caption=f"UnZipped `{caption_rts}`",
@@ -345,7 +345,7 @@ async def _(event):
                     await asyncio.sleep(5)
                     await event.delete()
                 except Exception as e:
-                    await borg.send_message(
+                    await @mellow.send_message(
                         event.chat_id,
                         "{} caused `{}`".format(caption_rts, str(e)),
                         reply_to=event.message.id
@@ -357,7 +357,7 @@ async def _(event):
 
 
 
-borg.on(mellow_cmd(pattern="unrar"))
+@mellow.on(mellow_cmd(pattern="unrar"))
 async def _(event):
     if event.fwd_from:
         return
@@ -369,7 +369,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -418,7 +418,7 @@ async def _(event):
                         )
                     ]
                 try:
-                    await borg.send_file(
+                    await @mellow.send_file(
                         event.chat_id,
                         single_file,
                         caption=f"UnRarred `{caption_rts}`",
@@ -435,7 +435,7 @@ async def _(event):
                     await asyncio.sleep(5)
                     await event.delete()
                 except Exception as e:
-                    await borg.send_message(
+                    await @mellow.send_message(
                         event.chat_id,
                         "{} caused `{}`".format(caption_rts, str(e)),
                         reply_to=event.message.id
@@ -445,7 +445,7 @@ async def _(event):
                 os.remove(single_file)
         os.remove(downloaded_file_name)
 
-borg.on(mellow_cmd(pattern="untar"))
+@mellow.on(mellow_cmd(pattern="untar"))
 async def _(event):
     if event.fwd_from:
         return
@@ -461,7 +461,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -516,7 +516,7 @@ async def _(event):
                         )
                     ]
                 try:
-                    await borg.send_file(
+                    await @mellow.send_file(
                         event.chat_id,
                         single_file,
                         caption=f"Untared `{caption_rts}`",
@@ -533,7 +533,7 @@ async def _(event):
                     await asyncio.sleep(5)
                     await event.delete()
                 except Exception as e:
-                    await borg.send_message(
+                    await @mellow.send_message(
                         event.chat_id,
                         "{} caused `{}`".format(caption_rts, str(e)),
                         reply_to=event.message.id

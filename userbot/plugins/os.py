@@ -3,11 +3,11 @@ from telethon import events
 
 import asyncio
 
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
 
-borg.on(mellow_cmd(pattern=r"macos"))
+@mellow.on(mellow_cmd(pattern=r"macos"))
 
 async def _(event):
 
@@ -43,7 +43,7 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-borg.on(mellow_cmd(pattern=r"windows"))
+@mellow.on(mellow_cmd(pattern=r"windows"))
 
 async def _(event):
 
@@ -80,7 +80,7 @@ async def _(event):
 
 
 
-borg.on(mellow_cmd(pattern=r"linux"))
+@mellow.on(mellow_cmd(pattern=r"linux"))
 
 async def _(event):
 
@@ -116,7 +116,7 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-borg.on(mellow_cmd(pattern=r"stock"))
+@mellow.on(mellow_cmd(pattern=r"stock"))
 
 async def _(event):
 
@@ -152,7 +152,7 @@ async def _(event):
         await event.edit(animation_chars[i % 11])
 
 
-borg.on(mellow_cmd(pattern=r"os"))
+@mellow.on(mellow_cmd(pattern=r"os"))
 
 async def _(event):
 

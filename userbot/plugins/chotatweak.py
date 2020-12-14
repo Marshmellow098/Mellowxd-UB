@@ -3,9 +3,9 @@ import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
-borg.on(mellow_cmd(pattern="ctg ?(.*)"))
+@mellow.on(mellow_cmd(pattern="ctg ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

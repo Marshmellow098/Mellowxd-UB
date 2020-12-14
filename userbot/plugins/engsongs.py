@@ -18,7 +18,7 @@ import random
 
 from userbot.utils import mellow_cmd
 
-borg.on(mellow_cmd(pattern=r"engsongs", outgoing=True))
+@mellow.on(mellow_cmd(pattern=r"engsongs", outgoing=True))
 
 async def _(event):
 

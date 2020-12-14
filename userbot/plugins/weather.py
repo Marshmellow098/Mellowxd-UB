@@ -9,7 +9,7 @@ from datetime import tzinfo, datetime
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="weathers (.*)"))
+@mellow.on(mellow_cmd(pattern="weathers (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -51,7 +51,7 @@ async def _(event):
         await event.edit(response_api["message"])
 
 
-borg.on(mellow_cmd(pattern="wttr (.*)"))
+@mellow.on(mellow_cmd(pattern="wttr (.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -7,7 +7,7 @@ from userbot.utils import mellow_cmd
 from userbot import ALIVE_NAME
 
 
-borg.on(mellow_cmd(pattern="gbun"))
+@mellow.on(mellow_cmd(pattern="gbun"))
 async def gbun(event):
     if event.fwd_from:
         return
@@ -18,7 +18,7 @@ async def gbun(event):
     await event.edit("**Summoning out le Gungnir ❗️⚜️☠️**")
     await asyncio.sleep(3.5)
     chat = await event.get_input_chat()
-    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
+    async for x in @mellow.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f""
     reply_message = None
     if event.reply_to_msg_id:

@@ -15,7 +15,7 @@ import os
 import spotdl
 import subprocess
 
-borg.on(mellow_cmd(pattern="getsong ?(.*)"))
+@mellow.on(mellow_cmd(pattern="getsong ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

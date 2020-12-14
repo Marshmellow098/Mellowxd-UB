@@ -1,68 +1,68 @@
 """ Plugin By @chsaiujwal on telegram """
 """ Plugin By @chsaiujwal on telegram """
 
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 from asyncio import wait
 
 from telethon import events
 
 
-borg.on(mellow_cmd(pattern=r"hola"))
+@mellow.on(mellow_cmd(pattern=r"hola"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("╔┓┏╦━╦┓╔┓╔━━╗\n║┗┛║┗╣┃║┃║X X  ║\n║┏┓║┏╣┗╣┗╣╰╯║\n╚┛┗╩━╩━╩━╩━━╝")
 
-borg.on(mellow_cmd(pattern=r"plus"))
+@mellow.on(mellow_cmd(pattern=r"plus"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("╭━━━━━━━━━━━━━╮\n┃╱╱╱╱╱╱╱╱┏┓╱╱╱┃\n┃╱╱╱┏┓╱╱┏╯┃╱╱╱┃\n┃╱╱┏┛┗┓╱┗┓┃╱╱╱┃\n┃╱╱┗┓┏┛╱╱┃┃╱╱╱┃\n┃╱╱╱┗┛╱╱╱┃┃╱╱╱┃\n┃╱╱╱╱╱╱╱╱┗┛╱╱╱┃\n╰━━━━━━━━━━━━━╯")
-borg.on(mellow_cmd(pattern=r"yes"))
+@mellow.on(mellow_cmd(pattern=r"yes"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("┏┓┏┓╭━━┓╭━━╮▕▔▔▏\n┃┃┃┃┃┏━┛┃╭━┛▕┈┈▏\n┃╰╯┃┃┗━┓┃╰━╮▕┈┈▏\n╰━╮┃┃┏━┛╰━╮┃┈╲╱┈\n┏━╯┃┃┗━┓┏━╯┃┈╭╮┈\n╰━━╯╰━━┛╰━━╯┈╰╯┈")
 
-borg.on(mellow_cmd(pattern=r"lol"))
+@mellow.on(mellow_cmd(pattern=r"lol"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("▂▂╱▔▔▔▔▔▔▔▔▔▔▔▔╲\n╲▂┈╭╮┈┈╭━━╮╭╮┈┈▕\n┈┈▏┃┃┈┈┃╭╮┃┃┃┈┈▕\n┈┈▏┃╰━╮┃╰╯┃┃╰━╮▕\n┈┈▏╰━━╯╰━━╯╰━━╯▕\n┈┈╲▂▂▂▂▂▂▂▂▂▂▂▂╱")
     
     
-borg.on(mellow_cmd(pattern=r"android"))
+@mellow.on(mellow_cmd(pattern=r"android"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("┈┈┈╲┈┈┈┈╱┈┈┈┈┈┈┈\n┈┈┈╱▔▔▔▔╲┈┈┈┈┈┈┈\n┈┈┃┈▇┈┈▇┈┃┈┈┈┈┈┈\n╭╮┣━━━━━━┫╭╮┈┈┈┈\n┃┃┃┈┈┈┈┈┈┃┃┃┈┈┈┈\n╰╯┃┈┈┈┈┈┈┃╰╯┈┈┈┈\n┈┈╰┓┏━━┓┏╯┈┈┈┈┈┈\n┈┈┈╰╯┈┈╰╯┈┈┈┈┈┈┈")
-borg.on(mellow_cmd(pattern=r"hmm"))
+@mellow.on(mellow_cmd(pattern=r"hmm"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("┈┈╱▔▔▔▔▔╲┈┈┈HM┈HM\n┈╱┈┈╱▔╲╲╲▏┈┈┈HMMM\n╱┈┈╱━╱▔▔▔▔▔╲━╮┈┈\n▏┈▕┃▕╱▔╲╱▔╲▕╮┃┈┈\n▏┈▕╰━▏▊▕▕▋▕▕━╯┈┈\n╲┈┈╲╱▔╭╮▔▔┳╲╲┈┈┈\n┈╲┈┈▏╭━━━━╯▕▕┈┈┈\n┈┈╲┈╲▂▂▂▂▂▂╱╱┈┈┈\n┈┈┈┈▏┊┈┈┈┈┊┈┈┈╲┈\n┈┈┈▏┊┈┈┈┈┊▕╲┈┈╲\n┈╱▔╲▏┊┈┈┈┈┊▕╱▔╲▕\n┈▏┈┈┈╰┈┈┈┈╯┈┈┈▕▕\n┈╲┈┈┈╲┈┈┈┈╱┈┈┈╱┈╲\n┈┈╲┈┈▕▔▔▔▔▏┈┈╱╲╲╲▏\n┈╱▔┈┈▕┈┈┈┈▏┈┈▔╲▔▔\n┈╲▂▂▂╱┈┈┈┈╲▂▂▂╱┈")
     
-borg.on(mellow_cmd(pattern=r"happybirthday"))
+@mellow.on(mellow_cmd(pattern=r"happybirthday"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("¸.•°*”˜˜”*°•.¸☆ ★ ☆¸.•°*”˜˜”*°\n╔╗╔╦══╦═╦═╦╗╔╗ ★ ★ \n║╚╝║══║═║═║╚╝║ ☆¸.•° \n║╔╗║╔╗║╔╣╔╩╗╔╝ ★\n╚╝╚╩╝╚╩╝╚╝═╚╝★Birthday!★")
     
-borg.on(mellow_cmd(pattern=r"WTF"))
+@mellow.on(mellow_cmd(pattern=r"WTF"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("┏┓┏┓┏┓┏━━━┓┏━━━┓\n┃┃┃┃┃┃┗┓╱┏┛┃╱┏━┛\n┃┗┛┗┛┃┈┃╱┃┈┃╱┗┓\n┃╱╱╱╱┃┈┃╱┃┈┃╱┏┛\n┗━━━━┛◯┗━┛◯┗━┛◯")
  
-borg.on(mellow_cmd(pattern=r"lmao"))
+@mellow.on(mellow_cmd(pattern=r"lmao"))
 async def hi(event):
     if event.fwd_from:
         return
     await event.edit("┏┓┈╭━━╮╭━━╮╭━━╮\n┃┃┈┃┃┃┃┃╭╮┃┃╭╮┃\n┃┗┓┃┃┃┃┃┏┓┃┃╰╯┃\n┗━┛┗┻┻┛┗┛┗┛╰━━╯")
 
 
-borg.on(events.NewMessage(pattern=r"\.spam", outgoing=True))
+@mellow.on(events.NewMessage(pattern=r"\.spam", outgoing=True))
 
 async def spammer(e):
 
@@ -79,7 +79,7 @@ async def spammer(e):
                 LOGGER_GROUP, "#SPAM \n\n" "Spam was executed successfully"
             )
 
-borg.on(mellow_cmd(pattern=r"no"))
+@mellow.on(mellow_cmd(pattern=r"no"))
 async def hi(event):
     if event.fwd_from:
         return

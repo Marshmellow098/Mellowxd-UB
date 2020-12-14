@@ -41,7 +41,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-borg.on(mellow_cmd("rename (.*)"))
+@mellow.on(mellow_cmd("rename (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -56,7 +56,7 @@ async def _(event):
        # c_time = time.time()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await borg.download_media(
+        downloaded_file_name = await @mellow.download_media(
             reply_message,
             downloaded_file_name
         )
@@ -70,7 +70,7 @@ async def _(event):
         await event.edit("Syntax // `.rename file.name` as reply to a Telegram media")
 
 
-borg.on(mellow_cmd("rnupload (.*)"))
+@mellow.on(mellow_cmd("rnupload (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -87,7 +87,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await borg.download_media(
+        downloaded_file_name = await @mellow.download_media(
             reply_message,
             downloaded_file_name
         )
@@ -95,7 +95,7 @@ async def _(event):
         ms_one = (end - start).seconds
         if os.path.exists(downloaded_file_name):
             c_time = time.time()
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -115,7 +115,7 @@ async def _(event):
         await event.edit("Syntax // .rnupload file.name as reply to a Telegram media")
 
 
-borg.on(mellow_cmd("rnstreamupload (.*)"))
+@mellow.on(mellow_cmd("rnstreamupload (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -130,7 +130,7 @@ async def _(event):
         c_time = time.time()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await borg.download_media(
+        downloaded_file_name = await @mellow.download_media(
             reply_message,
             downloaded_file_name
         )
@@ -163,7 +163,7 @@ async def _(event):
             # Bad Request: VIDEO_CONTENT_TYPE_INVALID
            # c_time = time.time()
             try:
-                await borg.send_file(
+                await @mellow.send_file(
                     event.chat_id,
                     downloaded_file_name,
                     thumb=thumb,

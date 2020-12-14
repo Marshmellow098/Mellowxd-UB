@@ -5,11 +5,11 @@ originaly from : @corsicanu_bot
 
 import sys
 from telethon import events, functions
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 import random
 
 
-borg.on(events.NewMessage(pattern=r"\.shouts", outgoing=True))
+@mellow.on(events.NewMessage(pattern=r"\.shouts", outgoing=True))
 async def shout(args):
     if args.fwd_from:
         return

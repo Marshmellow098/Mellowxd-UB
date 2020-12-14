@@ -10,12 +10,12 @@ from telethon import events
 
 import asyncio
 
-from uniborg.util import mellow_cmd
+from uni@mellow.util import mellow_cmd
 
 
 
 
-borg.on(mellow_cmd(pattern=r"isro"))
+@mellow.on(mellow_cmd(pattern=r"isro"))
 
 async def _(event):
 

@@ -75,7 +75,7 @@ async def formatJSON(outData):
         msg += " __" + re.sub("<br>", '\n', cat) +"__"
         return msg
 
-borg.on(mellow_cmd(pattern="anilist ?(.*)"))
+@mellow.on(mellow_cmd(pattern="anilist ?(.*)"))
 async def anilist(event):
 	if event.fwd_from:
 		return

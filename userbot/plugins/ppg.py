@@ -9,7 +9,7 @@ from telethon.utils import get_input_location
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd(pattern="ppg ?(.*)"))
+@mellow.on(mellow_cmd(pattern="ppg ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -17,7 +17,7 @@ async def _(event):
     if replied_user is None:
         await event.edit(str(error_i_a))
         return False
-    replied_user_profile_photos = await borg(GetUserPhotosRequest(
+    replied_user_profile_photos = await @mellow(GetUserPhotosRequest(
         user_id=replied_user.user.id,
         offset=42,
         max_id=0,
@@ -63,7 +63,7 @@ Person: <a href='tg://user?id={}'>{}</a>
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = event.message.id
-    await borg.send_message(
+    await @mellow.send_message(
         event.chat_id,
         caption,
         reply_to=message_id_to_reply,

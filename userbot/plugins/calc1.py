@@ -8,7 +8,7 @@ import io
 from userbot.utils import mellow_cmd
 from userbot import CMD_HELP
 
-borg.on(mellow_cmd(pattern="calc"))
+@mellow.on(mellow_cmd(pattern="calc"))
 async def _(event):
     if event.fwd_from or event.via_bot_id:
         return

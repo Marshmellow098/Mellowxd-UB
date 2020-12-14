@@ -40,7 +40,7 @@ from .. import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
 from ..utils import mellow_cmd, edit_or_reply
 
 
-borg.on(mellow_cmd(pattern="userinfo(?: |$)(.*)"))
+@mellow.on(mellow_cmd(pattern="userinfo(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -131,7 +131,7 @@ async def get_full_user(event):
     return None, "No input is found"
 
 
-borg.on(mellow_cmd(pattern="whois(?: |$)(.*)"))
+@mellow.on(mellow_cmd(pattern="whois(?: |$)(.*)"))
 async def who(event):
     cat = await edit_or_reply(
         event, "`Sit tight while I steal some data from This guuyyy...`"
@@ -148,7 +148,7 @@ async def who(event):
     if not message_id_to_reply:
         message_id_to_reply = None
     try:
-        await borg.send_file(
+        await @mellow.send_file(
             event.chat_id,
             photo,
             caption=caption,
@@ -245,7 +245,7 @@ async def fetch_info(replied_user, event):
     return photo, caption
 
 
-borg.on(mellow_cmd(pattern="link(?: |$)(.*)"))
+@mellow.on(mellow_cmd(pattern="link(?: |$)(.*)"))
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)

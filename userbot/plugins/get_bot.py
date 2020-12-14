@@ -5,7 +5,7 @@ from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
 from userbot.utils import mellow_cmd
 
 
-borg.on(mellow_cmd("get_bot ?(.*)"))
+@mellow.on(mellow_cmd("get_bot ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -18,12 +18,12 @@ async def _(event):
     else:
         mentions = "Bots in {} channel: \n".format(input_str)
         try:
-            chat = await borg.get_entity(input_str)
+            chat = await @mellow.get_entity(input_str)
         except Exception as e:
             await event.edit(str(e))
             return None
     try:
-        async for x in borg.iter_participants(chat, filter=ChannelParticipantsBots):
+        async for x in @mellow.iter_participants(chat, filter=ChannelParticipantsBots):
             if isinstance(x.participant, ChannelParticipantAdmin):
                 mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
             else:
