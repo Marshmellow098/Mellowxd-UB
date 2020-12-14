@@ -129,9 +129,9 @@ def load_module(shortname):
         mod.command = command
         mod.logger = logging.getLogger(shortname)
         # support for uniborg
-        sys.modules["mellow.utils"] = userbot.utils
+        sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
-        mod.borg = bot
+        mod.borg = mellow
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
