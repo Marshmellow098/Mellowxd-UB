@@ -11,7 +11,7 @@ from telethon.tl.types import MessageMediaPhoto
 import re
 from userbot.utils import mellow_cmd
 from userbot import bot 
-from userbot import bot as @mellow
+from userbot import bot as mellow
 sedpath = "./shivam/"
 if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
