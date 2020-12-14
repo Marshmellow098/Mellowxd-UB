@@ -55,7 +55,7 @@ if 1 == 1:
                                           "username_colors": ["#fb6169", "#faa357", "#b48bf2", "#85de85",
                                                               "#62d4e3", "#65bdf3", "#ff5694"],
                                           "default_username_color": "#b48bf2"})
-    client = borg
+    client = mellow 
 
     @mellow.on(admin_cmd(pattern="chat(.*)"))
     async def quotecmd(message):  # noqa: C901
