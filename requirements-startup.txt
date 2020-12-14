@@ -63,6 +63,6 @@ youtube-dl
 youtube-search-python
 covid
 tswift
-opencv-python-headless
+opencv-contrib-python
 fonttools
 numpy
