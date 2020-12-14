@@ -7,12 +7,12 @@ By:- @Zero_cool7870
 
 """
 
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 import asyncio
 import os
 
 
-@mellow.on(admin_cmd(pattern="ls ?(.*)"))
+@mellow.on(mellow_cmd(pattern="ls ?(.*)"))
 async def lst(event):
 	if event.fwd_from:
 		return

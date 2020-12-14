@@ -2,10 +2,10 @@
 Syntax: .edd <User(s)>"""
 
 from telethon import functions
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="edd ?(.*)"))
+@mellow.on(mellow_cmd(pattern="edd ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

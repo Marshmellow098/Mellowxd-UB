@@ -5,10 +5,10 @@
 Syntax: .ud Query"""
 from telethon import events
 import urbandict
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd("ud (.*)"))
+@mellow.on(mellow_cmd("ud (.*)"))
 async def _(event):
     if event.fwd_from:
         return

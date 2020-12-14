@@ -10,7 +10,7 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from PIL import Image
 from telethon import events
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
@@ -32,7 +32,7 @@ def get_video_thumb(file, output=None, width=320):
         return output
 
 
-@mellow.on(admin_cmd(pattern="savethumbnail"))
+@mellow.on(mellow_cmd(pattern="savethumbnail"))
 async def _(event):
     if event.fwd_from:
         return
@@ -71,7 +71,7 @@ async def _(event):
         await event.edit("Reply to a photo to save custom thumbnail")
 
 
-@mellow.on(admin_cmd(pattern="clearthumbnail"))
+@mellow.on(mellow_cmd(pattern="clearthumbnail"))
 async def _(event):
     if event.fwd_from:
         return
@@ -80,7 +80,7 @@ async def _(event):
     await event.edit("✅ Custom thumbnail cleared succesfully.")
 
 
-@mellow.on(admin_cmd(pattern="getthumbnail"))
+@mellow.on(mellow_cmd(pattern="getthumbnail"))
 async def _(event):
     if event.fwd_from:
         return

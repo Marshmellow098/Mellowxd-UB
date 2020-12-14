@@ -4,10 +4,10 @@ import zipfile
 from pySmartDL import SmartDL
 import time
 import os
-from uni@mellow.util import admin_cmd, humanbytes, progress, time_formatter
+from uni@mellow.util import mellow_cmd, humanbytes, progress, time_formatter
 
 
-@mellow.on(admin_cmd(pattern="compress ?(.*)"))
+@mellow.on(mellow_cmd(pattern="compress ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

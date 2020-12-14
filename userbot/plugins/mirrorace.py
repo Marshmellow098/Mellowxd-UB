@@ -8,10 +8,10 @@ import os
 import requests
 import time
 from datetime import datetime
-from uni@mellow.util import admin_cmd, progress
+from uni@mellow.util import mellow_cmd, progress
 
 
-@mellow.on(admin_cmd(pattern="ma ?(.*)", allow_sudo=True))
+@mellow.on(mellow_cmd(pattern="ma ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

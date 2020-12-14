@@ -5,10 +5,10 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from userbot import bot, CMD_HELP
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 #@register(outgoing=True, pattern="^.q(?: |$)(.*)")
-@mellow.on(admin_cmd(pattern=r"qbot(?: |$)(.*)"))
+@mellow.on(mellow_cmd(pattern=r"qbot(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

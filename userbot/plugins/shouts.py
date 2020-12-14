@@ -5,7 +5,7 @@ originaly from : @corsicanu_bot
 
 import sys
 from telethon import events, functions
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 import random
 
 

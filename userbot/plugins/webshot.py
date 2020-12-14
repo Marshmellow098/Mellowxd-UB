@@ -9,13 +9,13 @@ import requests
 
 from telethon import events
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 
 
 
-@mellow.on(admin_cmd("screencapture (.*)"))
+@mellow.on(mellow_cmd("screencapture (.*)"))
 
 async def _(event):
 

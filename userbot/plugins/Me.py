@@ -1,8 +1,8 @@
 """ made only for Marshmellow userbot don't kang it our else will make so many report to you that your account will get ban """
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@bot.on(admin_cmd(pattern="me", outgoing=True))
+@bot.on(mellow_cmd(pattern="me", outgoing=True))
 async def hello_users(event):
     if event.fwd_from:
         return

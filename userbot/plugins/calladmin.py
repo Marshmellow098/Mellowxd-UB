@@ -2,10 +2,10 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="admins"))
+@mellow.on(mellow_cmd(pattern="admins"))
 async def _(event):
     if event.fwd_from:
         return

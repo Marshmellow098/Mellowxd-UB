@@ -3,9 +3,9 @@ import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@mellow.on(admin_cmd("frybot ?(.*)"))
+@mellow.on(mellow_cmd("frybot ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

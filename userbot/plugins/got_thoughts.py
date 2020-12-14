@@ -15,10 +15,10 @@ import os
 import sys
 
 import random
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern=r"gott", outgoing=True))
+@mellow.on(mellow_cmd(pattern=r"gott", outgoing=True))
 
 async def _(event):
 

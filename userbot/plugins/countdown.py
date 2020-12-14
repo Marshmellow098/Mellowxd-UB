@@ -4,7 +4,7 @@ from telethon import events
 
 from datetime import datetime
 
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 import importlib.util
 
@@ -18,7 +18,7 @@ import importlib.util
 
 
 
-@mellow.on(admin_cmd(pattern='(f?c)d '))
+@mellow.on(mellow_cmd(pattern='(f?c)d '))
 
 async def timer_blankx(e):
 
@@ -45,7 +45,7 @@ async def timer_blankx(e):
   await e.edit(txt + 'NaN')
 
 
-@mellow.on(admin_cmd(pattern='(f?s)cd '))
+@mellow.on(mellow_cmd(pattern='(f?s)cd '))
 
 async def timer_blankx(e):
 

@@ -3,10 +3,10 @@ Syntax: .meaning <word>"""
 
 import requests
 from telethon import events
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd("meaning (.*)"))
+@mellow.on(mellow_cmd("meaning (.*)"))
 async def _(event):
     if event.fwd_from:
         return

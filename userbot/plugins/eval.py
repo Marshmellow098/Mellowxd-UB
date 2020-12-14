@@ -10,10 +10,10 @@ import traceback
 import asyncio
 import sys
 import io
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd("eval"))
+@mellow.on(mellow_cmd("eval"))
 async def _(event):
     if event.fwd_from:
         return

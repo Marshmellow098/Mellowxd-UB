@@ -2,10 +2,10 @@
 Syntax: .json"""
 from telethon import events
 import io
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd("json"))
+@mellow.on(mellow_cmd("json"))
 async def _(event):
     if event.fwd_from:
         return

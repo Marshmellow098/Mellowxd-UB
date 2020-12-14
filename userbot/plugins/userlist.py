@@ -2,7 +2,7 @@
 Syntax: .userlist"""
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 from telethon.errors.rpcerrorlist import (UserIdInvalidError,
                                           MessageTooLongError)
                                           

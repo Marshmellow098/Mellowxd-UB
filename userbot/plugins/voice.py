@@ -8,10 +8,10 @@ import os
 import subprocess
 from datetime import datetime
 from gtts import gTTS
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="voice (.*)"))
+@mellow.on(mellow_cmd(pattern="voice (.*)"))
 async def _(event):
     if event.fwd_from:
         return

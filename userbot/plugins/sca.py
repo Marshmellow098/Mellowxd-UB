@@ -14,10 +14,10 @@ document
 cancel"""
 
 import asyncio
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
  
  
-@mellow.on(admin_cmd("sca ?(.*)"))
+@mellow.on(mellow_cmd("sca ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

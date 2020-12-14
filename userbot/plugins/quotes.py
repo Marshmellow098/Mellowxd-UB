@@ -1,8 +1,8 @@
 import random
 import requests
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
-@mellow.on(admin_cmd(pattern="quote ?(.*)"))
+@mellow.on(mellow_cmd(pattern="quote ?(.*)"))
 async def quote_search(event):
     if event.fwd_from:
         return

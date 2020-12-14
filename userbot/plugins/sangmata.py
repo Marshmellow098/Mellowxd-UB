@@ -6,11 +6,11 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 
-@mellow.on(admin_cmd("sg ?(.*)"))
+@mellow.on(mellow_cmd("sg ?(.*)"))
 
 async def _(event):
 
@@ -76,7 +76,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd("fakemail ?(.*)"))
+@mellow.on(mellow_cmd("fakemail ?(.*)"))
 
 async def _(event):
 
@@ -144,7 +144,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd("ub ?(.*)"))
+@mellow.on(mellow_cmd("ub ?(.*)"))
 
 async def _(event):
 
@@ -208,7 +208,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd("gid ?(.*)"))
+@mellow.on(mellow_cmd("gid ?(.*)"))
 
 async def _(event):
 
@@ -272,7 +272,7 @@ async def _(event):
 
                 
 
-@mellow.on(admin_cmd("urban ?(.*)"))
+@mellow.on(mellow_cmd("urban ?(.*)"))
 
 async def _(event):
 

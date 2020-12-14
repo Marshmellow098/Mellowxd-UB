@@ -1,9 +1,9 @@
 from telethon import events
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 import asyncio
 
 
-@mellow.on(admin_cmd(pattern="undlt"))
+@mellow.on(mellow_cmd(pattern="undlt"))
 async def _(event):
     if event.fwd_from:
         return

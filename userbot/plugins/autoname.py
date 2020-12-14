@@ -5,7 +5,7 @@ import asyncio
 import time
 from telethon.tl import functions
 from telethon.errors import FloodWaitError
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 from userbot import ALIVE_NAME
 
 
@@ -13,7 +13,7 @@ DEL_TIME_OUT = 60
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "FRIDAY"
 
 
-@mellow.on(admin_cmd(pattern="autoname"))  # pylint:disable=E0602
+@mellow.on(mellow_cmd(pattern="autoname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

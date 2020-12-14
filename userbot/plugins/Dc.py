@@ -6,9 +6,9 @@
 from telethon.tl.types import MessageMediaPhoto
 import os, urllib, requests, asyncio
 from userbot.uni@mellowConfig import Config
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@mellow.on(admin_cmd(pattern="colp$", outgoing=True))
+@mellow.on(mellow_cmd(pattern="colp$", outgoing=True))
 async def detect(event):
     if Config.DEEP_AI is None:
         return await event.edit(

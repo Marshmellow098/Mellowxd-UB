@@ -5,10 +5,10 @@ import asyncio
 import os
 import time
 from datetime import datetime
-from uni@mellow.util import admin_cmd, progress
+from uni@mellow.util import mellow_cmd, progress
 
 
-@mellow.on(admin_cmd(pattern="nfc (.*)"))  # pylint:disable=E0602
+@mellow.on(mellow_cmd(pattern="nfc (.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

@@ -9,7 +9,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP
 from userbot.uni@mellowConfig import Config
-from userbot.utils import admin_cmd, sudo_cmd
+from userbot.utils import mellow_cmd, sudo_cmd
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
@@ -30,7 +30,7 @@ BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 
 
-@mellow.on(admin_cmd(pattern="paste ?(.*)"))
+@mellow.on(mellow_cmd(pattern="paste ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -76,7 +76,7 @@ async def _(event):
         await event.edit("Pasted to dogbin : [dog]({}) in {} seconds".format(url, ms))
 
 
-@mellow.on(admin_cmd(outgoing=True, pattern="getpaste(?: |$)(.*)"))
+@mellow.on(mellow_cmd(outgoing=True, pattern="getpaste(?: |$)(.*)"))
 async def get_dogbin_content(dog_url):
     """ For .getpaste command, fetches the content of a dogbin URL. """
     textx = await dog_url.get_reply_message()
@@ -128,7 +128,7 @@ async def get_dogbin_content(dog_url):
         )
 
 
-@mellow.on(admin_cmd(pattern="neko ?(.*)"))
+@mellow.on(mellow_cmd(pattern="neko ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -185,7 +185,7 @@ async def _(event):
         await event.edit(reply_text)
 
 
-@mellow.on(admin_cmd(pattern="iffuci ?(.*)"))
+@mellow.on(mellow_cmd(pattern="iffuci ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -231,7 +231,7 @@ async def _(event):
         await event.edit("code is pasted to {} in {} seconds".format(url, ms))
 
 
-@mellow.on(admin_cmd(pattern="paster ?(.*)"))
+@mellow.on(mellow_cmd(pattern="paster ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

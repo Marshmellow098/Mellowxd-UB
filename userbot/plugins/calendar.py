@@ -5,10 +5,10 @@ import asyncio
 from datetime import datetime
 import requests
 import json
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="calendar (.*)"))
+@mellow.on(mellow_cmd(pattern="calendar (.*)"))
 async def _(event):
     if event.fwd_from:
         return

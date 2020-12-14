@@ -8,7 +8,7 @@ import logging
 
 
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 
@@ -38,7 +38,7 @@ if 1 == 1:
 
 
 
-    @mellow.on(admin_cmd(pattern="poto(.*)"))
+    @mellow.on(mellow_cmd(pattern="poto(.*)"))
 
     async def potocmd(event):
 

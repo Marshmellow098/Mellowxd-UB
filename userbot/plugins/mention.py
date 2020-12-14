@@ -2,10 +2,10 @@
 # (c) @INF1N17Y
 
 from telethon import events
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd("mention (.*)"))
+@mellow.on(mellow_cmd("mention (.*)"))
 async def _(event):
 	if event.fwd_from:
 		return	

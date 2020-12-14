@@ -5,10 +5,10 @@ from telethon import events
 from datetime import datetime
 import io
 import speedtest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd("speedtest ?(.*)"))
+@mellow.on(mellow_cmd("speedtest ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

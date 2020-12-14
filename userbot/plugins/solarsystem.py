@@ -1,9 +1,9 @@
 
 from telethon import events
 import asyncio
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
-@mellow.on(admin_cmd(pattern=r"solarsystem"))
+@mellow.on(mellow_cmd(pattern=r"solarsystem"))
 async def _(event):
     if event.fwd_from:
         return

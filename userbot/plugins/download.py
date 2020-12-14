@@ -12,10 +12,10 @@ from datetime import datetime
 from pySmartDL import SmartDL
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
-from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
+from userbot.utils import mellow_cmd, humanbytes, progress, time_formatter
 
 
-@mellow.on(admin_cmd(pattern="dwl ?(.*)"))
+@mellow.on(mellow_cmd(pattern="dwl ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

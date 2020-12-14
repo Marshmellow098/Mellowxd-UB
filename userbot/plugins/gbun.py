@@ -3,11 +3,11 @@ import asyncio
 from telethon import events
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import ALIVE_NAME
 
 
-@mellow.on(admin_cmd(pattern="gbun"))
+@mellow.on(mellow_cmd(pattern="gbun"))
 async def gbun(event):
     if event.fwd_from:
         return

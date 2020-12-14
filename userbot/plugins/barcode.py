@@ -9,10 +9,10 @@ import os
 import time
 from barcode.writer import ImageWriter
 from datetime import datetime
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="barcode ?(.*)"))
+@mellow.on(mellow_cmd(pattern="barcode ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

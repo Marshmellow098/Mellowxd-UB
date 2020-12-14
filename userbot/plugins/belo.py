@@ -15,11 +15,11 @@ import sys
 
 import random
 
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
 
-@mellow.on(admin_cmd(pattern=r"belo"))
+@mellow.on(mellow_cmd(pattern=r"belo"))
 
 async def _(event):
 

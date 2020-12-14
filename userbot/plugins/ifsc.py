@@ -3,10 +3,10 @@ Syntax: .ifsc rp <IFSC CODE>"""
 from telethon import events
 import requests
 import json
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="ifsc(.*)"))
+@mellow.on(mellow_cmd(pattern="ifsc(.*)"))
 async def _(event):
     if event.fwd_from:
         return

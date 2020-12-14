@@ -3,10 +3,10 @@ Syntax: .color <color_code>"""
 from telethon import events
 import os
 from PIL import Image, ImageColor
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="color (.*)"))
+@mellow.on(mellow_cmd(pattern="color (.*)"))
 async def _(event):
     if event.fwd_from:
         return

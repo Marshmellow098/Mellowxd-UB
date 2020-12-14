@@ -18,7 +18,7 @@ from glitch_this import ImageGlitcher
 from telethon.tl.types import MessageMediaPhoto
 
 from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 glitcher = ImageGlitcher()
 DURATION = 100  # Set this to however many centiseconds each frame should be visible for
@@ -29,7 +29,7 @@ if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
 
 
-@bot.on(admin_cmd(pattern=r"glitch"))
+@bot.on(mellow_cmd(pattern=r"glitch"))
 async def glitch(event):
     sed = await event.get_reply_message()
     okbruh = await event.edit("`Gli, Glitchiiingggg.....`")

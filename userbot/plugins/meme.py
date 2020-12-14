@@ -8,9 +8,9 @@ from telethon import events
 import asyncio
 import os
 import sys
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
-@mellow.on(admin_cmd(pattern=r"meme"))
+@mellow.on(mellow_cmd(pattern=r"meme"))
 
 async def meme(event):
 
@@ -93,7 +93,7 @@ usage:- .flower
 made by @Zello_cool7870
 
 """
-@mellow.on(admin_cmd(pattern=r"flower"))
+@mellow.on(mellow_cmd(pattern=r"flower"))
 async def meme(event):
     if event.fwd_from:
         return   

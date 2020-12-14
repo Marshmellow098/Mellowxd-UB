@@ -2,9 +2,9 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@mellow.on(admin_cmd(pattern="join"))
+@mellow.on(mellow_cmd(pattern="join"))
 async def _(event):
     if event.fwd_from:
         return
@@ -20,7 +20,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@mellow.on(admin_cmd(pattern="pay"))
+@mellow.on(mellow_cmd(pattern="pay"))
 async def _(event):
     if event.fwd_from:
         return
@@ -38,7 +38,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd(pattern="climb"))
+@mellow.on(mellow_cmd(pattern="climb"))
 async def _(event):
     if event.fwd_from:
         return
@@ -54,7 +54,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@mellow.on(admin_cmd(pattern="aag"))
+@mellow.on(mellow_cmd(pattern="aag"))
 async def _(event):
     if event.fwd_from:
         return
@@ -70,7 +70,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@mellow.on(admin_cmd(pattern="push"))
+@mellow.on(mellow_cmd(pattern="push"))
 async def _(event):
     if event.fwd_from:
         return
@@ -87,7 +87,7 @@ async def _(event):
     await event.delete()
 
 
-@mellow.on(admin_cmd(pattern="work"))
+@mellow.on(mellow_cmd(pattern="work"))
 async def _(event):
     if event.fwd_from:
         return

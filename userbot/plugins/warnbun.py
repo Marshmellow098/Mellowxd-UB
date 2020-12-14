@@ -2,10 +2,10 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd("warn1"))
+@mellow.on(mellow_cmd("warn1"))
 async def _(event):
     if event.fwd_from:
         return
@@ -25,10 +25,10 @@ async def _(event):
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd("warn2"))
+@mellow.on(mellow_cmd("warn2"))
 async def _(event):
     if event.fwd_from:
         return
@@ -48,10 +48,10 @@ async def _(event):
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd("warn3"))
+@mellow.on(mellow_cmd("warn3"))
 async def _(event):
     if event.fwd_from:
         return
@@ -71,10 +71,10 @@ async def _(event):
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd("warn0"))
+@mellow.on(mellow_cmd("warn0"))
 async def _(event):
     if event.fwd_from:
         return
@@ -94,11 +94,11 @@ async def _(event):
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
 
-@mellow.on(admin_cmd("ocb"))
+@mellow.on(mellow_cmd("ocb"))
 async def _(event):
     if event.fwd_from:
         return
@@ -114,7 +114,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@mellow.on(admin_cmd("fw"))
+@mellow.on(mellow_cmd("fw"))
 async def _(event):
     if event.fwd_from:
         return

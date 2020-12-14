@@ -2,10 +2,10 @@
 Syntax: .coinflip [optional_choice]"""
 from telethon import events
 import random, re
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="coin ?(.*)"))
+@mellow.on(mellow_cmd(pattern="coin ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

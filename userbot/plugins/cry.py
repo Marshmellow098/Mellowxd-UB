@@ -1,14 +1,14 @@
 """Use cmd `.cry` to cry"""
 
 from telethon import events
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 import asyncio
 
 
 
 
 
-@mellow.on(admin_cmd(pattern="lcry"))
+@mellow.on(mellow_cmd(pattern="lcry"))
 
 async def _(event):
 

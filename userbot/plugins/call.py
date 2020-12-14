@@ -13,13 +13,13 @@ Available Commands:
 from telethon import events
 
 import asyncio
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import ALIVE_NAME
 
 USER =str(ALIVE_NAME)
 
 
-@mellow.on(admin_cmd(pattern=r"call"))
+@mellow.on(mellow_cmd(pattern=r"call"))
 
 async def _(event):
 

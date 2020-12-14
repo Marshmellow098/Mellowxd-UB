@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 from pathlib import Path
 from telethon.tl.types import InputMessagesFilterDocument
-from userbot.utils import admin_cmd, load_module, remove_plugin
+from userbot.utils import mellow_cmd, load_module, remove_plugin
 from userbot import ALIVE_NAME
 from userbot import bot
 
@@ -16,7 +16,7 @@ thumb_image_path = "./Resources/PicsArt_12-07-03.35.32.jpg"
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Marshmellow"
 
 
-@bot.on(admin_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
+@bot.on(mellow_cmd(pattern=r"send (?P<shortname>\w+)", outgoing=True))
 async def send(event):
     if event.fwd_from:
         return
@@ -46,7 +46,7 @@ async def send(event):
         await edit_or_reply(event, "**404**: Write correct file name")
 
 
-@bot.on(admin_cmd(pattern="install"))
+@bot.on(mellow_cmd(pattern="install"))
 async def install(event):
     if event.fwd_from:
         return
@@ -79,7 +79,7 @@ async def install(event):
     await event.delete()
 
 
-@bot.on(admin_cmd(pattern=r"unload (?P<shortname>\w+)$"))
+@bot.on(mellow_cmd(pattern=r"unload (?P<shortname>\w+)$"))
 async def unload(event):
     if event.fwd_from:
         return
@@ -95,7 +95,7 @@ async def unload(event):
         )
 
 
-@bot.on(admin_cmd(pattern=r"load (?P<shortname>\w+)$"))
+@bot.on(mellow_cmd(pattern=r"load (?P<shortname>\w+)$"))
 async def load(event):
     if event.fwd_from:
         return

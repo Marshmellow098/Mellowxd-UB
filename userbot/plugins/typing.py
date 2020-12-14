@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K
 import asyncio
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="type (.*)"))
+@mellow.on(mellow_cmd(pattern="type (.*)"))
 async def _(event):
     if event.fwd_from:
         return

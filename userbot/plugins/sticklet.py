@@ -10,10 +10,10 @@ import textwrap
 
 from PIL import Image, ImageDraw, ImageFont
 from telethon.tl.types import InputMessagesFilterDocument
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="sticklet (.*)"))
+@mellow.on(mellow_cmd(pattern="sticklet (.*)"))
 async def sticklet(event):
     R = random.randint(0,256)
     G = random.randint(0,256)

@@ -3,14 +3,14 @@ from telethon import events
 
 import asyncio
 
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 from userbot import ALIVE_NAME
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 
-@mellow.on(admin_cmd(pattern=r"police"))
+@mellow.on(mellow_cmd(pattern=r"police"))
 
 async def _(event):
 

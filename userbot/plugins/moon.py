@@ -6,12 +6,12 @@ avaliable commands :
 
 from telethon import events
 import asyncio
-from uni@mellow.util import admin_cmd
-from userbot.utils import admin_cmd
+from uni@mellow.util import mellow_cmd
+from userbot.utils import mellow_cmd
 from collections import deque
 
 
-@mellow.on(admin_cmd(pattern=r"smoon"))
+@mellow.on(mellow_cmd(pattern=r"smoon"))
 
 async def _(event):
 
@@ -49,7 +49,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd(pattern=r"tmoon"))
+@mellow.on(mellow_cmd(pattern=r"tmoon"))
 async def _(event):
     if event.fwd_from:
         return

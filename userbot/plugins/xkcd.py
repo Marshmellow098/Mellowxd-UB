@@ -5,10 +5,10 @@ import asyncio
 import json
 import requests
 from urllib.parse import quote
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="xkcd ?(.*)"))
+@mellow.on(mellow_cmd(pattern="xkcd ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

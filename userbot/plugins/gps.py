@@ -1,11 +1,11 @@
 
 from geopy.geocoders import Nominatim
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from telethon.tl import types
 from userbot import CMD_HELP 
 
 
-@mellow.on(admin_cmd(pattern="gps ?(.*)"))
+@mellow.on(mellow_cmd(pattern="gps ?(.*)"))
 async def gps(event):
     if event.fwd_from:
         return

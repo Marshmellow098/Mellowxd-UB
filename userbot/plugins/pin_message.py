@@ -2,10 +2,10 @@
 Syntax: .cpin [LOUD]"""
 from telethon import events
 from telethon.tl import functions, types
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@mellow.on(admin_cmd("cpin ?(.*)"))
+@mellow.on(mellow_cmd("cpin ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

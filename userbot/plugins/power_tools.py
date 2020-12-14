@@ -9,10 +9,10 @@ from telethon import events
 import asyncio
 import os
 import sys
-from uni@mellow.util import admin_cmd
+from uni@mellow.util import mellow_cmd
 
 
-@mellow.on(admin_cmd(pattern="restart"))
+@mellow.on(mellow_cmd(pattern="restart"))
 async def _(event):
     await event.edit("Restarting [⏳⏳] ...")
     await asyncio.sleep(2)
@@ -25,7 +25,7 @@ async def _(event):
     quit()
 
 
-@mellow.on(admin_cmd(pattern="shutdown"))
+@mellow.on(mellow_cmd(pattern="shutdown"))
 async def _(event):
     if event.fwd_from:
         return

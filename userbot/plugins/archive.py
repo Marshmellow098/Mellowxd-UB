@@ -21,7 +21,7 @@ import time
 from pySmartDL import SmartDL
 from userbot.uni@mellowConfig import Config
 from telethon import events
-from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
+from userbot.utils import mellow_cmd, humanbytes, progress, time_formatter
 import subprocess
 import patoolib
 import tarfile
@@ -32,7 +32,7 @@ extracted = Config.TMP_DOWNLOAD_DIRECTORY + "extracted/"
 if not os.path.isdir(extracted):
     os.makedirs(extracted)
 
-@mellow.on(admin_cmd(pattern="compress"))
+@mellow.on(mellow_cmd(pattern="compress"))
 async def _(event):
     if event.fwd_from:
         return
@@ -78,7 +78,7 @@ def zipdir(path, ziph):
             ziph.write(os.path.join(root, file))
             os.remove(os.path.join(root, file))
     
-@mellow.on(admin_cmd(pattern=("rar ?(.*)")))
+@mellow.on(mellow_cmd(pattern=("rar ?(.*)")))
 async def _(event):
     if event.fwd_from:
         return
@@ -128,7 +128,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd(pattern=("7z ?(.*)")))
+@mellow.on(mellow_cmd(pattern=("7z ?(.*)")))
 async def _(event):
     if event.fwd_from:
         return
@@ -178,7 +178,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd(pattern=("tar ?(.*)")))
+@mellow.on(mellow_cmd(pattern=("tar ?(.*)")))
 async def _(event):
     if event.fwd_from:
         return
@@ -265,7 +265,7 @@ async def create_archive(input_directory):
     return return_name
 
 
-@mellow.on(admin_cmd(pattern="unzip"))
+@mellow.on(mellow_cmd(pattern="unzip"))
 async def _(event):
     if event.fwd_from:
         return
@@ -357,7 +357,7 @@ async def _(event):
 
 
 
-@mellow.on(admin_cmd(pattern="unrar"))
+@mellow.on(mellow_cmd(pattern="unrar"))
 async def _(event):
     if event.fwd_from:
         return
@@ -445,7 +445,7 @@ async def _(event):
                 os.remove(single_file)
         os.remove(downloaded_file_name)
 
-@mellow.on(admin_cmd(pattern="untar"))
+@mellow.on(mellow_cmd(pattern="untar"))
 async def _(event):
     if event.fwd_from:
         return

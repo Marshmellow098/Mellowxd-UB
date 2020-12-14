@@ -17,7 +17,7 @@ from random import choice, getrandbits, randint
 from re import sub
 from random import randint
 from telethon import events, functions
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 # ================= CONSTANT =================
@@ -305,39 +305,39 @@ GDMORNING = [
 ]    
 
 
-@mellow.on(admin_cmd(pattern=f"love$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"love$", outgoing=True))
 async def love(chutiyappa):
     await chutiyappa.edit(choice(LOVESTR))
         
-@mellow.on(admin_cmd(pattern=f"metoo$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"metoo$", outgoing=True))
 async def metoo(hahayes):
     await hahayes.edit(choice(METOOSTR))
 
-@mellow.on(admin_cmd(pattern=f"gdnoon$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"gdnoon$", outgoing=True))
 async def noon(noon):
     await noon.edit(choice(GDNOON))    
     
-@mellow.on(admin_cmd(pattern=f"chase$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"chase$", outgoing=True))
 async def police(chase):
     await chase.edit(choice(CHASE_STR))
        
-@mellow.on(admin_cmd(pattern=f"qhi$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"qhi$", outgoing=True))
 async def hoi(hello):
     await hello.edit(choice(HELLOSTR))
     
-@mellow.on(admin_cmd(pattern=f"gdbye$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"gdbye$", outgoing=True))
 async def bhago(bhagobc):
     await bhagobc.edit(choice(BYESTR))
     
-@mellow.on(admin_cmd(pattern=f"gdn$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"gdn$", outgoing=True))
 async def night(night):
     await night.edit(choice(GDNIGHT))
     
-@mellow.on(admin_cmd(pattern=f"gdm$", outgoing=True))
+@mellow.on(mellow_cmd(pattern=f"gdm$", outgoing=True))
 async def morning(morning):
     await morning.edit(choice(GDMORNING))
     
-@mellow.on(admin_cmd(pattern="congo"))
+@mellow.on(mellow_cmd(pattern="congo"))
 async def _(event):
     if event.fwd_from:
          return

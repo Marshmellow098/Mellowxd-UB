@@ -10,7 +10,7 @@ from telethon.tl.functions.messages import SendMediaRequest
 
 
 
-@mellow.on(utils.admin_cmd(pattern=r"filetoimage"))
+@mellow.on(utils.mellow_cmd(pattern=r"filetoimage"))
 async def on_file_to_photo(event):
     await event.edit("processing.....")
     await asyncio.sleep(2)

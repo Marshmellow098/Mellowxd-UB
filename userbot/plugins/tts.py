@@ -15,13 +15,13 @@ from datetime import datetime
 
 from gtts import gTTS
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 
 
 
-@mellow.on(admin_cmd(pattern="tts (.*)"))
+@mellow.on(mellow_cmd(pattern="tts (.*)"))
 
 async def _(event):
 

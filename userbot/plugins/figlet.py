@@ -1,8 +1,8 @@
 import pyfiglet
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 #@command(pattern="^.figlet ?(.*)", outgoing=True)
-@mellow.on(admin_cmd(pattern=r"figlet ?(.*)"))
+@mellow.on(mellow_cmd(pattern=r"figlet ?(.*)"))
 async def figlet(event):
     if event.fwd_from:
         return

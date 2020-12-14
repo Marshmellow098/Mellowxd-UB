@@ -2,14 +2,14 @@ import asyncio
 import os
 from pathlib import Path
 from telethon.errors.rpcerrorlist import YouBlockedUserError
-from userbot.utils import admin_cmd, edit_or_reply
+from userbot.utils import mellow_cmd, edit_or_reply
 
 SEARCH_STRING = "<code>Ok weit, searching....</code>"
 NOT_FOUND_STRING = "<code>Sorry !I am unable to find any results to your query</code>"
 SENDING_STRING = "<code>Ok I found something related to that.....</code>"
 BOT_BLOCKED_STRING = "<code>Please unblock @utubebot and try again</code>"
 
-@bot.on(admin_cmd(pattern="yt (.*)"))
+@bot.on(mellow_cmd(pattern="yt (.*)"))
 async def fetcher(event):
     if event.fwd_from:
         return
