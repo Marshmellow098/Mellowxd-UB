@@ -24,7 +24,7 @@ afk_start = {}
 # Originally by @NOOB_GUY_OP
 # I think its first for DARKCOBRA
 
-@borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
+@mellow.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
 async def set_not_afk(event):
     global USER_AFK  # pylint:disable=E0602
     global afk_time  # pylint:disable=E0602
@@ -67,7 +67,7 @@ async def set_not_afk(event):
         afk_time = None  # pylint:disable=E0602
 
 
-@borg.on(
+@mellow.on(
     events.NewMessage(  # pylint:disable=E0602
         incoming=True, func=lambda e: bool(e.mentioned or e.is_private)
     )
@@ -105,7 +105,7 @@ async def on_afk(event):
         last_afk_message[event.chat_id] = msg  # pylint:disable=E0602
 
 
-@borg.on(admin_cmd(pattern=r"mafk (.*) (.*)", outgoing=True))  # pylint:disable=E0602
+@mellow.on(admin_cmd(pattern=r"mafk (.*) (.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

@@ -8,7 +8,7 @@ from uniborg.util import admin_cmd
 import asyncio
 from telethon import events
 
-@borg.on(admin_cmd(pattern="lovu ?(.*)"))
+@mellow.on(admin_cmd(pattern="lovu ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("love u 😘")
@@ -25,14 +25,14 @@ async def _(event):
         await asyncio.sleep(0.2)
         await event.edit("╔╗─╔═╗╔╗─╔╗╔═╗     ╔╦╗\n║║─║║║║╚╦╝║║╦╝     ║║║\n║╚╗║║║╚╗║╔╝║╩╗     ║║║\n╚═╝╚═╝─╚═╝─╚═╝     ╚═╝")
 
-@borg.on(admin_cmd(pattern="plz ?(.*)"))
+@mellow.on(admin_cmd(pattern="plz ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("please🥺🥺🥺🥺🥺 ")
         await asyncio.sleep(1.3)
         await event.edit("╔═╗╔╗─╔═╗╔══╗╔══╗╔═╗\n║╬║║║─║╦╝║╔╗║║══╣║╦╝\n║╔╝║╚╗║╩╗║╠╣║╠══║║╩╗\n╚╝─╚═╝╚═╝╚╝╚╝╚══╝╚═╝")
 
-@borg.on(admin_cmd(pattern="wtbf ?(.*)"))
+@mellow.on(admin_cmd(pattern="wtbf ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("what the fuck bro")
@@ -44,7 +44,7 @@ async def _(event):
         await event.edit("╔╦═╦╗╔══╗╔══╗\n║║║║║╚╗╔╝║═╦╝\n║║║║║─║║─║╔╝─\n╚═╩═╝─╚╝─╚╝──")
 
 
-@borg.on(admin_cmd(pattern="fyes ?(.*)"))
+@mellow.on(admin_cmd(pattern="fyes ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("yes,ehy not")
@@ -52,46 +52,46 @@ async def _(event):
         await event.edit("╔═╦╗╔═╗╔══╗\n╚╗║║║╦╝║══╣\n╔╩╗║║╩╗╠══║\n╚══╝╚═╝╚══╝")
 
 
-@borg.on(admin_cmd(pattern="fno ?(.*)"))
+@mellow.on(admin_cmd(pattern="fno ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("no never ")
         await asyncio.sleep(1)
         await event.edit("╔═╦╗╔═╗\n║║║║║║║\n║║║║║║║\n╚╩═╝╚═╝")
 
-@borg.on(admin_cmd(pattern="fbad ?(.*)"))
+@mellow.on(admin_cmd(pattern="fbad ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("very bad , i didnt like it")
         await asyncio.sleep(1)
         await event.edit("╔══╗╔══╗╔══╗\n║╔╗║║╔╗║╚╗╗║\n║╔╗║║╠╣║╔╩╝║\n╚══╝╚╝╚╝╚══╝")
 
-@borg.on(admin_cmd(pattern="fgd ?(.*)"))
+@mellow.on(admin_cmd(pattern="fgd ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔═╗───────╔╗ ─╔╗────╔╦╗\n║╬║╔═╗╔═╗╔╝║ ╔╝║╔═╗─║║║\n╠╗║║╬║║╬║║╬║ ║╬║║╬╚╗╠╗║\n╚═╝╚═╝╚═╝╚═╝ ╚═╝╚══╝╚═╝")
 
-@borg.on(admin_cmd(pattern="noice ?(.*)"))
+@mellow.on(admin_cmd(pattern="noice ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔═╦╗╔══╗╔═╗╔═╗\n║║║║╚║║╝║╔╝║╦╝\n║║║║╔║║╗║╚╗║╩╗\n╚╩═╝╚══╝╚═╝╚═╝")
 
-@borg.on(admin_cmd(pattern="really ?(.*)"))
+@mellow.on(admin_cmd(pattern="really ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔═╗╔═╗╔══╗╔╗─╔╗─╔═╦╗\n║╬║║╦╝║╔╗║║║─║║─╚╗║║\n║╗╣║╩╗║╠╣║║╚╗║╚╗╔╩╗║\n╚╩╝╚═╝╚╝╚╝╚═╝╚═╝╚══╝")
 
-@borg.on(admin_cmd(pattern="ooh ?(.*)"))
+@mellow.on(admin_cmd(pattern="ooh ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔═╗╔═╗╔═╗╔╗╔╗\n║║║║║║║║║║╚╝║\n║║║║║║║║║║╔╗║\n╚═╝╚═╝╚═╝╚╝╚╝")
 
-@borg.on(admin_cmd(pattern="maker ?(.*)"))
+@mellow.on(admin_cmd(pattern="maker ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔══╗╔══╗╔╦═╦╗╔══╗╔═╦╗\n║══╣║╔╗║║║║║║║╔╗║║║║║\n╠══║║╠╣║║║║║║║╠╣║║║║║\n╚══╝╚╝╚╝╚═╩═╝╚╝╚╝╚╩═╝")
 
-@borg.on(admin_cmd(pattern="pgl ?(.*)"))
+@mellow.on(admin_cmd(pattern="pgl ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔═╗╔══╗╔══╗╔══╗╔╗─\n║╬║║╔╗║║╔═╣║╔╗║║║─\n║╔╝║╠╣║║╚╗║║╠╣║║╚╗\n╚╝─╚╝╚╝╚══╝╚╝╚╝╚═╝")

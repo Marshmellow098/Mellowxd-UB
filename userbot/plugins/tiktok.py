@@ -11,7 +11,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 from userbot.utils import admin_cmd
 from userbot import CMD_HELP 
 
-@borg.on(admin_cmd("tti ?(.*)"))
+@mellow.on(admin_cmd("tti ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,7 +39,7 @@ async def _(event):
             await event.edit("**Error:** `unblock` @HK_tiktok_BOT `and retry!`")
             
 
-@borg.on(admin_cmd("ttv ?(.*)"))
+@mellow.on(admin_cmd("ttv ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -67,7 +67,7 @@ async def _(event):
             await event.edit("**Error:** `unblock` @HK_tiktok_BOT `and retry!`")
             
 
-@borg.on(admin_cmd("wttv ?(.*)"))
+@mellow.on(admin_cmd("wttv ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

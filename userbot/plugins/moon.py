@@ -11,7 +11,7 @@ from userbot.utils import admin_cmd
 from collections import deque
 
 
-@borg.on(admin_cmd(pattern=r"smoon"))
+@mellow.on(admin_cmd(pattern=r"smoon"))
 
 async def _(event):
 
@@ -49,7 +49,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd(pattern=r"tmoon"))
+@mellow.on(admin_cmd(pattern=r"tmoon"))
 async def _(event):
     if event.fwd_from:
         return

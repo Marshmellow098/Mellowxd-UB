@@ -21,7 +21,7 @@ aria2 = aria2p.API(
 
 EDIT_SLEEP_TIME_OUT = 10
 
-@borg.on(admin_cmd(pattern="fdownload ?(.*)"))
+@mellow.on(admin_cmd(pattern="fdownload ?(.*)"))
 async def magnet_download(event):
 	if event.fwd_from:
 		return

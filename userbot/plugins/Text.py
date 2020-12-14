@@ -7,7 +7,7 @@ from userbot.utils import admin_cmd
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="text (.*)"))
+@mellow.on(admin_cmd(pattern="text (.*)"))
 async def _(event):
     name = event.pattern_match.group(1)
     if event.fwd_from:

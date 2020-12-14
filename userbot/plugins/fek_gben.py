@@ -7,7 +7,7 @@ from userbot.utils import admin_cmd
 import asyncio
 from telethon import events
 
-@borg.on(admin_cmd(pattern="fgben"))
+@mellow.on(admin_cmd(pattern="fgben"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("Preparing to gban this nub nibba....")
@@ -122,7 +122,7 @@ async def _(event):
   
      
         
-@borg.on(admin_cmd(pattern="fungben ?(.*)"))
+@mellow.on(admin_cmd(pattern="fungben ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("Preparing to Ungban this nub nibba please weit for a while.....")

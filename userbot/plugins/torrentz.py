@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 from userbot.utils import admin_cmd, humanbytes
 
 
-@borg.on(admin_cmd(  # pylint:disable=E0602
+@mellow.on(admin_cmd(  # pylint:disable=E0602
     pattern="movie (torrentz2\.eu|idop\.se) (.*)"
 ))
 async def _(event):

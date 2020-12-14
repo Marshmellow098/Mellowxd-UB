@@ -14,7 +14,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@jarvisofficialsecuritybot"
 
-@borg.on(admin_cmd("fedban ?(.*)"))
+@mellow.on(admin_cmd("fedban ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return    
@@ -62,7 +62,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd("unfedban ?(.*)"))
+@mellow.on(admin_cmd("unfedban ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return    

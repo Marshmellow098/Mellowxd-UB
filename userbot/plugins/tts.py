@@ -21,7 +21,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern="tts (.*)"))
+@mellow.on(admin_cmd(pattern="tts (.*)"))
 
 async def _(event):
 

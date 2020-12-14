@@ -39,7 +39,7 @@ from uniborg.util import admin_cmd
 from telethon import events
 
 
-@borg.on(admin_cmd(pattern="deepfry(?: |$)(.*)", outgoing=True)) 
+@mellow.on(admin_cmd(pattern="deepfry(?: |$)(.*)", outgoing=True)) 
 async def deepfryer(event):
     try:
         frycount = int(event.pattern_match.group(1))

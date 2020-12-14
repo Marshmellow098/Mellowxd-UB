@@ -14,7 +14,7 @@ import asyncio
 from collections import deque
 from uniborg.util import admin_cmd
 
-@borg.on(admin_cmd(pattern=r"candy"))
+@mellow.on(admin_cmd(pattern=r"candy"))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -24,7 +24,7 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
     
-@borg.on(admin_cmd(pattern=r"nothappy"))
+@mellow.on(admin_cmd(pattern=r"nothappy"))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -34,7 +34,7 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
 
-@borg.on(admin_cmd(pattern=r"heart"))
+@mellow.on(admin_cmd(pattern=r"heart"))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -44,7 +44,7 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
     
-@borg.on(admin_cmd(pattern=r"tlol"))
+@mellow.on(admin_cmd(pattern=r"tlol"))
 async def _(event):
 	if event.fwd_from:
 		return
@@ -54,7 +54,7 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
     
-@borg.on(admin_cmd(pattern=r"lol"))
+@mellow.on(admin_cmd(pattern=r"lol"))
 async def _(event):
 	if event.fwd_from:
 		return

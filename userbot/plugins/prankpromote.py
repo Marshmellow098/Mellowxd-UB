@@ -11,7 +11,7 @@ from userbot.utils import admin_cmd
 
 
 """
-@borg.on(admin_cmd(pattern="promote ?(.*)"))
+@mellow.on(admin_cmd(pattern="promote ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -42,7 +42,7 @@ async def _(event):
         await event.edit("AJ SA TU MARA CHALA")
 """
 
-@borg.on(admin_cmd(pattern="prankpromote ?(.*)"))
+@mellow.on(admin_cmd(pattern="prankpromote ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

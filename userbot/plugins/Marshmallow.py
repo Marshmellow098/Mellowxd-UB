@@ -27,7 +27,7 @@ img15="https://telegra.ph/file/34ba55eb1543578a1fc92.jpg"
 
 
 
-@borg.on(admin_cmd(outgoing=True, pattern="mmh"))
+@mellow.on(admin_cmd(outgoing=True, pattern="mmh"))
 async def _(event):
     if event.fwd_from:
         return

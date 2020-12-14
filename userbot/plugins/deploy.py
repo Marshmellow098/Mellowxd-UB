@@ -15,7 +15,7 @@ from userbot import AUTONAME
 
 DEFAULTUSER = str(AUTONAME) if AUTONAME else "Marshmellow User"
 
-@borg.on(admin_cmd(pattern=r"deploy"))
+@mellow.on(admin_cmd(pattern=r"deploy"))
 
 async def _(event):
 

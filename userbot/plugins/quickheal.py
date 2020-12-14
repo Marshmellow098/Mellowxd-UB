@@ -7,7 +7,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"quickheal"))
+@mellow.on(admin_cmd(pattern=r"quickheal"))
 
 async def _(event):
 

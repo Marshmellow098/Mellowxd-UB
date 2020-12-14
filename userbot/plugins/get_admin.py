@@ -5,7 +5,7 @@ from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("get_ad?(m)in ?(.*)"))
+@mellow.on(admin_cmd("get_ad?(m)in ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

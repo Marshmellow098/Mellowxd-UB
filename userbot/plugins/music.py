@@ -10,7 +10,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"music"))
+@mellow.on(admin_cmd(pattern=r"music"))
 
 async def _(event):
 

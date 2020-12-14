@@ -12,7 +12,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@Missrose_bot"
 
-@borg.on(admin_cmd("createfed ?(.*)"))
+@mellow.on(admin_cmd("createfed ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return    

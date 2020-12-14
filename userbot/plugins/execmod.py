@@ -21,7 +21,7 @@ if not os.path.isdir("./SAVED"):
 if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
      os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
-@borg.on(admin_cmd(outgoing=True, pattern="pips(?: |$)(.*)"))
+@mellow.on(admin_cmd(outgoing=True, pattern="pips(?: |$)(.*)"))
 async def pipcheck(pip):
         pipmodule = pip.pattern_match.group(1)
         if pipmodule:
@@ -64,7 +64,7 @@ async def pipcheck(pip):
         else:
             await pip.edit("`Use .help system to see an example`")
 	
-@borg.on(admin_cmd(pattern="suicide$"))
+@mellow.on(admin_cmd(pattern="suicide$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -100,7 +100,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 	
-@borg.on(admin_cmd(pattern="plugins$"))
+@mellow.on(admin_cmd(pattern="plugins$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -136,7 +136,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@borg.on(admin_cmd(pattern="date$"))
+@mellow.on(admin_cmd(pattern="date$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -172,7 +172,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@borg.on(admin_cmd(pattern="env$"))
+@mellow.on(admin_cmd(pattern="env$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -208,7 +208,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@borg.on(admin_cmd(pattern="fast$"))
+@mellow.on(admin_cmd(pattern="fast$"))
 async def _(event):
     await event.edit("calculating...")
     if event.fwd_from:
@@ -245,7 +245,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@borg.on(admin_cmd(pattern="fortune$"))
+@mellow.on(admin_cmd(pattern="fortune$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -282,7 +282,7 @@ async def _(event):
         await event.edit(OUTPUT)
 
 
-@borg.on(admin_cmd(pattern="qquote$"))
+@mellow.on(admin_cmd(pattern="qquote$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -318,7 +318,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 	
-@borg.on(admin_cmd(pattern="fakeid$"))
+@mellow.on(admin_cmd(pattern="fakeid$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -354,7 +354,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@borg.on(admin_cmd(pattern="kwot$"))
+@mellow.on(admin_cmd(pattern="kwot$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -390,7 +390,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@borg.on(admin_cmd(pattern="qpro$"))
+@mellow.on(admin_cmd(pattern="qpro$"))
 async def _(event):
     if event.fwd_from:
         return

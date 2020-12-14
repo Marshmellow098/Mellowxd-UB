@@ -11,7 +11,7 @@ from telethon import events
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="screenshot (.*)"))
+@mellow.on(admin_cmd(pattern="screenshot (.*)"))
 async def _(event):
     if event.fwd_from:
         return

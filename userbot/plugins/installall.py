@@ -7,7 +7,7 @@ from pathlib import Path
 import userbot.utils
 import os
 
-@borg.on(admin_cmd(pattern=r"installall$"))
+@mellow.on(admin_cmd(pattern=r"installall$"))
 async def install(event):
 	if event.fwd_from:
 		return

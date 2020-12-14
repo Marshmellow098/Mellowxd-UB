@@ -17,7 +17,7 @@ def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-@borg.on(admin_cmd(pattern="gs (.*)"))
+@mellow.on(admin_cmd(pattern="gs (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -45,7 +45,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd(pattern="grs"))
+@mellow.on(admin_cmd(pattern="grs"))
 async def _(event):
     if event.fwd_from:
         return

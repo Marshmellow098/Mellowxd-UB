@@ -11,7 +11,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from userbot.events import register
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd("leave$"))
+@mellow.on(admin_cmd("leave$"))
 async def leave(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`I iz Leaving dis Lol Group kek!`")
@@ -21,7 +21,7 @@ async def leave(e):
         else:
             await e.edit('`But Boss! This is Not A Chat`')
 
-@borg.on(admin_cmd(";__;$"))
+@mellow.on(admin_cmd(";__;$"))
 #@register(outgoing=True, pattern="^;__;$")
 async def fun(e):
     t = ";__;"
@@ -29,7 +29,7 @@ async def fun(e):
         t = t[:-1] + "_;"
         await e.edit(t)
 
-@borg.on(admin_cmd("yo$"))
+@mellow.on(admin_cmd("yo$"))
 #@register(outgoing=True, pattern="^yo$")
 async def Ooo(e):
     t = "yo"
@@ -37,7 +37,7 @@ async def Ooo(e):
         t = t[:-1] + "oo"
         await e.edit(t)
 
-@borg.on(admin_cmd("Oof$"))
+@mellow.on(admin_cmd("Oof$"))
 #@register(outgoing=True, pattern="^Oof$")
 async def Oof(e):
     t = "Oof"
@@ -45,19 +45,19 @@ async def Oof(e):
         t = t[:-1] + "of"
         await e.edit(t)
 
-@borg.on(admin_cmd("ccry$"))
+@mellow.on(admin_cmd("ccry$"))
 #@register(outgoing=True, pattern="^.cry$")
 async def cry(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("(;´༎ຶД༎ຶ)")
 
-@borg.on(admin_cmd("fp$"))
+@mellow.on(admin_cmd("fp$"))
 #@register(outgoing=True, pattern="^.fp$")
 async def facepalm(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("🤦‍♂")
 
-@borg.on(admin_cmd("moon$"))
+@mellow.on(admin_cmd("moon$"))
 #@register(outgoing=True, pattern="^.mmoon$")
 async def _(event):
 	if event.fwd_from:
@@ -69,13 +69,13 @@ async def _(event):
 		deq.rotate(1)
 		
 
-@borg.on(admin_cmd("source$"))
+@mellow.on(admin_cmd("source$"))
 #@register(outgoing=True, pattern="^.source$")
 async def source(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("/Spandey112/SensibleUserbot")
 
-@borg.on(admin_cmd("readme$"))
+@mellow.on(admin_cmd("readme$"))
 #@register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
@@ -83,7 +83,7 @@ async def reedme(e):
 
 
 
-@borg.on(admin_cmd("heart$"))		
+@mellow.on(admin_cmd("heart$"))		
 #@register(outgoing=True, pattern="^.heart$")
 async def _(event):
 	if event.fwd_from:
@@ -94,7 +94,7 @@ async def _(event):
 		await event.edit("".join(deq))
 		deq.rotate(1)
 		
-@borg.on(admin_cmd("fap$"))
+@mellow.on(admin_cmd("fap$"))
 #@register(outgoing=True, pattern="^.fap$")
 async def _(event):
 	if event.fwd_from:

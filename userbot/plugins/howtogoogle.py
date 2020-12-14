@@ -12,7 +12,7 @@ import json
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("ggl (.*)"))
+@mellow.on(admin_cmd("ggl (.*)"))
 async def _(event):
     if event.fwd_from:
         return

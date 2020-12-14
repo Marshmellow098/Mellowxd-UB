@@ -7,7 +7,7 @@ from userbot.utils import admin_cmd
 from userbot import ALIVE_NAME
 
 
-@borg.on(admin_cmd(pattern="gbun"))
+@mellow.on(admin_cmd(pattern="gbun"))
 async def gbun(event):
     if event.fwd_from:
         return

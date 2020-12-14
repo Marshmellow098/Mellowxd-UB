@@ -4,7 +4,7 @@ from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern="join"))
+@mellow.on(admin_cmd(pattern="join"))
 async def _(event):
     if event.fwd_from:
         return
@@ -20,7 +20,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@borg.on(admin_cmd(pattern="pay"))
+@mellow.on(admin_cmd(pattern="pay"))
 async def _(event):
     if event.fwd_from:
         return
@@ -38,7 +38,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd(pattern="climb"))
+@mellow.on(admin_cmd(pattern="climb"))
 async def _(event):
     if event.fwd_from:
         return
@@ -54,7 +54,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@borg.on(admin_cmd(pattern="aag"))
+@mellow.on(admin_cmd(pattern="aag"))
 async def _(event):
     if event.fwd_from:
         return
@@ -70,7 +70,7 @@ async def _(event):
         await event.reply(mentions)
     await event.delete()
 
-@borg.on(admin_cmd(pattern="push"))
+@mellow.on(admin_cmd(pattern="push"))
 async def _(event):
     if event.fwd_from:
         return
@@ -87,7 +87,7 @@ async def _(event):
     await event.delete()
 
 
-@borg.on(admin_cmd(pattern="work"))
+@mellow.on(admin_cmd(pattern="work"))
 async def _(event):
     if event.fwd_from:
         return

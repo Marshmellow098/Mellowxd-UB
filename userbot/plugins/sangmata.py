@@ -10,7 +10,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd("sg ?(.*)"))
+@mellow.on(admin_cmd("sg ?(.*)"))
 
 async def _(event):
 
@@ -76,7 +76,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd("fakemail ?(.*)"))
+@mellow.on(admin_cmd("fakemail ?(.*)"))
 
 async def _(event):
 
@@ -144,7 +144,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd("ub ?(.*)"))
+@mellow.on(admin_cmd("ub ?(.*)"))
 
 async def _(event):
 
@@ -208,7 +208,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd("gid ?(.*)"))
+@mellow.on(admin_cmd("gid ?(.*)"))
 
 async def _(event):
 
@@ -272,7 +272,7 @@ async def _(event):
 
                 
 
-@borg.on(admin_cmd("urban ?(.*)"))
+@mellow.on(admin_cmd("urban ?(.*)"))
 
 async def _(event):
 

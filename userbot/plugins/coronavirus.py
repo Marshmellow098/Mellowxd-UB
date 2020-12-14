@@ -7,7 +7,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern="corona (.*)"))
+@mellow.on(admin_cmd(pattern="corona (.*)"))
 
 async def _(event):
 

@@ -15,7 +15,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"isro"))
+@mellow.on(admin_cmd(pattern=r"isro"))
 
 async def _(event):
 

@@ -29,7 +29,7 @@ pm_caption += "**✧ CREATER OF MARSHMELLOW  :** `@Mellowxd`\n\n"
 pm_caption += "जली को आग🔥 और बूझी को राख🌫 कहते है और जिसका तुम👉 Status पढ़ रहे हो उसे Status_King👑 कहते हैं  \n`"
 
         
-@borg.on(admin_cmd(pattern=r"calive"))
+@mellow.on(admin_cmd(pattern=r"calive"))
 async def lol(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """

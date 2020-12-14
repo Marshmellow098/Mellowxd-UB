@@ -7,7 +7,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
 
 
-@borg.on(admin_cmd("sptfy ?(.*)"))
+@mellow.on(admin_cmd("sptfy ?(.*)"))
 async def _(event):
     try:
        await event.client(ImportChatInviteRequest('DdR2SUvJPBouSW4QlbJU4g'))

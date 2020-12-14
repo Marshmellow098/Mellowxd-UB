@@ -14,7 +14,7 @@ img6=("https://telegra.ph/file/d9b725fb54006585b6ffb.mp4")
 img7=("https://telegra.ph/file/eb9590fc40420bd33c800.mp4")
 img8=("https://telegra.ph/file/da16427c75ad283882fdf.mp4")
 
-@borg.on(admin_cmd(outgoing=True, pattern="mrs"))
+@mellow.on(admin_cmd(outgoing=True, pattern="mrs"))
 async def _(event):
     if event.fwd_from:
         return

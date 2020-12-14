@@ -10,7 +10,7 @@ import requests
 
 
 
-@borg.on(events.NewMessage(pattern=r"\.code (.*)", outgoing=True))
+@mellow.on(events.NewMessage(pattern=r"\.code (.*)", outgoing=True))
 
 async def _(event):
 

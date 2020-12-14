@@ -16,7 +16,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd(r"roundv$"))
+@mellow.on(admin_cmd(r"roundv$"))
 async def _(event):
     if event.fwd_from:
         return 

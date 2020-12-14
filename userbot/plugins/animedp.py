@@ -32,7 +32,7 @@ async def animepp():
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
     urllib.request.urlretrieve(fy,"donottouch.jpg")
     
-@borg.on(admin_cmd(pattern="animedp ?(.*)"))
+@mellow.on(admin_cmd(pattern="animedp ?(.*)"))
 async def main(event):
     await event.edit("**Started Anime Profile Pic\n\n Check Your Dp**")    
     while True:

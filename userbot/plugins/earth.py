@@ -6,7 +6,7 @@ import asyncio
 from collections import deque
 from uniborg.util import admin_cmd
 
-@borg.on(admin_cmd(pattern="earth"))
+@mellow.on(admin_cmd(pattern="earth"))
 async def _(event):
 	if event.fwd_from:
 		return

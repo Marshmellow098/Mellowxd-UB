@@ -21,7 +21,7 @@ import zipfile
 extracted = Config.TMP_DOWNLOAD_DIRECTORY + "extracted/"
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 
-@borg.on(admin_cmd("zip"))
+@mellow.on(admin_cmd("zip"))
 async def _(event):
     if event.fwd_from:
         return

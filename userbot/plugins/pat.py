@@ -31,7 +31,7 @@ PAT_IMAGE = "pat.jpg"
 
 
 
-@borg.on(admin_cmd(pattern="pat ?(.*)", outgoing =True))
+@mellow.on(admin_cmd(pattern="pat ?(.*)", outgoing =True))
 async def lastfm(event):
     if event.fwd_from:
         return

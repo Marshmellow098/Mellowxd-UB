@@ -13,7 +13,7 @@ from telethon import events, types, functions, utils
 
 def choser(cmd, pack, blacklist={}):
     docs = None
-    @borg.on(events.NewMessage(pattern=rf'\.{cmd}', outgoing=True))
+    @mellow.on(events.NewMessage(pattern=rf'\.{cmd}', outgoing=True))
     async def handler(event):
         await event.delete()
 

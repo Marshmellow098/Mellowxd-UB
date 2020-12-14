@@ -5,7 +5,7 @@ from telethon.tl import types
 from userbot import CMD_HELP 
 
 
-@borg.on(admin_cmd(pattern="gps ?(.*)"))
+@mellow.on(admin_cmd(pattern="gps ?(.*)"))
 async def gps(event):
     if event.fwd_from:
         return

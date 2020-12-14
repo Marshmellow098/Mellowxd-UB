@@ -5,7 +5,7 @@ Took from @HellBot_Offical made by @Kraken_The_BadASS
 from userbot.utils import admin_cmd,edit_or_reply
 from var import Var
 
-@borg.on(admin_cmd(pattern="xogame$"))
+@mellow.on(admin_cmd(pattern="xogame$"))
 async def gamez(event):
     if event.fwd_from:
         return

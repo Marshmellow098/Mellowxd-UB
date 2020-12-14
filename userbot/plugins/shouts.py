@@ -9,7 +9,7 @@ from uniborg.util import admin_cmd
 import random
 
 
-@borg.on(events.NewMessage(pattern=r"\.shouts", outgoing=True))
+@mellow.on(events.NewMessage(pattern=r"\.shouts", outgoing=True))
 async def shout(args):
     if args.fwd_from:
         return

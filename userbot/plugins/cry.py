@@ -8,7 +8,7 @@ import asyncio
 
 
 
-@borg.on(admin_cmd(pattern="lcry"))
+@mellow.on(admin_cmd(pattern="lcry"))
 
 async def _(event):
 

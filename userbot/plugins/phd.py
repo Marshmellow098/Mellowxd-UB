@@ -27,7 +27,7 @@ from telethon.tl.functions.messages import ImportChatInviteRequest
 
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd("phd ?(.*)"))
+@mellow.on(admin_cmd("phd ?(.*)"))
 
 async def _(event):
 

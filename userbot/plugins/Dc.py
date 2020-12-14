@@ -8,7 +8,7 @@ import os, urllib, requests, asyncio
 from userbot.uniborgConfig import Config
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern="colp$", outgoing=True))
+@mellow.on(admin_cmd(pattern="colp$", outgoing=True))
 async def detect(event):
     if Config.DEEP_AI is None:
         return await event.edit(

@@ -11,7 +11,7 @@ import sys
 import random
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern=r"tip$", outgoing=True))
+@mellow.on(admin_cmd(pattern=r"tip$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

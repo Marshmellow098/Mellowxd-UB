@@ -1,6 +1,6 @@
 from userbot.utils import admin_cmd
 
-@borg.on(admin_cmd(pattern=r"hhi ?(.*)"))
+@mellow.on(admin_cmd(pattern=r"hhi ?(.*)"))
 async def hhi(event):
     giveVar = event.text
     cat = giveVar[5:6]

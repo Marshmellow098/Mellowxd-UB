@@ -15,7 +15,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd("screencapture (.*)"))
+@mellow.on(admin_cmd("screencapture (.*)"))
 
 async def _(event):
 

@@ -13,7 +13,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"jio"))
+@mellow.on(admin_cmd(pattern=r"jio"))
 
 async def _(event):
 

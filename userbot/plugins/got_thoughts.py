@@ -18,7 +18,7 @@ import random
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern=r"gott", outgoing=True))
+@mellow.on(admin_cmd(pattern=r"gott", outgoing=True))
 
 async def _(event):
 

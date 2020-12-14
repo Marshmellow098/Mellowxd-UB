@@ -12,7 +12,7 @@ from telethon import events
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd(pattern=r"upb"))
+@mellow.on(admin_cmd(pattern=r"upb"))
 async def batch_upload(event):
 	if event.fwd_from:
 		return   

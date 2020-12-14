@@ -40,7 +40,7 @@ USER_BOT_NO_WARN = (
 
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @borg.on(admin_cmd(pattern="allow ?(.*)"))
+    @mellow.on(admin_cmd(pattern="allow ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
            return

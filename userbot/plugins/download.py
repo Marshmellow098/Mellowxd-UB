@@ -15,7 +15,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
 
 
-@borg.on(admin_cmd(pattern="dwl ?(.*)"))
+@mellow.on(admin_cmd(pattern="dwl ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

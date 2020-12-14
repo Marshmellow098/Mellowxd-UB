@@ -5,7 +5,7 @@ import io
 from userbot.utils import admin_cmd
 
 
-@borg.on(admin_cmd("json"))
+@mellow.on(admin_cmd("json"))
 async def _(event):
     if event.fwd_from:
         return

@@ -17,7 +17,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd("unoob"))
+@mellow.on(admin_cmd("unoob"))
 
 async def _(event):
 
@@ -51,7 +51,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
             
             
-@borg.on(admin_cmd("menoob"))
+@mellow.on(admin_cmd("menoob"))
 
 async def _(event):
 
@@ -84,7 +84,7 @@ async def _(event):
         await event.edit(animation_chars[i % 9])
         await asyncio.sleep(animation_interval) 
             
-@borg.on(admin_cmd("upro"))
+@mellow.on(admin_cmd("upro"))
 
 async def _(event):
 
@@ -116,7 +116,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
         await asyncio.sleep(animation_interval)  
             
-@borg.on(admin_cmd("mepro"))
+@mellow.on(admin_cmd("mepro"))
 
 async def _(event):
 

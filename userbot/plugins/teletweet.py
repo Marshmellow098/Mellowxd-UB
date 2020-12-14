@@ -41,7 +41,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(IF_EMOJI, '', inputString)
 
 
-@borg.on(admin_cmd(pattern="tweet(?: |$)(.*)"))
+@mellow.on(admin_cmd(pattern="tweet(?: |$)(.*)"))
 
 async def tweet(okie):
 #"""Creates random anime sticker!"""

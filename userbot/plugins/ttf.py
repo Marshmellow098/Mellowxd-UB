@@ -3,7 +3,7 @@ import asyncio
 from uniborg.util import admin_cmd
 
 
-@borg.on(admin_cmd(pattern="ttf ?(.*)"))
+@mellow.on(admin_cmd(pattern="ttf ?(.*)"))
 async def get(event):
     name = event.text[5:]
     m = await event.get_reply_message()

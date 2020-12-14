@@ -27,7 +27,7 @@ PRO_STRINGS = [
      "`Pros here -_- Time to Leave`",
 ]
 
-@borg.on(admin_cmd(pattern="run ?(.*)"))
+@mellow.on(admin_cmd(pattern="run ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -37,7 +37,7 @@ async def _(event):
     await event.edit(reply_text)
 
 
-@borg.on(admin_cmd(pattern="metoo ?(.*)"))
+@mellow.on(admin_cmd(pattern="metoo ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -47,7 +47,7 @@ async def _(event):
     await event.edit(reply_text)
 			  
 			  
-@borg.on(admin_cmd(pattern="proo ?(.*)"))
+@mellow.on(admin_cmd(pattern="proo ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return

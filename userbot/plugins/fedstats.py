@@ -17,7 +17,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@MissRose_bot"
 
-@borg.on(admin_cmd("fstat ?(.*)"))
+@mellow.on(admin_cmd("fstat ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return    

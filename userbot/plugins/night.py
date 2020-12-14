@@ -15,7 +15,7 @@ night_time = None
 last_night_message = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-@borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
+@mellow.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
 async def set_not_night(event):
     global USER_night  # pylint:disable=E0602
     global night_time  # pylint:disable=E0602
@@ -39,7 +39,7 @@ async def set_not_night(event):
         USER_night = {}  # pylint:disable=E0602
         night_time = None  # pylint:disable=E0602
 
-@borg.on(admin_cmd(pattern=r"night ?(.*)"))
+@mellow.on(admin_cmd(pattern=r"night ?(.*)"))
 
 async def _(event):
     if event.fwd_from:
@@ -76,7 +76,7 @@ async def _(event):
             logger.warn(str(e))  # pylint:disable=E0602
 
 
-@borg.on(events.NewMessage(  # pylint:disable=E0602
+@mellow.on(events.NewMessage(  # pylint:disable=E0602
     incoming=True,
     func=lambda e: bool(e.mentioned or e.is_private)
 ))

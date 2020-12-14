@@ -18,7 +18,7 @@ from userbot.utils import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"rdl"))
+@mellow.on(admin_cmd(pattern=r"rdl"))
 async def _(event):
     if event.fwd_from:
         return

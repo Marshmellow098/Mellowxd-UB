@@ -7,7 +7,7 @@ from uniborg.util import admin_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"snake"))
+@mellow.on(admin_cmd(pattern=r"snake"))
 
 async def _(event):
 

@@ -11,7 +11,7 @@ DEL_TIME_OUT = 60
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 
-@borg.on(admin_cmd(pattern="cname"))  # pylint:disable=E0602
+@mellow.on(admin_cmd(pattern="cname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
