@@ -1,16 +1,17 @@
-""" Google Translate
+""" tool from Dark cobra thx to Mr Hellboy Atul Sir 
+ Google Translate
 Available Commands:
 .tr LanguageCode as reply to a message
 .tr LangaugeCode | text to translate"""
 
 import emoji
 from googletrans import Translator
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from telethon import events
 
 
 
-@borg.on(admin_cmd(pattern="tr ?(.*)"))
+@borg.on(mellow_cmd(pattern="tr ?(.*)"))
 @borg.on(events.NewMessage(pattern=r"\.tr ?(.*)",incoming=True))
 async def _(event):
     if event.fwd_from:
@@ -36,7 +37,7 @@ async def _(event):
         after_tr_text = translated.text
         # TODO: emojify the :
         # either here, or before translation
-        output_str = """**Translated By 𝔻𝔸ℝ𝕂 ℂ𝕆𝔹ℝ𝔸** 
+        output_str = """**Translated By Marshmellow Userbot** 
          Source **( {} )**
          Translation **( {} )**
          {}""".format(
