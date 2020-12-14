@@ -128,8 +128,8 @@ def load_module(shortname):
         mod.Var = Var
         mod.command = command
         mod.logger = logging.getLogger(shortname)
-        # support for uni@mellow
-        sys.modules["uni@mellow.util"] = userbot.utils
+        # support for uniborg
+        sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.mellow = bot
         # support for paperplaneextended
