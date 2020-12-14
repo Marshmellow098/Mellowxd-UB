@@ -2,7 +2,7 @@ from telethon import events
 import asyncio
 import os
 import sys
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import random
 #Fuckboys
 img1=("https://telegra.ph/file/d8e36bd381b070df21bf1.mp4")
