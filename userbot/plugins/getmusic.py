@@ -30,7 +30,7 @@ async def getmusic(so):
         return
     await so.client(JoinChannelRequest("t.me/Anitimeofficial"))
     song = so.pattern_match.group(1)
-    chat = "@MissAndrea_Bot"
+    chat = "@SongsForYouBot"
     link = f"/song {song}"
     await so.edit("```Getting Your Music```")
     async with bot.conversation(chat) as conv:
