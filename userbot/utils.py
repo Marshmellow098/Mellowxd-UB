@@ -24,7 +24,7 @@ from typing import List
 
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from userbot.uni@mellowConfig import Config
+    from userbot.uniborgConfig import Config
 else:
     if os.path.exists("config.py"):
         from config import Development as Config
@@ -128,8 +128,8 @@ def load_module(shortname):
         mod.Var = Var
         mod.command = command
         mod.logger = logging.getLogger(shortname)
-        # support for uni@mellow
-        sys.modules["uni@mellow.util"] = userbot.utils
+        # support for uniborg
+        sys.modules["uniborg.util"] = userbot.utils
         mod.Config = Config
         mod.mellow = bot
         # support for paperplaneextended
@@ -156,7 +156,7 @@ def remove_plugin(shortname):
     except:
         raise ValueError
 
-def mellow_cmd(pattern=None, **args):
+def admin_cmd(pattern=None, **args):
     args["func"] = lambda e: e.via_bot_id is None
     stack = inspect.stack()
     previous_stack_frame = stack[1]
