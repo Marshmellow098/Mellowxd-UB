@@ -24,7 +24,7 @@ from typing import List
 
 ENV = bool(os.environ.get("ENV", False))
 if ENV:
-    from userbot.uni@mellowConfig import Config
+    from userbot.uniborg import Config
 else:
     if os.path.exists("config.py"):
         from config import Development as Config
