@@ -1,5 +1,5 @@
 # Thanks to prothinkergang 
-# Thanks to @YOU_ARE_UNDER_ARREST for alive pic
+# Thaks to my self for making 
 
 
 
@@ -8,7 +8,7 @@ import os
 import asyncio
 import random
 from telethon import events
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import ALIVE_NAME, ALIVE_PIC
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MARSHMELLOW USER"
@@ -31,9 +31,9 @@ pm_caption +=f"**[Support Group](https://t.me/marshmellowsupport)**\n\n"
 pm_caption +=f"**[Channel for Updates](https://t.me/marshmellowuserbot)**\n\n"
 pm_caption +=f"**Wanna deploy your owm Marshmellow pay me 10000 dollar**\n\n"
 pm_caption += "[REPO](https://github.com/Marshmellow098/MARSHMELLOW-USERBOT)"
-@mellow.on(admin_cmd(pattern=r"alive"))
+@mellow.on(mellow_cmd(pattern=r"alive"))
 async def amireallyalive(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
-    await borg.send_file(alive.chat_id,file=ALIVE_PIC,caption=pm_caption)
+    await mellow.send_file(alive.chat_id,file=ALIVE_PIC,caption=pm_caption)
     await alive.delete()
