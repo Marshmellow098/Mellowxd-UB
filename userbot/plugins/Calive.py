@@ -6,7 +6,7 @@ import os
 import asyncio
 import random
 from telethon import events
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import ALIVE_NAME, ALIVE_PIC
 from telethon.tl.types import ChannelParticipantsAdmins
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "MARSHMELLOW USER"
@@ -29,9 +29,9 @@ pm_caption += "**✧ CREATER OF MARSHMELLOW  :** `@Mellowxd`\n\n"
 pm_caption += "जली को आग🔥 और बूझी को राख🌫 कहते है और जिसका तुम👉 Status पढ़ रहे हो उसे Status_King👑 कहते हैं  \n`"
 
         
-@mellow.on(admin_cmd(pattern=r"calive"))
+@mellow.on(mellow_cmd(pattern=r"calive"))
 async def lol(alive):
     chat = await alive.get_chat()
     """ For .alive command, check if the bot is running.  """
-    await borg.send_file(alive.chat_id,file=ALIVE_PIC,caption=pm_caption)
+    await mellow.send_file(alive.chat_id,file=ALIVE_PIC,caption=pm_caption)
     await alive.delete()
