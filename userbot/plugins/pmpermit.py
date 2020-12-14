@@ -2,7 +2,7 @@ import os
 import time
 import asyncio
 import io
-from userbot.uni@mellowConfig import Config
+from userbot.uniborgConfig import Config
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
@@ -40,7 +40,7 @@ USER_BOT_NO_WARN = (
 
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @mellow.on(mellow_cmd(pattern="allow ?(.*)"))
+    borg.on(mellow_cmd(pattern="allow ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
            return
@@ -70,7 +70,7 @@ if Var.PRIVATE_GROUP_ID is not None:
                 if not chat.id in PM_WARNS:
                     pmpermit_sql.approve(chat.id, "outgoing")
                     bruh = "**=>> User has been auto-approved Bcoz outgoing messages..**"
-                    rko = await @mellow.send_message(event.chat_id, bruh)
+                    rko = await borg.send_message(event.chat_id, bruh)
                     await asyncio.sleep(4)
                     await rko.delete()
 
@@ -233,7 +233,7 @@ async def hehehe(event):
     if event.is_private:
         if not pmpermit_sql.is_approved(chat.id):
             pmpermit_sql.approve(chat.id, "**My Boss Is Best🔥**")
-            await @mellow.send_message(chat, "**Boss Meet My Creator he made me..he is the best you know..**")
+            await borg.send_message(chat, "**Boss Meet My Creator he made me..he is the best you know..**")
             
             
             

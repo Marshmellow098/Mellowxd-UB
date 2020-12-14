@@ -15,7 +15,7 @@ from telethon.tl.types import DocumentAttributeVideo
 from userbot.utils import mellow_cmd, humanbytes, progress, time_formatter
 
 
-@mellow.on(mellow_cmd(pattern="dwl ?(.*)"))
+borg.on(mellow_cmd(pattern="dwl ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -28,7 +28,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await @mellow.download_media(
+            downloaded_file_name = await borg.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(

@@ -10,7 +10,7 @@ import asyncio
 
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd("nope"))
+borg.on(mellow_cmd("nope"))
 async def _(event):
     if event.fwd_from:
         return

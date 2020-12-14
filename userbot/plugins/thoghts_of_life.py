@@ -19,7 +19,7 @@ import random
 
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd(pattern=f"tip", allow_sudo=True))
+borg.on(mellow_cmd(pattern=f"tip", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

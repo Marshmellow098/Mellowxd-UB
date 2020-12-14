@@ -5,7 +5,7 @@ from userbot import CMD_HELP
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern=r"open", outgoing=True))
+borg.on(mellow_cmd(pattern=r"open", outgoing=True))
 
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
@@ -21,7 +21,7 @@ async def _(event):
     os.remove(b)
 
 
-@mellow.on(mellow_cmd(pattern="doc ?(.*)"))
+borg.on(mellow_cmd(pattern="doc ?(.*)"))
 async def get(event):
     name = event.text[5:]
     if name is None:

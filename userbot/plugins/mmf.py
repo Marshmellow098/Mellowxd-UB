@@ -17,7 +17,7 @@ from userbot.utils import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd(pattern=r"mmf ?(.*)"))
+borg.on(mellow_cmd(pattern=r"mmf ?(.*)"))
 
 async def handler(event):
 
@@ -39,7 +39,7 @@ async def handler(event):
 
         return
 
-    file = await @mellow.download_media(reply_message, Var.TEMP_DOWNLOAD_DIRECTORY)
+    file = await borg.download_media(reply_message, Var.TEMP_DOWNLOAD_DIRECTORY)
 
     a = await event.reply("```Memifying this image..```")
 

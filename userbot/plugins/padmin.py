@@ -8,11 +8,11 @@ from telethon import events
 
 import asyncio
 
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd(pattern=r"padmin"))
+borg.on(mellow_cmd(pattern=r"padmin"))
 
 async def _(event):
 

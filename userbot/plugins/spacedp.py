@@ -49,7 +49,7 @@ async def animepp():
 
     urllib.request.urlretrieve(fy,"friday.jpg")
 
-@mellow.on(mellow_cmd(pattern="spacedp ?(.*)"))
+borg.on(mellow_cmd(pattern="spacedp ?(.*)"))
 
 async def main(event):
 

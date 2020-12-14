@@ -14,7 +14,7 @@ img6=("https://telegra.ph/file/d9b725fb54006585b6ffb.mp4")
 img7=("https://telegra.ph/file/eb9590fc40420bd33c800.mp4")
 img8=("https://telegra.ph/file/da16427c75ad283882fdf.mp4")
 
-@mellow.on(mellow_cmd(outgoing=True, pattern="mrs"))
+borg.on(mellow_cmd(outgoing=True, pattern="mrs"))
 async def _(event):
     if event.fwd_from:
         return
@@ -22,26 +22,26 @@ async def _(event):
     await asyncio.sleep(0.9)
     x=(random.randrange(1,8))
     if x==1:
-        await @mellow.send_file(event.chat_id,img1)
+        await borg.send_file(event.chat_id,img1)
         await event.delete()
     if x==2:
-        await @mellow.send_file(event.chat_id,img2)
+        await borg.send_file(event.chat_id,img2)
         await event.delete()
     if x==3:
-        await @mellow.send_file(event.chat_id,img3)
+        await borg.send_file(event.chat_id,img3)
         await event.delete()
     if x==4:
-        await @mellow.send_file(event.chat_id,img3)
+        await borg.send_file(event.chat_id,img3)
         await event.delete()        
     if x==5:
-        await @mellow.send_file(event.chat_id,img4)
+        await borg.send_file(event.chat_id,img4)
         await event.delete()
     if x==6:
-        await @mellow.send_file(event.chat_id,img5)
+        await borg.send_file(event.chat_id,img5)
         await event.delete()
     if x==7:
-        await @mellow.send_file(event.chat_id,img6)
+        await borg.send_file(event.chat_id,img6)
         await event.delete()
     if x==8:
-        await @mellow.send_file(event.chat_id,img7)
+        await borg.send_file(event.chat_id,img7)
         await event.delete()      

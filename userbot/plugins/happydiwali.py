@@ -7,7 +7,7 @@ from telethon import events
 import asyncio 
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd(pattern="diwali"))
+borg.on(mellow_cmd(pattern="diwali"))
 async def _(event):
     if event.fwd_from:
         return

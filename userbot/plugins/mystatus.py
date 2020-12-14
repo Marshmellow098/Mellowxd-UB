@@ -10,13 +10,13 @@ Note - If you have a last name remove it unless it automatically removed.
 import os , urllib
 from telethon import events
 from telethon.tl import functions
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
 OFFLINE_TAG = "[OFFLINE]"
 ONLINE_TAG = "[ONLINE]"
 PROFILE_IMAGE = os.environ.get("PROFILE_IMAGE", "https://telegra.ph/file/9f0638dbfa028162a8682.jpg")
 
-@mellow.on(mellow_cmd(pattern="offline"))  # pylint:disable=E0602
+borg.on(mellow_cmd(pattern="offline"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -33,7 +33,7 @@ async def _(event):
     if photo:
         file = await event.client.upload_file(photo)
         try:
-            await @mellow(functions.photos.UploadProfilePhotoRequest(file))
+            await borg(functions.photos.UploadProfilePhotoRequest(file))
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
         else:
@@ -45,7 +45,7 @@ async def _(event):
     last_name = ""
     first_name = OFFLINE_TAG
     try:
-        await @mellow(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
+        await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
             last_name=last_name,
             first_name=first_name
         ))
@@ -54,7 +54,7 @@ async def _(event):
     except Exception as e:  # pylint:disable=C0103,W0703
         await event.edit(str(e))
 
-@mellow.on(mellow_cmd(pattern="online"))  # pylint:disable=E0602
+borg.on(mellow_cmd(pattern="online"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -72,7 +72,7 @@ async def _(event):
     if photo:
         file = await event.client.upload_file(photo)
         try:
-            await @mellow(functions.photos.UploadProfilePhotoRequest(file))
+            await borg(functions.photos.UploadProfilePhotoRequest(file))
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
         else:
@@ -84,7 +84,7 @@ async def _(event):
     first_name = ONLINE_TAG
     last_name = ""
     try:
-        await @mellow(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
+        await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
             last_name=last_name,
             first_name=first_name
         ))

@@ -52,7 +52,7 @@ async def _(event):
         result = f"{r_json}"
     
         await devent.delete()
-        await @mellow.send_message(
+        await borg.send_message(
         event.chat_id,
         file=result)
     
@@ -77,7 +77,7 @@ async def _(event):
       result = f"{r_json}"
     
       await devent.delete()
-      await @mellow.send_message(
+      await borg.send_message(
       event.chat_id,
       file=result)
 

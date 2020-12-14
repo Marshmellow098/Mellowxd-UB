@@ -17,7 +17,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@mellow.on(mellow_cmd(incoming=True))
+borg.on(mellow_cmd(incoming=True))
 async def _(event):
     # logger.info(CHAT_FLOOD)
     if not CHAT_FLOOD:
@@ -58,7 +58,7 @@ because he reached the defined flood limit.""".format(event.message.from_id),
         )
 
 
-@mellow.on(mellow_cmd(pattern="setflood (.*)"))
+borg.on(mellow_cmd(pattern="setflood (.*)"))
 async def _(event):
     if event.fwd_from:
         return

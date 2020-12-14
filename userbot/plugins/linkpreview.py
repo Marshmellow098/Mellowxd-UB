@@ -5,7 +5,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd(pattern="ctg ?(.*)"))
+borg.on(mellow_cmd(pattern="ctg ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

@@ -8,7 +8,7 @@ from datetime import datetime
 from userbot.utils import mellow_cmd, progress
 
 
-@mellow.on(mellow_cmd(pattern="convert (.*)"))  # pylint:disable=E0602
+borg.on(mellow_cmd(pattern="convert (.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -21,7 +21,7 @@ async def _(event):
     try:
         start = datetime.now()
         c_time = time.time()
-        downloaded_file_name = await @mellow.download_media(
+        downloaded_file_name = await borg.download_media(
             reply_message,
             Config.TMP_DOWNLOAD_DIRECTORY,
             progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -90,7 +90,7 @@ async def _(event):
         os.remove(downloaded_file_name)
         if os.path.exists(new_required_file_name):
             end_two = datetime.now()
-            await @mellow.send_file(
+            await borg.send_file(
                 entity=event.chat_id,
                 file=new_required_file_name,
                 caption=new_required_file_caption,

@@ -17,7 +17,7 @@ def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-@mellow.on(mellow_cmd(pattern="google search (.*)"))
+borg.on(mellow_cmd(pattern="google search (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -42,7 +42,7 @@ async def _(event):
     await event.edit("Google: {}\n{}".format(input_str, output_str), link_preview=False)
 
 
-@mellow.on(mellow_cmd(pattern="google image (.*)"))
+borg.on(mellow_cmd(pattern="google image (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -66,7 +66,7 @@ async def _(event):
     if len(lst) == 0:
         await event.delete()
         return
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id,
         lst,
         caption=input_str,
@@ -83,7 +83,7 @@ async def _(event):
     await event.delete()
 
 
-@mellow.on(mellow_cmd(pattern="google reverse search"))
+borg.on(mellow_cmd(pattern="google reverse search"))
 async def _(event):
     if event.fwd_from:
         return
@@ -95,7 +95,7 @@ async def _(event):
         previous_message = await event.get_reply_message()
         previous_message_text = previous_message.message
         if previous_message.media:
-            downloaded_file_name = await @mellow.download_media(
+            downloaded_file_name = await borg.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY
             )

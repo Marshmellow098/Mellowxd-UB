@@ -11,8 +11,8 @@ from telethon import events
 
 
 
-@mellow.on(mellow_cmd(pattern="tr ?(.*)"))
-@mellow.on(events.NewMessage(pattern=r"\.tr ?(.*)",incoming=True))
+borg.on(mellow_cmd(pattern="tr ?(.*)"))
+borg.on(events.NewMessage(pattern=r"\.tr ?(.*)",incoming=True))
 async def _(event):
     if event.fwd_from:
         return

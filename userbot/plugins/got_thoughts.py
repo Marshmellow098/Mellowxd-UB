@@ -15,10 +15,10 @@ import os
 import sys
 
 import random
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern=r"gott", outgoing=True))
+borg.on(mellow_cmd(pattern=r"gott", outgoing=True))
 
 async def _(event):
 

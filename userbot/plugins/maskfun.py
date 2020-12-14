@@ -23,7 +23,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
     linc= event.text
     link=linc[7:]
     pic=linc[31:]
@@ -61,7 +61,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -83,7 +83,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
     import cv2
 
@@ -119,7 +119,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -141,7 +141,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -178,7 +178,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -201,7 +201,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -238,7 +238,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -259,7 +259,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -296,7 +296,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -317,7 +317,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -354,7 +354,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -375,7 +375,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -412,7 +412,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -433,7 +433,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -470,7 +470,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):

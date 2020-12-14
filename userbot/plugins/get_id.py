@@ -5,7 +5,7 @@ from telethon.utils import pack_bot_file_id
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd("get_id"))
+borg.on(mellow_cmd("get_id"))
 async def _(event):
     if event.fwd_from:
         return

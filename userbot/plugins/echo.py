@@ -31,7 +31,7 @@ from ..utils import mellow_cmd, edit_or_reply
 from .sql_helper.echo_sql import addecho, get_all_echos, is_echo, remove_echo
 
 
-@mellow.on(mellow_cmd(pattern="enableecho$"))
+borg.on(mellow_cmd(pattern="enableecho$"))
 async def echo(cat):
     if cat.fwd_from:
         return
@@ -54,7 +54,7 @@ async def echo(cat):
         await edit_or_reply(cat, "Reply To A User's Message to echo his messages")
 
 
-@mellow.on(mellow_cmd(pattern="disableecho$"))
+borg.on(mellow_cmd(pattern="disableecho$"))
 async def echo(cat):
     if cat.fwd_from:
         return
@@ -77,7 +77,7 @@ async def echo(cat):
         await edit_or_reply(cat, "Reply To A User's Message to echo his messages")
 
 
-@mellow.on(mellow_cmd(pattern="listecho$"))
+borg.on(mellow_cmd(pattern="listecho$"))
 async def echo(cat):
     if cat.fwd_from:
         return
@@ -106,7 +106,7 @@ async def echo(cat):
         await edit_or_reply(cat, output_str)
 
 
-@mellow.on(events.NewMessage(incoming=True))
+borg.on(events.NewMessage(incoming=True))
 async def samereply(cat):
     if cat.chat_id in Config.UB_BLACK_LIST_CHAT:
         return

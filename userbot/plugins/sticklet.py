@@ -13,7 +13,7 @@ from telethon.tl.types import InputMessagesFilterDocument
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern="sticklet (.*)"))
+borg.on(mellow_cmd(pattern="sticklet (.*)"))
 async def sticklet(event):
     R = random.randint(0,256)
     G = random.randint(0,256)

@@ -5,10 +5,10 @@
 Syntax: .wikipedia Query"""
 from telethon import events
 import wikipedia
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern="wikipedia (.*)"))
+borg.on(mellow_cmd(pattern="wikipedia (.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -2,7 +2,7 @@ import pyfiglet
 from userbot.utils import mellow_cmd
 
 #@command(pattern="^.figlet ?(.*)", outgoing=True)
-@mellow.on(mellow_cmd(pattern=r"figlet ?(.*)"))
+borg.on(mellow_cmd(pattern=r"figlet ?(.*)"))
 async def figlet(event):
     if event.fwd_from:
         return

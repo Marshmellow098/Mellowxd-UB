@@ -16,7 +16,7 @@ if not os.path.isdir("./SAVED"):
 if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
      os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
-@mellow.on(events.NewMessage(pattern=r"\.lslocal", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.lslocal", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,7 +39,7 @@ async def _(event):
     if len(stdout) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(stdout)) as out_file:
             out_file.name = "exec.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -57,7 +57,7 @@ async def _(event):
 
 
 
-@mellow.on(events.NewMessage(pattern=r"\.lsroot", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.lsroot", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -77,7 +77,7 @@ async def _(event):
     if len(stdout) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(stdout)) as out_file:
             out_file.name = "exec.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -91,7 +91,7 @@ async def _(event):
         return
     await event.edit(f"{OUTPUT}`{stdout.decode()}`")
 	
-@mellow.on(events.NewMessage(pattern=r"\.lssaved", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.lssaved", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -111,7 +111,7 @@ async def _(event):
     if len(stdout) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(stdout)) as out_file:
             out_file.name = "exec.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -124,7 +124,7 @@ async def _(event):
         await event.edit(f"**{stderr.decode()}**")
         return
     await event.edit(f"{OUTPUT}`{stdout.decode()}`")
-@mellow.on(events.NewMessage(pattern=r"\.rnsaved ?(.*)", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.rnsaved ?(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -148,7 +148,7 @@ async def _(event):
     if len(stdout) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(stdout)) as out_file:
             out_file.name = "exec.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -162,7 +162,7 @@ async def _(event):
         return
     await event.edit(f"File renamed `{src}` to `{dst}`")
 	
-@mellow.on(events.NewMessage(pattern=r"\.rnlocal ?(.*)", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.rnlocal ?(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -186,7 +186,7 @@ async def _(event):
     if len(stdout) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(stdout)) as out_file:
             out_file.name = "exec.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -200,7 +200,7 @@ async def _(event):
         return
     await event.edit(f"File renamed `{src}` to `{dst}`")
         
-@mellow.on(events.NewMessage(pattern=r"\.delsave (.*)", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.delsave (.*)", outgoing=True))
 async def handler(event):
     if event.fwd_from:
         return
@@ -215,7 +215,7 @@ async def handler(event):
     else:
          await event.edit("⛔️File Not Found സാധനം കയ്യിലില്ല😬")
         
-@mellow.on(events.NewMessage(pattern=r"\.delocal (.*)", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.delocal (.*)", outgoing=True))
 async def handler(event):
     if event.fwd_from:
         return

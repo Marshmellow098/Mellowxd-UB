@@ -10,7 +10,7 @@ import re
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern=f"logic$", outgoing=True))
+borg.on(mellow_cmd(pattern=f"logic$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

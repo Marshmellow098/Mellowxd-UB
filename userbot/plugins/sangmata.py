@@ -10,7 +10,7 @@ from userbot.utils import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd("sg ?(.*)"))
+borg.on(mellow_cmd("sg ?(.*)"))
 
 async def _(event):
 
@@ -44,13 +44,13 @@ async def _(event):
 
     await event.edit("```Processing```")
 
-    async with @mellow.conversation(chat) as conv:
+    async with borg.conversation(chat) as conv:
 
           try:     
 
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=461843263))
 
-              await @mellow.forward_messages(chat, reply_message)
+              await borg.forward_messages(chat, reply_message)
 
               response = await response 
 
@@ -76,7 +76,7 @@ async def _(event):
 
 
 
-@mellow.on(mellow_cmd("fakemail ?(.*)"))
+borg.on(mellow_cmd("fakemail ?(.*)"))
 
 async def _(event):
 
@@ -110,13 +110,13 @@ async def _(event):
 
     await event.edit("```Processing```")
 
-    async with @mellow.conversation(chat) as conv:
+    async with borg.conversation(chat) as conv:
 
           try:     
 
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=177914997))
 
-              await @mellow.forward_messages(chat, reply_message)
+              await borg.forward_messages(chat, reply_message)
 
               response = await response 
 
@@ -144,7 +144,7 @@ async def _(event):
 
 
 
-@mellow.on(mellow_cmd("ub ?(.*)"))
+borg.on(mellow_cmd("ub ?(.*)"))
 
 async def _(event):
 
@@ -178,13 +178,13 @@ async def _(event):
 
     await event.edit("```Processing```")
 
-    async with @mellow.conversation(chat) as conv:
+    async with borg.conversation(chat) as conv:
 
           try:     
 
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=97342984))
 
-              await @mellow.forward_messages(chat, reply_message)
+              await borg.forward_messages(chat, reply_message)
 
               response = await response 
 
@@ -208,7 +208,7 @@ async def _(event):
 
 
 
-@mellow.on(mellow_cmd("gid ?(.*)"))
+borg.on(mellow_cmd("gid ?(.*)"))
 
 async def _(event):
 
@@ -242,13 +242,13 @@ async def _(event):
 
     await event.edit("```Processing```")
 
-    async with @mellow.conversation(chat) as conv:
+    async with borg.conversation(chat) as conv:
 
           try:     
 
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=186675376))
 
-              await @mellow.forward_messages(chat, reply_message)
+              await borg.forward_messages(chat, reply_message)
 
               response = await response 
 
@@ -272,7 +272,7 @@ async def _(event):
 
                 
 
-@mellow.on(mellow_cmd("urban ?(.*)"))
+borg.on(mellow_cmd("urban ?(.*)"))
 
 async def _(event):
 
@@ -306,13 +306,13 @@ async def _(event):
 
     await event.edit("```Processing```")
 
-    async with @mellow.conversation(chat) as conv:
+    async with borg.conversation(chat) as conv:
 
           try:     
 
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=185693644))
 
-              await @mellow.forward_messages(chat, reply_message)
+              await borg.forward_messages(chat, reply_message)
 
               response = await response 
 

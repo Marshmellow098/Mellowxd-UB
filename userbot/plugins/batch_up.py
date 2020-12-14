@@ -7,12 +7,12 @@ By:-@Zero_cool7870
 """
 import os 
 import asyncio
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 from telethon import events
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern=r"upb"))
+borg.on(mellow_cmd(pattern=r"upb"))
 async def batch_upload(event):
 	if event.fwd_from:
 		return   
@@ -24,7 +24,7 @@ async def batch_upload(event):
 		for file in files:
 			required_file_name = temp_dir+"/"+file
 			print(required_file_name)
-			await @mellow.send_file(
+			await borg.send_file(
 					event.chat_id,
 					required_file_name,
 					force_document=True

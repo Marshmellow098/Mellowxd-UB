@@ -3,7 +3,7 @@ import asyncio
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern="dump ?(.*)"))
+borg.on(mellow_cmd(pattern="dump ?(.*)"))
 async def _(message):
     try:
         obj = message.pattern_match.group(1)

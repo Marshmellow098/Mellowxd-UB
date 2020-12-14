@@ -18,7 +18,7 @@ from userbot.utils import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd(pattern=r"rdl"))
+borg.on(mellow_cmd(pattern=r"rdl"))
 async def _(event):
     if event.fwd_from:
         return

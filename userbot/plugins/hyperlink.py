@@ -7,7 +7,7 @@ from userbot.utils import mellow_cmd
 import asyncio
 from telethon.tl import functions, types
 
-@mellow.on(mellow_cmd(pattern="hl ?(.*)"))
+borg.on(mellow_cmd(pattern="hl ?(.*)"))
 async def _(event):
         if event.fwd_from:
             return

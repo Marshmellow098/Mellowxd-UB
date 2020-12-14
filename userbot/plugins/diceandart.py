@@ -8,7 +8,7 @@ BALL_E_MOJI = "🏀"
 # EMOJI CONSTANTS
 
 
-@mellow.on(mellow_cmd(pattern=f"({DART_E_MOJI}|{DICE_E_MOJI}|{BALL_E_MOJI}) ?(.*)"))
+borg.on(mellow_cmd(pattern=f"({DART_E_MOJI}|{DICE_E_MOJI}|{BALL_E_MOJI}) ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

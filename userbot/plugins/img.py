@@ -23,7 +23,7 @@ from userbot.utils import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd(pattern="img ?(.*)"))
+borg.on(mellow_cmd(pattern="img ?(.*)"))
 
 async def img_sampler(event):
 

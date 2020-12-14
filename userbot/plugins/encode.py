@@ -7,7 +7,7 @@ from pygments.lexers import Python3Lexer
 from pygments.formatters import ImageFormatter
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd(pattern="encode ?(.*)"))
+borg.on(mellow_cmd(pattern="encode ?(.*)"))
 async def coder_print(event):
 	a = await event.client.download_media(await event.get_reply_message(), Var.TEMP_DOWNLOAD_DIRECTORY)
 	s = open(a, 'r')

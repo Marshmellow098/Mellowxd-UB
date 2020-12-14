@@ -11,7 +11,7 @@ from gtts import gTTS
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern="voice (.*)"))
+borg.on(mellow_cmd(pattern="voice (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -59,7 +59,7 @@ async def _(event):
             required_file_name = required_file_name + ".opus"
         end = datetime.now()
         ms = (end - start).seconds
-        await @mellow.send_file(
+        await borg.send_file(
             event.chat_id,
             required_file_name,
             # caption="Processed {} ({}) in {} seconds!".format(text[0:97], lan, ms),

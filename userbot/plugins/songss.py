@@ -11,7 +11,7 @@ import asyncio
 
  
 
-@mellow.on(mellow_cmd(pattern="gaana ?(.*)"))
+borg.on(mellow_cmd(pattern="gaana ?(.*)"))
 
 async def FindMusicPleaseBot(gaana):
 

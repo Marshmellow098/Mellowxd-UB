@@ -15,7 +15,7 @@ from userbot.utils import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd("screencapture (.*)"))
+borg.on(mellow_cmd("screencapture (.*)"))
 
 async def _(event):
 
@@ -63,7 +63,7 @@ async def _(event):
 
             try:
 
-                await @mellow.send_file(
+                await borg.send_file(
 
                     event.chat_id,
 

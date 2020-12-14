@@ -64,7 +64,7 @@ def progress(current, total):
         current, total, (current / total) * 100))
 
 
-@mellow.on(mellow_cmd(pattern="ocrlanguages"))
+borg.on(mellow_cmd(pattern="ocrlanguages"))
 async def get_ocr_languages(event):
     if event.fwd_from:
         return
@@ -97,7 +97,7 @@ async def get_ocr_languages(event):
     await event.edit(str(a))
 
 
-@mellow.on(mellow_cmd(pattern="ocr (.*)"))
+borg.on(mellow_cmd(pattern="ocr (.*)"))
 async def parse_ocr_space_api(event):
     if event.fwd_from:
         return
@@ -105,7 +105,7 @@ async def parse_ocr_space_api(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     lang_code = event.pattern_match.group(1)
-    downloaded_file_name = await @mellow.download_media(
+    downloaded_file_name = await borg.download_media(
         await event.get_reply_message(),
         Config.TMP_DOWNLOAD_DIRECTORY,
         progress_callback=progress

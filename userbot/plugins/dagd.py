@@ -11,7 +11,7 @@ import json
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd("dns (.*)"))
+borg.on(mellow_cmd("dns (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -24,7 +24,7 @@ async def _(event):
         await event.edit("i can't seem to find {} on the internet".format(input_str))
 
 
-@mellow.on(mellow_cmd("url (.*)"))
+borg.on(mellow_cmd("url (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -37,7 +37,7 @@ async def _(event):
         await event.edit("something is wrong. please try again later.")
 
 
-@mellow.on(mellow_cmd("unshort (.*)"))
+borg.on(mellow_cmd("unshort (.*)"))
 async def _(event):
     if event.fwd_from:
         return

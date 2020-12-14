@@ -29,7 +29,7 @@ aria2 = aria2p.API(
 	)
 
 
-@mellow.on(mellow_cmd(pattern=r"magnet"))
+borg.on(mellow_cmd(pattern=r"magnet"))
 async def magnet_download(event):
 	if event.fwd_from:
 		return
@@ -53,7 +53,7 @@ async def magnet_download(event):
 	
 
 
-@mellow.on(mellow_cmd(pattern=r"tor"))
+borg.on(mellow_cmd(pattern=r"tor"))
 async def torrent_download(event):
 	if event.fwd_from:
 		return
@@ -69,7 +69,7 @@ async def torrent_download(event):
 	gid = download.gid
 	await progress_status(gid=gid,event=event,previous=None)
 
-@mellow.on(mellow_cmd(pattern=r"url"))
+borg.on(mellow_cmd(pattern=r"url"))
 async def magnet_download(event):
 	if event.fwd_from:
 		return
@@ -89,7 +89,7 @@ async def magnet_download(event):
 		new_gid = await check_metadata(gid)
 		await progress_status(gid=new_gid,event=event,previous=None)
 
-@mellow.on(mellow_cmd(pattern=r"ariaRM"))
+borg.on(mellow_cmd(pattern=r"ariaRM"))
 async def remove_all(event):
 	if event.fwd_from:
 		return
@@ -102,7 +102,7 @@ async def remove_all(event):
 		os.system("aria2p remove-all")
 	await event.edit("`Removed All Downloads.`")  
 
-@mellow.on(mellow_cmd(pattern=r"show"))
+borg.on(mellow_cmd(pattern=r"show"))
 async def show_all(event):
 	if event.fwd_from:
 		return
@@ -119,7 +119,7 @@ async def show_all(event):
 			f.write(msg)
 		await asyncio.sleep(2)	
 		await event.delete()	
-		await @mellow.send_file(
+		await borg.send_file(
 			event.chat_id,
 			output,
 			force_document=True,

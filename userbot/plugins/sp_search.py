@@ -8,11 +8,11 @@ By: @Zero_cool7870
 import os
 import asyncio
 import json
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd(pattern="sch ?(.*)", allow_sudo=True))
+borg.on(mellow_cmd(pattern="sch ?(.*)", allow_sudo=True))
 async def sp_search(event):
 	search_str = event.pattern_match.group(1)
 

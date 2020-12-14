@@ -17,7 +17,7 @@ TYPE_PHOTO = 1
 TYPE_DOCUMENT = 2
 
 
-@mellow.on(events.NewMessage(pattern=r'\#(\S+)', outgoing=True))
+borg.on(events.NewMessage(pattern=r'\#(\S+)', outgoing=True))
 async def on_snip(event):
     name = event.pattern_match.group(1)
     snip = get_snips(name)
@@ -39,7 +39,7 @@ async def on_snip(event):
         message_id = event.message.id
         if event.reply_to_msg_id:
             message_id = event.reply_to_msg_id
-        await @mellow.send_message(
+        await borg.send_message(
             event.chat_id,
             snip.reply,
             reply_to=message_id,
@@ -48,7 +48,7 @@ async def on_snip(event):
         await event.delete()
 
 
-@mellow.on(mellow_cmd("snips (.*)"))
+borg.on(mellow_cmd("snips (.*)"))
 async def on_snip_save(event):
     name = event.pattern_match.group(1)
     msg = await event.get_reply_message()
@@ -72,7 +72,7 @@ async def on_snip_save(event):
         await event.edit("Reply to a message with `snips keyword` to save the snip")
 
 
-@mellow.on(mellow_cmd("snipl"))
+borg.on(mellow_cmd("snipl"))
 async def on_snip_list(event):
     all_snips = get_all_snips()
     OUT_STR = "Available Snips:\n"
@@ -84,7 +84,7 @@ async def on_snip_list(event):
     if len(OUT_STR) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUT_STR)) as out_file:
             out_file.name = "snips.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -97,7 +97,7 @@ async def on_snip_list(event):
         await event.edit(OUT_STR)
 
 
-@mellow.on(mellow_cmd("snipd (\S+)"))
+borg.on(mellow_cmd("snipd (\S+)"))
 async def on_snip_delete(event):
     name = event.pattern_match.group(1)
     remove_snip(name)

@@ -14,7 +14,7 @@ from telethon.tl.types import (PeerChannel, ChannelParticipantsAdmins,
                                MessageEntityMentionName,
                                ChannelParticipantsBots)
 
-@mellow.on(mellow_cmd(pattern="link(?: |$)(.*)"))
+borg.on(mellow_cmd(pattern="link(?: |$)(.*)"))
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)

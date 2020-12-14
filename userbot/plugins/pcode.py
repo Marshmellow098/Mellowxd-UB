@@ -5,7 +5,7 @@ from pygments.lexers import Python3Lexer
 from pygments.formatters import ImageFormatter
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd(pattern="pcode ?(.*)"))
+borg.on(mellow_cmd(pattern="pcode ?(.*)"))
 async def coder_print(event):
 	cmd = event.text
 	a = await event.get_reply_message()

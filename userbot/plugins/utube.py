@@ -28,7 +28,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(IF_EMOJI, '', inputString)
 
 
-@mellow.on(mellow_cmd(pattern="utube(?: |$)(.*)"))
+borg.on(mellow_cmd(pattern="utube(?: |$)(.*)"))
 
 async def nope(doit):
     ok = doit.pattern_match.group(1)

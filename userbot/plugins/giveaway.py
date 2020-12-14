@@ -4,7 +4,7 @@
 import asyncio
 import datetime
 from telethon import events
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 from telethon.tl.types import (
     DocumentAttributeFilename,
     DocumentAttributeSticker,
@@ -21,7 +21,7 @@ logs_id = Var.PRIVATE_GROUP_ID
 
 # Keep all credits pls, made with great effort by @HeisenbergTheDanger
 
-@mellow.on(mellow_cmd(pattern="forward ?(.*)"))
+borg.on(mellow_cmd(pattern="forward ?(.*)"))
 
 async def forw(event): 
   if event.fwd_from:
@@ -40,13 +40,13 @@ async def forw(event):
   error_count = 0
   for channel in channels:
     try:
-      await @mellow.forward_messages(int(channel.chat_id), previous_message)
+      await borg.forward_messages(int(channel.chat_id), previous_message)
       sent_count += 1
       await event.edit(f"Sent : {sent_count}\nError : {error_count}\nTotal : {len(channels)}")
     except Exception as error:
       try:
-        await @mellow.send_message(logs_id, f"Error in sending at {channel.chat_id}.")
-        await @mellow.send_message(logs_id, "Error! " + str(error))
+        await borg.send_message(logs_id, f"Error in sending at {channel.chat_id}.")
+        await borg.send_message(logs_id, "Error! " + str(error))
         if error == "The message cannot be empty unless a file is provided":
             event.edit("For sending files, upload in Saved Messages and reply .forward to in.")
             return
@@ -57,12 +57,12 @@ async def forw(event):
   await event.edit(f"{sent_count} messages sent with {error_count} errors.")
   if error_count > 0:
     try:
-        await @mellow.send_message(logs_id, f"{error_count} Errors")
+        await borg.send_message(logs_id, f"{error_count} Errors")
     except:
         await event.edit("Set up log channel for checking errors.")
     
     
-@mellow.on(mellow_cmd(pattern="broadcast ?(.*)"))
+borg.on(mellow_cmd(pattern="broadcast ?(.*)"))
 
 async def _(event):
   if event.fwd_from:
@@ -83,13 +83,13 @@ async def _(event):
         await event.edit("Not supported. Try .forward")
         return
     if not previous_message.web_preview and previous_message.photo:
-      file = await @mellow.download_file(previous_message.media)
-      uploaded_doc = await @mellow.upload_file(file, file_name="img.png")
+      file = await borg.download_file(previous_message.media)
+      uploaded_doc = await borg.upload_file(file, file_name="img.png")
       raw_text = previous_message.text
       for channel in channels:
         try:
             if previous_message.photo:
-                await @mellow.send_file(
+                await borg.send_file(
                                 int(channel.chat_id),
                                 InputMediaUploadedPhoto(
                                     file=uploaded_doc
@@ -103,8 +103,8 @@ async def _(event):
             await event.edit(f"Sent : {sent_count}\nError : {error_count}\nTotal : {len(channels)}")
         except Exception as error:
           try:
-            await @mellow.send_message(logs_id, f"Error in sending at {chat_id}.")
-            await @mellow.send_message(logs_id, "Error! " + str(error))
+            await borg.send_message(logs_id, f"Error in sending at {chat_id}.")
+            await borg.send_message(logs_id, "Error! " + str(error))
             if error == "The message cannot be empty unless a file is provided":
                 event.edit("For sending files, upload in Saved Messages and reply .forward to in.")
                 return
@@ -115,20 +115,20 @@ async def _(event):
       await event.edit(f"{sent_count} messages sent with {error_count} errors.")
       if error_count > 0:
         try:
-            await @mellow.send_message(logs_id, f"{error_count} Errors")
+            await borg.send_message(logs_id, f"{error_count} Errors")
         except:
             pass      
     else:
       raw_text = previous_message.text
       for channel in channels:
         try:
-          await @mellow.send_message(int(channel.chat_id), raw_text, link_preview = False)
+          await borg.send_message(int(channel.chat_id), raw_text, link_preview = False)
           sent_count += 1
           await event.edit(f"Sent : {sent_count}\nError : {error_count}\nTotal : {len(channels)}")
         except Exception as error:
           try:
-            await @mellow.send_message(logs_id, f"Error in sending at {channel.chat_id}.")
-            await @mellow.send_message(logs_id, "Error! " + str(error))
+            await borg.send_message(logs_id, f"Error in sending at {channel.chat_id}.")
+            await borg.send_message(logs_id, "Error! " + str(error))
             if error == "The message cannot be empty unless a file is provided":
                 event.edit("For sending files, upload in Saved Messages and reply .forward to in.")
                 return
@@ -139,13 +139,13 @@ async def _(event):
       await event.edit(f"{sent_count} messages sent with {error_count} errors.")
       if error_count > 0:
         try:
-            await @mellow.send_message(logs_id, f"{error_count} Errors")
+            await borg.send_message(logs_id, f"{error_count} Errors")
         except:
             await event.edit("Set up log channel for checking errors.")
 
 # Written by @HeisenbergTheDanger
 
-@mellow.on(mellow_cmd(pattern="addchannel ?(.*)"))
+borg.on(mellow_cmd(pattern="addchannel ?(.*)"))
 async def add_ch(event):
     if event.fwd_from:
         return
@@ -182,7 +182,7 @@ async def add_ch(event):
         await event.delete()
 
 
-@mellow.on(mellow_cmd(pattern="rmchannel ?(.*)"))
+borg.on(mellow_cmd(pattern="rmchannel ?(.*)"))
 async def remove_ch(event):
     if event.fwd_from:
         return
@@ -209,7 +209,7 @@ async def remove_ch(event):
         await asyncio.sleep(3)
         await event.delete()
         
-@mellow.on(mellow_cmd(pattern="listchannels"))
+borg.on(mellow_cmd(pattern="listchannels"))
 async def list(event):
     if event.fwd_from:
         return
@@ -221,7 +221,7 @@ async def list(event):
     if len(msg) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(msg)) as out_file:
             out_file.name = "channels.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -234,11 +234,11 @@ async def list(event):
         await event.edit(msg)
 
         
-@mellow.on(mellow_cmd(pattern="search ?(.*)"))
+borg.on(mellow_cmd(pattern="search ?(.*)"))
 async def search(event):
     channel_id =  event.pattern_match.group(1)
     try:
-        channel = await @mellow.get_entity(int(channel_id))
+        channel = await borg.get_entity(int(channel_id))
     except ValueError:
         await event.edit("Invalid id.")
     name = channel.title

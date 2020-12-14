@@ -1,9 +1,9 @@
 
 from telethon import events
 import asyncio
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
-@mellow.on(mellow_cmd(pattern=r"solarsystem"))
+borg.on(mellow_cmd(pattern=r"solarsystem"))
 async def _(event):
     if event.fwd_from:
         return

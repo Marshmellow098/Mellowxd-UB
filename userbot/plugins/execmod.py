@@ -21,7 +21,7 @@ if not os.path.isdir("./SAVED"):
 if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
      os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
 
-@mellow.on(mellow_cmd(outgoing=True, pattern="pips(?: |$)(.*)"))
+borg.on(mellow_cmd(outgoing=True, pattern="pips(?: |$)(.*)"))
 async def pipcheck(pip):
         pipmodule = pip.pattern_match.group(1)
         if pipmodule:
@@ -64,7 +64,7 @@ async def pipcheck(pip):
         else:
             await pip.edit("`Use .help system to see an example`")
 	
-@mellow.on(mellow_cmd(pattern="suicide$"))
+borg.on(mellow_cmd(pattern="suicide$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -88,7 +88,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -100,7 +100,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 	
-@mellow.on(mellow_cmd(pattern="plugins$"))
+borg.on(mellow_cmd(pattern="plugins$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -124,7 +124,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -136,7 +136,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@mellow.on(mellow_cmd(pattern="date$"))
+borg.on(mellow_cmd(pattern="date$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -160,7 +160,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -172,7 +172,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@mellow.on(mellow_cmd(pattern="env$"))
+borg.on(mellow_cmd(pattern="env$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -196,7 +196,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -208,7 +208,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@mellow.on(mellow_cmd(pattern="fast$"))
+borg.on(mellow_cmd(pattern="fast$"))
 async def _(event):
     await event.edit("calculating...")
     if event.fwd_from:
@@ -233,7 +233,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -245,7 +245,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@mellow.on(mellow_cmd(pattern="fortune$"))
+borg.on(mellow_cmd(pattern="fortune$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -269,7 +269,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -282,7 +282,7 @@ async def _(event):
         await event.edit(OUTPUT)
 
 
-@mellow.on(mellow_cmd(pattern="qquote$"))
+borg.on(mellow_cmd(pattern="qquote$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -306,7 +306,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -318,7 +318,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 	
-@mellow.on(mellow_cmd(pattern="fakeid$"))
+borg.on(mellow_cmd(pattern="fakeid$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -342,7 +342,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -354,7 +354,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@mellow.on(mellow_cmd(pattern="kwot$"))
+borg.on(mellow_cmd(pattern="kwot$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -378,7 +378,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "kwot.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -390,7 +390,7 @@ async def _(event):
     else:
         await event.edit(OUTPUT)
 
-@mellow.on(mellow_cmd(pattern="qpro$"))
+borg.on(mellow_cmd(pattern="qpro$"))
 async def _(event):
     if event.fwd_from:
         return
@@ -414,7 +414,7 @@ async def _(event):
     if len(OUTPUT) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUTPUT)) as out_file:
             out_file.name = "env.text"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,

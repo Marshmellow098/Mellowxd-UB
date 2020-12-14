@@ -34,9 +34,9 @@ async def glitch(event):
     sed = await event.get_reply_message()
     okbruh = await event.edit("`Gli, Glitchiiingggg.....`")
     if isinstance(sed.media, MessageMediaPhoto):
-        photolove = await @mellow.download_media(sed.media, sedpath)
+        photolove = await borg.download_media(sed.media, sedpath)
     elif "image" in response.media.document.mime_type.split("/"):
-        photolove = await @mellow.download_media(sed.media, sedpath)
+        photolove = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("`Reply To Image`")
         return
@@ -51,7 +51,7 @@ async def glitch(event):
         duration=DURATION,
         loop=LOOP,
     )
-    await @mellow.send_file(event.chat_id, pathsn)
+    await borg.send_file(event.chat_id, pathsn)
     await okbruh.delete()
     for starky in (pathsn, photolove):
         if starky and os.path.exists(starky):

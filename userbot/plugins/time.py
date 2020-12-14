@@ -11,7 +11,7 @@ from userbot.utils import mellow_cmd
 FONT_FILE_TO_USE = "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"
 
 
-@mellow.on(mellow_cmd("time ?(.*)"))  # pylint:disable=E0602
+borg.on(mellow_cmd("time ?(.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -33,7 +33,7 @@ async def _(event):
     drawn_text = ImageDraw.Draw(img)
     drawn_text.text((10, 10), current_time, font=fnt, fill=(255, 255, 255))
     img.save(required_file_name)
-    await @mellow.send_file(  # pylint:disable=E0602
+    await borg.send_file(  # pylint:disable=E0602
         event.chat_id,
         required_file_name,
         caption="Userbot: Powered by @Dark_cobra_support",
@@ -48,7 +48,7 @@ async def _(event):
     await event.delete()
 
 
-@mellow.on(mellow_cmd("gtime (.*)"))  # pylint:disable=E0602
+borg.on(mellow_cmd("gtime (.*)"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

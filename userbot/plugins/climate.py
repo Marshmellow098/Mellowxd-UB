@@ -31,7 +31,7 @@ async def get_tz(con):
         return
 
 
-@mellow.on(mellow_cmd(outgoing=True, pattern="climate(?: |$)(.*)"))
+borg.on(mellow_cmd(outgoing=True, pattern="climate(?: |$)(.*)"))
 @errors_handler
 async def get_weather(weather):
     """ For .weather command, gets the current weather of a city. """
@@ -134,7 +134,7 @@ async def get_weather(weather):
         f"`{time}`\n")
 
 
-@mellow.on(mellow_cmd(outgoing=True, pattern="setcity(?: |$)(.*)"))
+borg.on(mellow_cmd(outgoing=True, pattern="setcity(?: |$)(.*)"))
 @errors_handler
 async def set_default_city(city):
     """ For .ctime command, change the default userbot country for date and time commands. """

@@ -7,7 +7,7 @@ from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from userbot.utils import mellow_cmd
 from userbot import CMD_HELP
 
-@mellow.on(mellow_cmd(pattern="recognize ?(.*)"))
+borg.on(mellow_cmd(pattern="recognize ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

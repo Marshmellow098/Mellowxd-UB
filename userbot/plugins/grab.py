@@ -5,7 +5,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd("grab ?(.*)"))
+borg.on(mellow_cmd("grab ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
@@ -22,10 +22,10 @@ async def _(event):
        await event.edit("```Reply to actual users message.```")
        return
     await event.edit("```Processing```")
-    async with @mellow.conversation(chat) as conv:
+    async with borg.conversation(chat) as conv:
           try:     
               response = conv.wait_event(events.NewMessage(incoming=True,from_users=864838521))
-              await @mellow.forward_messages(chat, reply_message)
+              await borg.forward_messages(chat, reply_message)
               response = await response 
           except YouBlockedUserError: 
               await event.reply("```Please unblock @sangmatainfo_bot and try again```")
@@ -33,4 +33,4 @@ async def _(event):
           if response.text.startswith("Hi"):
              await event.edit("```can you kindly disable your forward privacy settings for good?```")
           else: 
-             await @mellow.send_file(event.chat_id, response.message)
+             await borg.send_file(event.chat_id, response.message)

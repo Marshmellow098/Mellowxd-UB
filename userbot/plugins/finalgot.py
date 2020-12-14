@@ -3,7 +3,7 @@ from telethon import events
 import asyncio
 import random
 
-@mellow.on(events.NewMessage(pattern=r"\.snow", outgoing=True))
+borg.on(events.NewMessage(pattern=r"\.snow", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

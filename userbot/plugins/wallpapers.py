@@ -54,7 +54,7 @@ async def animepp():
     if not os.path.exists("f.ttf"):
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
     urllib.request.urlretrieve(fy,"donottouch.jpg")
-@mellow.on(mellow_cmd(pattern="wallpapers ?(.*)"))
+borg.on(mellow_cmd(pattern="wallpapers ?(.*)"))
 async def main(event):
     await event.edit("**uploading wallpapers \ndone check ur DP.**") 
     while True:

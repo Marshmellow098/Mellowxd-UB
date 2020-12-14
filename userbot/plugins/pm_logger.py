@@ -18,7 +18,7 @@ import os
 import sys
 from telethon.tl import functions, types
 from telethon.tl.types import Channel, Chat, User
-from userbot.uni@mellowConfig import Config
+from userbot.uniborgConfig import Config
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.WARN)
@@ -50,7 +50,7 @@ async def log(log_text):
     await log_text.delete()
 
 
-@mellow.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def monito_p_m_s(event):
     sender = await event.get_sender()
     if Config.NC_LOG_P_M_S and not sender.bot:
@@ -70,7 +70,7 @@ async def monito_p_m_s(event):
                 print(exc_type, fname, exc_tb.tb_lineno)
                 print(e) 
 
-@mellow.on(mellow_cmd(pattern="elog ?(.*)"))
+borg.on(mellow_cmd(pattern="elog ?(.*)"))
 async def set_no_log_p_m(event):
     if Config.PM_LOGGR_BOT_API_ID is not None:
         reason = event.pattern_match.group(1)
@@ -83,7 +83,7 @@ async def set_no_log_p_m(event):
                 await event.delete()
                 
                 
-@mellow.on(mellow_cmd(pattern="nlog ?(.*)"))
+borg.on(mellow_cmd(pattern="nlog ?(.*)"))
 async def set_no_log_p_m(event):
     if Config.PM_LOGGR_BOT_API_ID is not None:
         reason = event.pattern_match.group(1)

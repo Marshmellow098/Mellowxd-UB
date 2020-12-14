@@ -6,7 +6,7 @@ from telethon import events
 from telethon.tl.functions.messages import SaveDraftRequest
 from userbot.utils import mellow_cmd
 
-@mellow.on(mellow_cmd(pattern="chain"))
+borg.on(mellow_cmd(pattern="chain"))
 async def _(event):
     await event.edit("Counting...")
     count = -1
@@ -14,7 +14,7 @@ async def _(event):
     while message:
         reply = await message.get_reply_message()
         if reply is None:
-            await @mellow(SaveDraftRequest(
+            await borg(SaveDraftRequest(
                 await event.get_input_chat(),
                 "",
                 reply_to_msg_id=message.id

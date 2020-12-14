@@ -8,7 +8,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP
-from userbot.uni@mellowConfig import Config
+from userbot.uniborgConfig import Config
 from userbot.utils import mellow_cmd, sudo_cmd
 
 logging.basicConfig(
@@ -30,7 +30,7 @@ BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 
 
-@mellow.on(mellow_cmd(pattern="paste ?(.*)"))
+borg.on(mellow_cmd(pattern="paste ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -44,7 +44,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await @mellow.download_media(
+            downloaded_file_name = await borg.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,
@@ -76,7 +76,7 @@ async def _(event):
         await event.edit("Pasted to dogbin : [dog]({}) in {} seconds".format(url, ms))
 
 
-@mellow.on(mellow_cmd(outgoing=True, pattern="getpaste(?: |$)(.*)"))
+borg.on(mellow_cmd(outgoing=True, pattern="getpaste(?: |$)(.*)"))
 async def get_dogbin_content(dog_url):
     """ For .getpaste command, fetches the content of a dogbin URL. """
     textx = await dog_url.get_reply_message()
@@ -128,7 +128,7 @@ async def get_dogbin_content(dog_url):
         )
 
 
-@mellow.on(mellow_cmd(pattern="neko ?(.*)"))
+borg.on(mellow_cmd(pattern="neko ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -142,7 +142,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await @mellow.download_media(
+            downloaded_file_name = await borg.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,
@@ -185,7 +185,7 @@ async def _(event):
         await event.edit(reply_text)
 
 
-@mellow.on(mellow_cmd(pattern="iffuci ?(.*)"))
+borg.on(mellow_cmd(pattern="iffuci ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -199,7 +199,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await @mellow.download_media(
+            downloaded_file_name = await borg.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,
@@ -231,7 +231,7 @@ async def _(event):
         await event.edit("code is pasted to {} in {} seconds".format(url, ms))
 
 
-@mellow.on(mellow_cmd(pattern="paster ?(.*)"))
+borg.on(mellow_cmd(pattern="paster ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -246,7 +246,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await @mellow.download_media(
+            downloaded_file_name = await borg.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,

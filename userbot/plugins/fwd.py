@@ -7,7 +7,7 @@ from telethon.tl import types, functions
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern="frwd"))
+borg.on(mellow_cmd(pattern="frwd"))
 async def _(event):
     if event.fwd_from:
         return
@@ -15,18 +15,18 @@ async def _(event):
         await event.edit("Please set the required environment variable `PLUGIN_CHANNEL` for this plugin to work")
         return
     try:
-        e = await @mellow.get_entity(Config.PLUGIN_CHANNEL)
+        e = await borg.get_entity(Config.PLUGIN_CHANNEL)
     except Exception as e:
         await event.edit(str(e))
     else:
         re_message = await event.get_reply_message()
         # https://t.me/telethonofftopic/78166
-        fwd_message = await @mellow.forward_messages(
+        fwd_message = await borg.forward_messages(
             e,
             re_message,
             silent=True
         )
-        await @mellow.forward_messages(
+        await borg.forward_messages(
             event.chat_id,
             fwd_message
         )

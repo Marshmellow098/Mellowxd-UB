@@ -15,7 +15,7 @@ night_time = None
 last_night_message = {}
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
-@mellow.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
+borg.on(events.NewMessage(outgoing=True))  # pylint:disable=E0602
 async def set_not_night(event):
     global USER_night  # pylint:disable=E0602
     global night_time  # pylint:disable=E0602
@@ -23,12 +23,12 @@ async def set_not_night(event):
     current_message = event.message.message
     if ".night" not in current_message and "yes" in USER_night:  # pylint:disable=E0602
         try:
-            await @mellow.send_message(  # pylint:disable=E0602
+            await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
                 "Mine Owner has Gone Sleep (Pure Din Sota hi Rehta He {DEFAULTUSER} )"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
-            await @mellow.send_message(  # pylint:disable=E0602
+            await borg.send_message(  # pylint:disable=E0602
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` " + \
                 "for the proper functioning of night functionality " + \
@@ -39,7 +39,7 @@ async def set_not_night(event):
         USER_night = {}  # pylint:disable=E0602
         night_time = None  # pylint:disable=E0602
 
-@mellow.on(mellow_cmd(pattern=r"night ?(.*)"))
+borg.on(mellow_cmd(pattern=r"night ?(.*)"))
 
 async def _(event):
     if event.fwd_from:
@@ -53,7 +53,7 @@ async def _(event):
     last_night_message = {}
     reason = event.pattern_match.group(1)
     if not USER_night:  # pylint:disable=E0602
-        last_seen_status = await @mellow(  # pylint:disable=E0602
+        last_seen_status = await borg(  # pylint:disable=E0602
             functions.account.GetPrivacyRequest(
                 types.InputPrivacyKeyStatusTimestamp()
             )
@@ -68,7 +68,7 @@ async def _(event):
         await asyncio.sleep(5)
         await event.delete()
         try:
-            await @mellow.send_message(  # pylint:disable=E0602
+            await borg.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
                 f"My BOss Wants So Sleep"
             )
@@ -76,7 +76,7 @@ async def _(event):
             logger.warn(str(e))  # pylint:disable=E0602
 
 
-@mellow.on(events.NewMessage(  # pylint:disable=E0602
+borg.on(events.NewMessage(  # pylint:disable=E0602
     incoming=True,
     func=lambda e: bool(e.mentioned or e.is_private)
 ))

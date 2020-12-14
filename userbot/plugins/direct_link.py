@@ -19,10 +19,10 @@ from bs4 import BeautifulSoup
 from humanize import naturalsize
 from telethon import events
 from telethon.tl import functions, types
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
-#@mellow.on(events.NewMessage(pattern=r"^.direct(?: |$)([\s\S]*)", outgoing=True))
-@mellow.on(mellow_cmd(pattern=r"direct(?: |$)([\s\S]*)"))
+#borg.on(events.NewMessage(pattern=r"^.direct(?: |$)([\s\S]*)", outgoing=True))
+borg.on(mellow_cmd(pattern=r"direct(?: |$)([\s\S]*)"))
 async def direct_link_generator(request):
     """ direct links generator """
     await request.edit("`Processing...`")

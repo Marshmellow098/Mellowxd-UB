@@ -2,11 +2,11 @@
 # (c) Shrimadhav U K
 
 from telethon import events, functions, types
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
-@mellow.on(mellow_cmd("listmyusernames"))
+borg.on(mellow_cmd("listmyusernames"))
 
 async def mine(event):
     """ For .reserved command, get a list of your reserved usernames. """

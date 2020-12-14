@@ -11,7 +11,7 @@ DEL_TIME_OUT = 60
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in config vars in Heroku"
 
-@mellow.on(mellow_cmd(pattern="cname"))  # pylint:disable=E0602
+borg.on(mellow_cmd(pattern="cname"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -21,7 +21,7 @@ async def _(event):
         name = f"{HM}🔥{DEFAULTUSER}🔥{DMY}"
         logger.info(name)
         try:
-            await @mellow(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
+            await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
                 last_name = name
             ))
         except FloodWaitError as ex:
@@ -29,7 +29,7 @@ async def _(event):
             await asyncio.sleep(ex.seconds)
         # else:
             # logger.info(r.stringify())
-            # await @mellow.send_message(  # pylint:disable=E0602
+            # await borg.send_message(  # pylint:disable=E0602
             #     Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
             #     "Changed Profile Picture"
             # )

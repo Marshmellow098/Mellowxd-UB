@@ -16,8 +16,8 @@ def aesthetify(string):
         yield chr(c)
 
 
-@mellow.on(mellow_cmd(pattern="ae ?(.*)"))
-@mellow.on(events.MessageEdited(pattern=r'.ae\s+(.+)', outgoing=True))
+borg.on(mellow_cmd(pattern="ae ?(.*)"))
+borg.on(events.MessageEdited(pattern=r'.ae\s+(.+)', outgoing=True))
 async def _(event):
     text = event.pattern_match.group(1)
     text = "".join(aesthetify(text))

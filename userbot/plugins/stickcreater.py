@@ -12,7 +12,7 @@ from userbot.utils import mellow_cmd
 
 # RegEx by https://t.me/c/1220993104/500653 ( @SnapDragon7410 )
 
-@mellow.on(mellow_cmd(pattern="stcr ?(?:(.*?) \| )?(.*)", outgoing=True))
+borg.on(mellow_cmd(pattern="stcr ?(?:(.*?) \| )?(.*)", outgoing=True))
 async def sticklet(event):
     R = random.randint(0,256)
     G = random.randint(0,256)
@@ -62,7 +62,7 @@ async def sticklet(event):
         pass
 
     
-@mellow.on(mellow_cmd(pattern="stcr ?(?:(.*?) \| )?(.*)", allow_sudo=True))
+borg.on(mellow_cmd(pattern="stcr ?(?:(.*?) \| )?(.*)", allow_sudo=True))
 async def sticklet(event):
     R = random.randint(0,256)
     G = random.randint(0,256)

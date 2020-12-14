@@ -7,7 +7,7 @@ from userbot.utils import mellow_cmd
 from userbot.utils import mellow_cmd
 
 
-@mellow.on(mellow_cmd(pattern="text (.*)"))
+borg.on(mellow_cmd(pattern="text (.*)"))
 async def _(event):
     name = event.pattern_match.group(1)
     if event.fwd_from:

@@ -32,7 +32,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(IF_EMOJI, '', inputString)
 
 
-@mellow.on(mellow_cmd(pattern="uta(?: |$)(.*)"))
+borg.on(mellow_cmd(pattern="uta(?: |$)(.*)"))
 
 async def nope(doit):
     ok = doit.pattern_match.group(1)

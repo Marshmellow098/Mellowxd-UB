@@ -21,7 +21,7 @@ from userbot.utils import mellow_cmd
 
 
 
-@mellow.on(mellow_cmd(pattern="tts (.*)"))
+borg.on(mellow_cmd(pattern="tts (.*)"))
 
 async def _(event):
 
@@ -115,7 +115,7 @@ async def _(event):
 
         ms = (end - start).seconds
 
-        await @mellow.send_file(
+        await borg.send_file(
 
             event.chat_id,
 

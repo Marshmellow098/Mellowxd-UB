@@ -15,12 +15,12 @@ import re
 import subprocess
 import time
 from datetime import datetime
-from uni@mellow.util import mellow_cmd
+from uniborg.util import mellow_cmd
 
 langi = "en"
 
 #kanged from Blank-x ;---;
-@mellow.on(mellow_cmd("imdb (.*)", outgoing=True)) 
+borg.on(mellow_cmd("imdb (.*)", outgoing=True)) 
 async def imdb(e):
  try:
     movie_name = e.pattern_match.group(1)

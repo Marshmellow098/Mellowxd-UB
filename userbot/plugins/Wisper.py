@@ -5,7 +5,7 @@ from var import Var
 
 
 
-@mellow.on(mellow_cmd(pattern="wspr ?(.*)"))
+borg.on(mellow_cmd(pattern="wspr ?(.*)"))
 async def wspr(event):
     if event.fwd_from:
         return

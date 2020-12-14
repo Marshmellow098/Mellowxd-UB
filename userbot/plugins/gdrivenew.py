@@ -46,7 +46,7 @@ G_DRIVE_F_PARENT_ID = None
 G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
 
 
-@mellow.on(mellow_cmd(pattern="gdrive ?(.*)", allow_sudo=True))
+borg.on(mellow_cmd(pattern="gdrive ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -66,7 +66,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await @mellow.download_media(
+            downloaded_file_name = await borg.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(
@@ -116,7 +116,7 @@ async def _(event):
         await mone.edit("File Not found in local server. Give me a file path :((")
 
 
-@mellow.on(mellow_cmd(pattern="dfolder https?://drive\.google\.com/drive/u/\d/folders/([-\w]{25,})", allow_sudo=True))
+borg.on(mellow_cmd(pattern="dfolder https?://drive\.google\.com/drive/u/\d/folders/([-\w]{25,})", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -130,7 +130,7 @@ async def _(event):
         await mone.edit("Send `.gdrivesp https://drive.google.com/drive/u/X/folders/Y` to set the folder to upload new files to")
 
 
-@mellow.on(mellow_cmd(pattern="gclear", allow_sudo=True))
+borg.on(mellow_cmd(pattern="gclear", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def _(event):
     await event.delete()
 
 
-@mellow.on(mellow_cmd(pattern="gdir ?(.*)", allow_sudo=True))
+borg.on(mellow_cmd(pattern="gdir ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -173,7 +173,7 @@ async def _(event):
         await mone.edit(f"directory {input_str} does not seem to exist")
 
 
-@mellow.on(mellow_cmd(pattern="drive (delete|get) ?(.*)", allow_sudo=True))
+borg.on(mellow_cmd(pattern="drive (delete|get) ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -205,7 +205,7 @@ async def _(event):
     await mone.edit(response_from_svc)
 
 
-@mellow.on(mellow_cmd(pattern="sdrive ?(.*)", allow_sudo=True))
+borg.on(mellow_cmd(pattern="sdrive ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

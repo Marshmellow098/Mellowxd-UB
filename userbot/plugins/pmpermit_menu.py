@@ -44,66 +44,66 @@ async def _(event):
             return
         if event.is_private:
 
-         async with @mellow.conversation(chat) as conv:
-          await @mellow.send_message(chat,message=PM)
+         async with borg.conversation(chat) as conv:
+          await borg.send_message(chat,message=PM)
           chat_id = event.from_id
           response = await conv.get_response(chat)
           y = response.text
           if y == "1":
-              await @mellow.send_message(chat, ONE)
+              await borg.send_message(chat, ONE)
               response = await conv.get_response(chat)
               await event.delete()
               if not response.text == "/start":
                   await response.delete()
-                  await @mellow.send_message(chat, LWARN)
+                  await borg.send_message(chat, LWARN)
                   response = await conv.get_response(chat)
                   await event.delete()
                   await response.delete()
                   response = await conv.get_response(chat)
                   if not response.text == "/start":
-                      await @mellow.send_message(chat, TWO)
+                      await borg.send_message(chat, TWO)
                       await asyncio.sleep(3)
                       await event.client(functions.contacts.BlockRequest(chat_id))
           elif y == "2":
-              await @mellow.send_message(chat, LWARN)
+              await borg.send_message(chat, LWARN)
               response = await conv.get_response(chat)
               if not response.text == "/start":
-                  await @mellow.send_message(chat, TWO)
+                  await borg.send_message(chat, TWO)
                   await asyncio.sleep(3)
                   await event.client(functions.contacts.BlockRequest(chat_id))
          
 
           elif y == "3":
-              await @mellow.send_message(chat, FOUR)
+              await borg.send_message(chat, FOUR)
               response = await conv.get_response(chat)
               await event.delete()
               await response.delete()
               if not response.text == "/start":
-                  await @mellow.send_message(chat, LWARN)
+                  await borg.send_message(chat, LWARN)
                   await event.delete()
                   response = await conv.get_response(chat)
                   if not response.text == "/start":
-                      await @mellow.send_message(chat, TWO)
+                      await borg.send_message(chat, TWO)
                       await asyncio.sleep(3)
                       await event.client(functions.contacts.BlockRequest(chat_id))
           elif y == "4":
-              await @mellow.send_message(chat,FIVE)
+              await borg.send_message(chat,FIVE)
               response = await conv.get_response(chat)
               if not response.text == "/start":
-                  await @mellow.send_message(chat, LWARN)
+                  await borg.send_message(chat, LWARN)
                   response = await conv.get_response(chat)
                   if not response.text == "/start":
-                      await @mellow.send_message(chat, TWO)
+                      await borg.send_message(chat, TWO)
                       await asyncio.sleep(3)
                       await event.client(functions.contacts.BlockRequest(chat_id))
           else:
-              await @mellow.send_message(chat, "`You have entered an invalid command. Please send /start again or do not send another message if you do not wish to be blocked and reported.`")
+              await borg.send_message(chat, "`You have entered an invalid command. Please send /start again or do not send another message if you do not wish to be blocked and reported.`")
               response = await conv.get_response(chat)
               z = response.text
               if not z == "/start":
-                  await @mellow.send_message(chat, LWARN)
+                  await borg.send_message(chat, LWARN)
                   await conv.get_response(chat)
                   if not response.text == "/start":
-                      await @mellow.send_message(chat, TWO)
+                      await borg.send_message(chat, TWO)
                       await asyncio.sleep(3)
                       await event.client(functions.contacts.BlockRequest(chat_id))
