@@ -6,7 +6,7 @@ from telethon import events
 import asyncio
 from datetime import datetime
 import os
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 import qrcode
 from bs4 import BeautifulSoup
 
@@ -22,7 +22,7 @@ async def _(event):
     start = datetime.now()
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
-    downloaded_file_name = await borg.download_media(
+    downloaded_file_name = await @mellow.download_media(
         await event.get_reply_message(),
         Config.TMP_DOWNLOAD_DIRECTORY,
         progress_callback=progress
@@ -73,7 +73,7 @@ async def _(event):
         previous_message = await event.get_reply_message()
         reply_msg_id = previous_message.id
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress
@@ -99,7 +99,7 @@ async def _(event):
     qr.make(fit=True)
     img = qr.make_image(fill_color="black", back_color="white")
     img.save("img_file.webp", "PNG")
-    await borg.send_file(
+    await @mellow.send_file(
         event.chat_id,
         "img_file.webp",
         caption=message,

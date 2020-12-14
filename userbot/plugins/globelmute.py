@@ -14,7 +14,7 @@ async def startgmute(event):
         return
     reply = await event.get_reply_message()
     user_id = reply.from_id
-    if user_id == (await borg.get_me()).id:	
+    if user_id == (await @mellow.get_me()).id:	
         await event.edit(r"Btw Boss!!Why would I Gmute You. You are my Boss!!")	
         	
         return

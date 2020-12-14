@@ -22,26 +22,26 @@ async def _(event):
     await asyncio.sleep(0.9)
     x=(random.randrange(1,8))
     if x==1:
-        await borg.send_file(event.chat_id,img1)
+        await @mellow.send_file(event.chat_id,img1)
         await event.delete()
     if x==2:
-        await borg.send_file(event.chat_id,img2)
+        await @mellow.send_file(event.chat_id,img2)
         await event.delete()
     if x==3:
-        await borg.send_file(event.chat_id,img3)
+        await @mellow.send_file(event.chat_id,img3)
         await event.delete()
     if x==4:
-        await borg.send_file(event.chat_id,img3)
+        await @mellow.send_file(event.chat_id,img3)
         await event.delete()        
     if x==5:
-        await borg.send_file(event.chat_id,img4)
+        await @mellow.send_file(event.chat_id,img4)
         await event.delete()
     if x==6:
-        await borg.send_file(event.chat_id,img5)
+        await @mellow.send_file(event.chat_id,img5)
         await event.delete()
     if x==7:
-        await borg.send_file(event.chat_id,img6)
+        await @mellow.send_file(event.chat_id,img6)
         await event.delete()
     if x==8:
-        await borg.send_file(event.chat_id,img7)
+        await @mellow.send_file(event.chat_id,img7)
         await event.delete()      

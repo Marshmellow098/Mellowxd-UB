@@ -39,7 +39,7 @@ async def handler(event):
 
         return
 
-    file = await borg.download_media(reply_message, Var.TEMP_DOWNLOAD_DIRECTORY)
+    file = await @mellow.download_media(reply_message, Var.TEMP_DOWNLOAD_DIRECTORY)
 
     a = await event.reply("```Memifying this image..```")
 

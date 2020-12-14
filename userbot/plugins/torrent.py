@@ -119,7 +119,7 @@ async def show_all(event):
 			f.write(msg)
 		await asyncio.sleep(2)	
 		await event.delete()	
-		await borg.send_file(
+		await @mellow.send_file(
 			event.chat_id,
 			output,
 			force_document=True,

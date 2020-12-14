@@ -39,7 +39,7 @@ async def on_snip(event):
         message_id = event.message.id
         if event.reply_to_msg_id:
             message_id = event.reply_to_msg_id
-        await borg.send_message(
+        await @mellow.send_message(
             event.chat_id,
             snip.reply,
             reply_to=message_id,
@@ -84,7 +84,7 @@ async def on_snip_list(event):
     if len(OUT_STR) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUT_STR)) as out_file:
             out_file.name = "snips.text"
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,

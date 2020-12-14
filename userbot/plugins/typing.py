@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K
 import asyncio
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd(pattern="type (.*)"))

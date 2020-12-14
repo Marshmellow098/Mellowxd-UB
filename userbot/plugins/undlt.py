@@ -1,5 +1,5 @@
 from telethon import events
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 import asyncio
 
 
@@ -9,7 +9,7 @@ async def _(event):
         return
     c = await event.get_chat()
     if c.admin_rights or c.creator:
-        a = await borg.get_admin_log(event.chat_id,limit=5, search="", edit=False, delete=True)
+        a = await @mellow.get_admin_log(event.chat_id,limit=5, search="", edit=False, delete=True)
         for i in a:
           await event.reply(i.original.action.message)
     else:

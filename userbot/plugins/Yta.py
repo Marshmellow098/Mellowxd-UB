@@ -13,7 +13,7 @@ import os
 import time
 
 from telethon.tl.types import DocumentAttributeAudio
-from uniborg.util import edit_or_reply,admin_cmd
+from uni@mellow.util import edit_or_reply,admin_cmd
 from youtube_dl import YoutubeDL
 from youtube_dl.utils import (
     ContentTooShortError,

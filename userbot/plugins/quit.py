@@ -12,6 +12,6 @@ async def leave(e):
         await e.edit("`I am leaving this chat😒..koi ni hai yaha apna I hate you all🙄..huh!!`")
         time.sleep(3)
         if '-' in str(e.chat_id):
-            await borg(LeaveChannelRequest(e.chat_id))
+            await @mellow(LeaveChannelRequest(e.chat_id))
         else:
             await e.edit('`Mere pyaare boss ye chat nahi hai..thoda soch samajh kar command dijiye..🤥`')

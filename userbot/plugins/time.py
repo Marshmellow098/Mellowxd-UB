@@ -33,7 +33,7 @@ async def _(event):
     drawn_text = ImageDraw.Draw(img)
     drawn_text.text((10, 10), current_time, font=fnt, fill=(255, 255, 255))
     img.save(required_file_name)
-    await borg.send_file(  # pylint:disable=E0602
+    await @mellow.send_file(  # pylint:disable=E0602
         event.chat_id,
         required_file_name,
         caption="Userbot: Powered by @Dark_cobra_support",

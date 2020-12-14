@@ -5,7 +5,7 @@
 
 from telethon.tl.types import MessageMediaPhoto
 import os, urllib, requests, asyncio
-from userbot.uniborgConfig import Config
+from userbot.uni@mellowConfig import Config
 from userbot.utils import admin_cmd
 
 @mellow.on(admin_cmd(pattern="colp$", outgoing=True))
@@ -46,7 +46,7 @@ async def detect(event):
     result = f"{r_json}"
     
     await devent.delete()
-    await borg.send_message(
+    await @mellow.send_message(
         event.chat_id,
         file=result
     )

@@ -35,7 +35,7 @@ async def _(event):
     elif input_str:
         to_promote_id = input_str
     try:
-        await borg(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
+        await @mellow(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
     except (Exception) as exc:
         await event.edit(str(exc))
     else:
@@ -59,7 +59,7 @@ async def _(event):
     elif input_str:
         to_promote_id = input_str
     try:
-        await borg(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
+        await @mellow(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
     except (Exception) as exc:
         await event.edit(str(exc))
     else:

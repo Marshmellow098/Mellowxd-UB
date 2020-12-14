@@ -1,6 +1,6 @@
 """Syntax: .whatscrapp as reply to a message copied from @WhatsCRApp"""
 from telethon import events
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd(pattern="whatscrapp"))

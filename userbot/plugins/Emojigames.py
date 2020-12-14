@@ -1,5 +1,5 @@
   
-# imported from uniborg credit goes to spechide
+# imported from uni@mellow credit goes to spechide
 from telethon.tl.types import InputMediaDice
 
 from ..utils import admin_cmd

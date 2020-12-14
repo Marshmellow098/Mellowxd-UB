@@ -10,7 +10,7 @@ Note - If you have a last name remove it unless it automatically removed.
 import os , urllib
 from telethon import events
 from telethon.tl import functions
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 OFFLINE_TAG = "[OFFLINE]"
 ONLINE_TAG = "[ONLINE]"
@@ -33,7 +33,7 @@ async def _(event):
     if photo:
         file = await event.client.upload_file(photo)
         try:
-            await borg(functions.photos.UploadProfilePhotoRequest(file))
+            await @mellow(functions.photos.UploadProfilePhotoRequest(file))
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
         else:
@@ -45,7 +45,7 @@ async def _(event):
     last_name = ""
     first_name = OFFLINE_TAG
     try:
-        await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
+        await @mellow(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
             last_name=last_name,
             first_name=first_name
         ))
@@ -72,7 +72,7 @@ async def _(event):
     if photo:
         file = await event.client.upload_file(photo)
         try:
-            await borg(functions.photos.UploadProfilePhotoRequest(file))
+            await @mellow(functions.photos.UploadProfilePhotoRequest(file))
         except Exception as e:  # pylint:disable=C0103,W0703
             await event.edit(str(e))
         else:
@@ -84,7 +84,7 @@ async def _(event):
     first_name = ONLINE_TAG
     last_name = ""
     try:
-        await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
+        await @mellow(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
             last_name=last_name,
             first_name=first_name
         ))

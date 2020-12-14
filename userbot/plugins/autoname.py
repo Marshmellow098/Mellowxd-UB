@@ -5,7 +5,7 @@ import asyncio
 import time
 from telethon.tl import functions
 from telethon.errors import FloodWaitError
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 from userbot import ALIVE_NAME
 
 
@@ -23,7 +23,7 @@ async def _(event):
         name = f"⌚{HM} 🔥{DEFAULTUSER}🔥 📅{DMY}"
         logger.info(name)
         try:
-            await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
+            await @mellow(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
                 first_name=name
             ))
         except FloodWaitError as ex:
@@ -32,7 +32,7 @@ async def _(event):
     
         # else:
             # logger.info(r.stringify())
-            # await borg.send_message(  # pylint:disable=E0602
+            # await @mellow.send_message(  # pylint:disable=E0602
             #     Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
             #     "Successfully Changed Profile Name"
             # )

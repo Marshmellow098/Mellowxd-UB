@@ -18,12 +18,12 @@ async def _(event):
     else:
         mentions = "Bots in {} channel: \n".format(input_str)
         try:
-            chat = await borg.get_entity(input_str)
+            chat = await @mellow.get_entity(input_str)
         except Exception as e:
             await event.edit(str(e))
             return None
     try:
-        async for x in borg.iter_participants(chat, filter=ChannelParticipantsBots):
+        async for x in @mellow.iter_participants(chat, filter=ChannelParticipantsBots):
             if isinstance(x.participant, ChannelParticipantAdmin):
                 mentions += "\n ⚜️ [{}](tg://user?id={}) `{}`".format(x.first_name, x.id, x.id)
             else:

@@ -129,125 +129,125 @@ async def hmm(event):
     await event.delete()
     x=random.randrange(1,60)
     if x==1:
-        await borg.send_file(event.chat_id,file=img1,caption=txt1)
+        await @mellow.send_file(event.chat_id,file=img1,caption=txt1)
     if x==2:
-        await borg.send_file(event.chat_id,file=img2,caption=txt2)
+        await @mellow.send_file(event.chat_id,file=img2,caption=txt2)
     if x==3:
-        await borg.send_file(event.chat_id,file=img3,caption=txt3)
+        await @mellow.send_file(event.chat_id,file=img3,caption=txt3)
     if x==4:
-        await borg.send_file(event.chat_id,file=img4,caption=txt4)
+        await @mellow.send_file(event.chat_id,file=img4,caption=txt4)
     if x==5:
-        await borg.send_file(event.chat_id,file=img5,caption=txt5)
+        await @mellow.send_file(event.chat_id,file=img5,caption=txt5)
     if x==6:
-        await borg.send_file(event.chat_id,file=img6,caption=stark)
+        await @mellow.send_file(event.chat_id,file=img6,caption=stark)
     if x==7:
-        await borg.send_file(event.chat_id,file=img7,caption=stark)
+        await @mellow.send_file(event.chat_id,file=img7,caption=stark)
     if x==8:
-        await borg.send_file(event.chat_id,file=img8,caption=stark)
+        await @mellow.send_file(event.chat_id,file=img8,caption=stark)
     if x==9:
-        await borg.send_file(event.chat_id,file=img9,caption=stark)
+        await @mellow.send_file(event.chat_id,file=img9,caption=stark)
     if x==10:
-        await borg.send_file(event.chat_id,file=img10,caption=stark)
+        await @mellow.send_file(event.chat_id,file=img10,caption=stark)
     if x==11:
-        await borg.send_file(event.chat_id,file=img11,caption=stark)
+        await @mellow.send_file(event.chat_id,file=img11,caption=stark)
     if x==12:
-        await borg.send_file(event.chat_id,file=img12,caption=mac)
+        await @mellow.send_file(event.chat_id,file=img12,caption=mac)
     if x==13:
-        await borg.send_file(event.chat_id,file=img13,caption=mac)
+        await @mellow.send_file(event.chat_id,file=img13,caption=mac)
     if x==14:
-        await borg.send_file(event.chat_id,file=img14,caption=mac)
+        await @mellow.send_file(event.chat_id,file=img14,caption=mac)
     if x==15:
-        await borg.send_file(event.chat_id,file=img15,caption=mac)
+        await @mellow.send_file(event.chat_id,file=img15,caption=mac)
     if x==16:
-        await borg.send_file(event.chat_id,file=img16,caption=mac)
+        await @mellow.send_file(event.chat_id,file=img16,caption=mac)
     if x==17:
-        await borg.send_file(event.chat_id,file=img17,caption=mac)
+        await @mellow.send_file(event.chat_id,file=img17,caption=mac)
     if x==18:
-        await borg.send_file(event.chat_id,file=img18,caption=mac)
+        await @mellow.send_file(event.chat_id,file=img18,caption=mac)
     if x==19:
-        await borg.send_file(event.chat_id,file=img19,caption=serve)
+        await @mellow.send_file(event.chat_id,file=img19,caption=serve)
     if x==20:
-        await borg.send_file(event.chat_id,file=img20,caption=serve)
+        await @mellow.send_file(event.chat_id,file=img20,caption=serve)
     if x==21:
-        await borg.send_file(event.chat_id,file=img21,caption=serve)
+        await @mellow.send_file(event.chat_id,file=img21,caption=serve)
     if x==22:
-        await borg.send_file(event.chat_id,file=img22,caption=serve)
+        await @mellow.send_file(event.chat_id,file=img22,caption=serve)
     if x==23:
-        await borg.send_file(event.chat_id,file=img23,caption=serve)
+        await @mellow.send_file(event.chat_id,file=img23,caption=serve)
     if x==24:
-        await borg.send_file(event.chat_id,file=img24,caption=serve)
+        await @mellow.send_file(event.chat_id,file=img24,caption=serve)
     if x==25:
-        await borg.send_file(event.chat_id,file=img25,caption=serve)
+        await @mellow.send_file(event.chat_id,file=img25,caption=serve)
     if x==26:
-        await borg.send_file(event.chat_id,file=img26,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img26,caption=mental)
     if x==27:
-        await borg.send_file(event.chat_id,file=img27,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img27,caption=mental)
     if x==28:
-        await borg.send_file(event.chat_id,file=img28,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img28,caption=mental)
     if x==29:
-        await borg.send_file(event.chat_id,file=img29,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img29,caption=mental)
     if x==30:
-        await borg.send_file(event.chat_id,file=img30,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img30,caption=mental)
     if x==31:
-        await borg.send_file(event.chat_id,file=img31,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img31,caption=mental)
     if x==32:
-        await borg.send_file(event.chat_id,file=img32,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img32,caption=mental)
     if x==33:
-        await borg.send_file(event.chat_id,file=img33,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img33,caption=mental)
     if x==34:
-        await borg.send_file(event.chat_id,file=img34,caption=mental)
+        await @mellow.send_file(event.chat_id,file=img34,caption=mental)
     if x==35:
-        await borg.send_file(event.chat_id,file=img35,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img35,caption=pm)
     if x==36:
-        await borg.send_file(event.chat_id,file=img36,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img36,caption=pm)
     if x==37:
-        await borg.send_file(event.chat_id,file=img37,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img37,caption=pm)
     if x==38:
-        await borg.send_file(event.chat_id,file=img38,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img38,caption=pm)
     if x==39:
-        await borg.send_file(event.chat_id,file=img39,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img39,caption=pm)
     if x==40:
-        await borg.send_file(event.chat_id,file=img40,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img40,caption=pm)
     if x==41:
-        await borg.send_file(event.chat_id,file=img41,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img41,caption=pm)
     if x==42:
-        await borg.send_file(event.chat_id,file=img42,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img42,caption=pm)
     if x==43:
-        await borg.send_file(event.chat_id,file=img43,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img43,caption=pm)
     if x==44:
-        await borg.send_file(event.chat_id,file=img44,caption=pm)
+        await @mellow.send_file(event.chat_id,file=img44,caption=pm)
     if x==45:
-        await borg.send_file(event.chat_id,file=img45,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img45,caption=opeo)
     if x==46:
-        await borg.send_file(event.chat_id,file=img46,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img46,caption=opeo)
     if x==47:
-        await borg.send_file(event.chat_id,file=img47,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img47,caption=opeo)
     if x==48:
-        await borg.send_file(event.chat_id,file=img48,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img48,caption=opeo)
     if x==49:
-        await borg.send_file(event.chat_id,file=img49,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img49,caption=opeo)
     if x==50:
-        await borg.send_file(event.chat_id,file=img50,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img50,caption=opeo)
     if x==51:
-        await borg.send_file(event.chat_id,file=img51,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img51,caption=opeo)
     if x==52:
-        await borg.send_file(event.chat_id,file=img52,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img52,caption=opeo)
     if x==53:
-        await borg.send_file(event.chat_id,file=img53,caption=opeo)
+        await @mellow.send_file(event.chat_id,file=img53,caption=opeo)
     if x==54:
-        await borg.send_file(event.chat_id,file=img54,caption=hmm)
+        await @mellow.send_file(event.chat_id,file=img54,caption=hmm)
     if x==55:
-        await borg.send_file(event.chat_id,file=img55,caption=hmm)
+        await @mellow.send_file(event.chat_id,file=img55,caption=hmm)
     if x==56:
-        await borg.send_file(event.chat_id,file=img56,caption=hmm)
+        await @mellow.send_file(event.chat_id,file=img56,caption=hmm)
     if x==57:
-        await borg.send_file(event.chat_id,file=img57,caption=hmm)
+        await @mellow.send_file(event.chat_id,file=img57,caption=hmm)
     if x==58:
-        await borg.send_file(event.chat_id,file=img58,caption=water)
+        await @mellow.send_file(event.chat_id,file=img58,caption=water)
     if x==59:
-        await borg.send_file(event.chat_id,file=img59,caption=water)
+        await @mellow.send_file(event.chat_id,file=img59,caption=water)
     if x==60:
-        await borg.send_file(event.chat_id,file=img60,caption=water)
+        await @mellow.send_file(event.chat_id,file=img60,caption=water)
     
     
 @mellow.on(admin_cmd(pattern="wdiwali",outgoing=True))

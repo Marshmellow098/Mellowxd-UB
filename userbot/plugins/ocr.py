@@ -105,7 +105,7 @@ async def parse_ocr_space_api(event):
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
         os.makedirs(Config.TMP_DOWNLOAD_DIRECTORY)
     lang_code = event.pattern_match.group(1)
-    downloaded_file_name = await borg.download_media(
+    downloaded_file_name = await @mellow.download_media(
         await event.get_reply_message(),
         Config.TMP_DOWNLOAD_DIRECTORY,
         progress_callback=progress

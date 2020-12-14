@@ -148,7 +148,7 @@ async def who(event):
     if not message_id_to_reply:
         message_id_to_reply = None
     try:
-        await borg.send_file(
+        await @mellow.send_file(
             event.chat_id,
             photo,
             caption=caption,

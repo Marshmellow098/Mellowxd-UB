@@ -3,7 +3,7 @@ import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 @mellow.on(admin_cmd(pattern="purl ?(.*)", allow_sudo=True))
 async def _(event):

@@ -106,7 +106,7 @@ async def _(event):
                     supports_streaming = True
                     force_document = False
                 try:
-                    await borg.send_file(
+                    await @mellow.send_file(
                         event.chat_id,
                         single_file,
                         caption=caption_rts,
@@ -121,7 +121,7 @@ async def _(event):
                         # )
                     )
                 except Exception as e:
-                    await borg.send_message(
+                    await @mellow.send_message(
                         event.chat_id,
                         "{} caused `{}`".format(caption_rts, str(e)),
                         reply_to=event.message.id
@@ -153,7 +153,7 @@ async def _(event):
     if os.path.exists(input_str):
         start = datetime.now()
         c_time = time.time()
-        await borg.send_file(
+        await @mellow.send_file(
             event.chat_id,
             input_str,
             force_document=True,
@@ -224,7 +224,7 @@ async def _(event):
         # Bad Request: VIDEO_CONTENT_TYPE_INVALID
         c_time = time.time()
         try:
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 file_name,
                 thumb=thumb,

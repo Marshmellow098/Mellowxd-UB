@@ -26,13 +26,13 @@ async def on_file_to_photo(event):
     if image.size > 10 * 1024 * 1024:
         return  # We'd get PhotoSaveFileInvalidError otherwise
 
-    file = await borg.download_media(target, file=BytesIO())
+    file = await @mellow.download_media(target, file=BytesIO())
     file.seek(0)
-    img = await borg.upload_file(file)
+    img = await @mellow.upload_file(file)
     img.name = 'image.png'
 
     try:
-        await borg(SendMediaRequest(
+        await @mellow(SendMediaRequest(
             peer=await event.get_input_chat(),
             media=types.InputMediaUploadedPhoto(img),
             message=target.message,

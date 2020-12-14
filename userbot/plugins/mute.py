@@ -2,7 +2,7 @@
 '''
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 #@command(outgoing=True, pattern=r"^.mute ?(\d+)?")
 @mellow.on(admin_cmd(pattern="mute ?(\d+)?"))

@@ -10,7 +10,7 @@ from hachoir.parser import createParser
 from userbot.utils import admin_cmd, progress
 
 
-FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uniborg.media.ffmpeg"
+FF_MPEG_DOWN_LOAD_MEDIA_PATH = "uni@mellow.media.ffmpeg"
 
 
 @mellow.on(admin_cmd("ffmpegsave"))
@@ -25,7 +25,7 @@ async def ff_mpeg_trim_cmd(event):
             reply_message = await event.get_reply_message()
             try:
                 c_time = time.time()
-                downloaded_file_name = await borg.download_media(
+                downloaded_file_name = await @mellow.download_media(
                     reply_message,
                     FF_MPEG_DOWN_LOAD_MEDIA_PATH,
                     
@@ -65,7 +65,7 @@ async def ff_mpeg_trim_cmd(event):
         logger.info(o)
         try:
             c_time = time.time()
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 o,
                 caption=" ".join(cmt[1:]),
@@ -89,7 +89,7 @@ async def ff_mpeg_trim_cmd(event):
         logger.info(o)
         try:
             c_time = time.time()
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 o,
                 caption=" ".join(cmt[1:]),

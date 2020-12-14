@@ -3,7 +3,7 @@ Syntax: .meaning <word>"""
 
 import requests
 from telethon import events
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd("meaning (.*)"))
@@ -28,7 +28,7 @@ async def _(event):
     if event.reply_to_msg_id:
         reply_msg_id = event.reply_to_msg_id
     try:
-        await borg.send_file(
+        await @mellow.send_file(
             event.chat_id,
             pronounciation,
             caption=f"Pronounciation of __{input_str}__",

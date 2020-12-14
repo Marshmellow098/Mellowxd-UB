@@ -2,7 +2,7 @@
 Syntax: .wikimedia Query"""
 from telethon import events
 import requests
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd(pattern="wikimedia (.*)"))

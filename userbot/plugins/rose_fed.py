@@ -18,14 +18,14 @@ async def _(event):
         return    
     sysarg = event.pattern_match.group(1)
     if sysarg == "":
-      async with borg.conversation(bot) as conv:
+      async with @mellow.conversation(bot) as conv:
           try:
               await conv.send_message("/start")
               response = await conv.get_response()
               await conv.send_message("/newfed DARK-COBRA Federation")
               audio = await conv.get_response()
               final = ("If you would like to know more about ROSE BOT federation, please visit @Missrose_bot." , "")
-              await borg.send_message(event.chat_id, audio.text)
+              await @mellow.send_message(event.chat_id, audio.text)
               await event.delete()
           except YouBlockedUserError:
               await event.edit("**Error:** `unblock` @Missrose_bot `and retry!")

@@ -4,7 +4,7 @@ import zipfile
 from pySmartDL import SmartDL
 import time
 import os
-from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
+from uni@mellow.util import admin_cmd, humanbytes, progress, time_formatter
 
 
 @mellow.on(admin_cmd(pattern="compress ?(.*)"))
@@ -19,14 +19,14 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY                
             )
             directory_name = downloaded_file_name
             await event.edit("Finish downloading to my local")
             zipfile.ZipFile(directory_name + '.zip', 'w', zipfile.ZIP_DEFLATED).write(directory_name)
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 directory_name + ".zip",
                 caption="**Zipped Successfully**",

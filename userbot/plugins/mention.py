@@ -1,8 +1,8 @@
-# For Uniborg
+# For Uni@mellow
 # (c) @INF1N17Y
 
 from telethon import events
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd("mention (.*)"))

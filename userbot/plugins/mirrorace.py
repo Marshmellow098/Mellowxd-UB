@@ -8,7 +8,7 @@ import os
 import requests
 import time
 from datetime import datetime
-from uniborg.util import admin_cmd, progress
+from uni@mellow.util import admin_cmd, progress
 
 
 @mellow.on(admin_cmd(pattern="ma ?(.*)", allow_sudo=True))
@@ -28,7 +28,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         try:
             c_time = time.time()
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=lambda d, t: asyncio.get_event_loop().create_task(

@@ -21,7 +21,7 @@ async def _(event):
         name = f"{HM}🔥{DEFAULTUSER}🔥{DMY}"
         logger.info(name)
         try:
-            await borg(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
+            await @mellow(functions.account.UpdateProfileRequest(  # pylint:disable=E0602
                 last_name = name
             ))
         except FloodWaitError as ex:
@@ -29,7 +29,7 @@ async def _(event):
             await asyncio.sleep(ex.seconds)
         # else:
             # logger.info(r.stringify())
-            # await borg.send_message(  # pylint:disable=E0602
+            # await @mellow.send_message(  # pylint:disable=E0602
             #     Config.PRIVATE_GROUP_BOT_API_ID,  # pylint:disable=E0602
             #     "Changed Profile Picture"
             # )

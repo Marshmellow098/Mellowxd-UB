@@ -49,7 +49,7 @@ async def _(event):
             message_id = event.reply_to_msg_id
         with io.BytesIO(im_png) as out_file:
             out_file.name = "DARK COBRA.ScreenCapture.PNG"
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 out_file,
                 caption=input_str,

@@ -24,7 +24,7 @@ from hachoir.parser import createParser
 from userbot import LOGS, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from userbot.utils import register
 from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
-from userbot.uniborgConfig import Config
+from userbot.uni@mellowConfig import Config
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 import io
 from userbot.utils import admin_cmd, progress

@@ -47,7 +47,7 @@ async def _(event):
         await mellow.send_file(event.chat_id,img4)
         await event.delete()
     if x==6:
-        await borg.send_file(event.chat_id,img5)
+        await @mellow.send_file(event.chat_id,img5)
         await event.delete()
     if x==7:
         await mellow.send_file(event.chat_id,img6)

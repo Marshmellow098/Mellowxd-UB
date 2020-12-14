@@ -50,7 +50,7 @@ async def lastfm(event):
     with open(PAT_IMAGE,'wb') as f:
         f.write(requests.get(pat).content)
     if username:
-        await borg.send_file(event.chat_id,PAT_IMAGE,caption=username)
+        await @mellow.send_file(event.chat_id,PAT_IMAGE,caption=username)
     else:
-        await borg.send_file(event.chat_id,PAT_IMAGE,reply_to=event.reply_to_msg_id) 
+        await @mellow.send_file(event.chat_id,PAT_IMAGE,reply_to=event.reply_to_msg_id) 
     remove(PAT_IMAGE)

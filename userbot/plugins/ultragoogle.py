@@ -66,7 +66,7 @@ async def _(event):
     if len(lst) == 0:
         await event.delete()
         return
-    await borg.send_file(
+    await @mellow.send_file(
         event.chat_id,
         lst,
         caption=input_str,
@@ -95,7 +95,7 @@ async def _(event):
         previous_message = await event.get_reply_message()
         previous_message_text = previous_message.message
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY
             )

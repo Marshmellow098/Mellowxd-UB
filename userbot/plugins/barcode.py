@@ -9,7 +9,7 @@ import os
 import time
 from barcode.writer import ImageWriter
 from datetime import datetime
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd(pattern="barcode ?(.*)"))
@@ -27,7 +27,7 @@ async def _(event):
         previous_message = await event.get_reply_message()
         reply_msg_id = previous_message.id
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
             )
@@ -46,7 +46,7 @@ async def _(event):
     try:
         bar_code_mode_f = barcode.get(bar_code_type, message, writer=ImageWriter())
         filename = bar_code_mode_f.save(bar_code_type)
-        await borg.send_file(
+        await @mellow.send_file(
             event.chat_id,
             filename,
             caption=message,

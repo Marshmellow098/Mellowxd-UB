@@ -6,7 +6,7 @@ usage:- .slap in reply to any message, or u gonna slap urself.
 
 import sys
 from telethon import events, functions
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 import random
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName

@@ -27,7 +27,7 @@ async def _(event):
     action = "typing"
     if input_str:
         action = input_str
-    async with borg.action(event.chat_id, action):
+    async with @mellow.action(event.chat_id, action):
         await asyncio.sleep(86400)  # type for 10 seconds
         
         

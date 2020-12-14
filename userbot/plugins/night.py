@@ -23,12 +23,12 @@ async def set_not_night(event):
     current_message = event.message.message
     if ".night" not in current_message and "yes" in USER_night:  # pylint:disable=E0602
         try:
-            await borg.send_message(  # pylint:disable=E0602
+            await @mellow.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
                 "Mine Owner has Gone Sleep (Pure Din Sota hi Rehta He {DEFAULTUSER} )"
             )
         except Exception as e:  # pylint:disable=C0103,W0703
-            await borg.send_message(  # pylint:disable=E0602
+            await @mellow.send_message(  # pylint:disable=E0602
                 event.chat_id,
                 "Please set `PLUGIN_CHANNEL` " + \
                 "for the proper functioning of night functionality " + \
@@ -53,7 +53,7 @@ async def _(event):
     last_night_message = {}
     reason = event.pattern_match.group(1)
     if not USER_night:  # pylint:disable=E0602
-        last_seen_status = await borg(  # pylint:disable=E0602
+        last_seen_status = await @mellow(  # pylint:disable=E0602
             functions.account.GetPrivacyRequest(
                 types.InputPrivacyKeyStatusTimestamp()
             )
@@ -68,7 +68,7 @@ async def _(event):
         await asyncio.sleep(5)
         await event.delete()
         try:
-            await borg.send_message(  # pylint:disable=E0602
+            await @mellow.send_message(  # pylint:disable=E0602
                 Config.PLUGIN_CHANNEL,  # pylint:disable=E0602
                 f"My BOss Wants So Sleep"
             )

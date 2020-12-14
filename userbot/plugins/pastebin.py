@@ -8,7 +8,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP
-from userbot.uniborgConfig import Config
+from userbot.uni@mellowConfig import Config
 from userbot.utils import admin_cmd, sudo_cmd
 
 logging.basicConfig(
@@ -44,7 +44,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,
@@ -142,7 +142,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,
@@ -199,7 +199,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,
@@ -246,7 +246,7 @@ async def _(event):
     elif event.reply_to_msg_id:
         previous_message = await event.get_reply_message()
         if previous_message.media:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 previous_message,
                 Config.TMP_DOWNLOAD_DIRECTORY,
                 progress_callback=progress,

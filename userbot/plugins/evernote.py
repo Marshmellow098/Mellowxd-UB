@@ -9,4 +9,4 @@ async def test(event):
         return
     uwu = event.pattern_match.group(1)
     await event.edit("Added note to Evernote".format(uwu))
-    await borg.send_message("@ifttt", "#note {}".format(uwu))
+    await @mellow.send_message("@ifttt", "#note {}".format(uwu))

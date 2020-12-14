@@ -5,7 +5,7 @@
 from telethon import events
 from datetime import datetime
 import requests
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd("xtools (.*)"))

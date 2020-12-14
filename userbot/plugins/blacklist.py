@@ -51,7 +51,7 @@ async def on_view_blacklist(event):
     if len(OUT_STR) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(OUT_STR)) as out_file:
             out_file.name = "blacklist.text"
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,

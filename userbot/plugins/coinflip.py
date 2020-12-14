@@ -2,7 +2,7 @@
 Syntax: .coinflip [optional_choice]"""
 from telethon import events
 import random, re
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd(pattern="coin ?(.*)"))

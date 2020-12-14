@@ -10,7 +10,7 @@ import traceback
 import asyncio
 import sys
 import io
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd("eval"))
@@ -54,7 +54,7 @@ async def _(event):
     if len(final_output) > Config.MAX_MESSAGE_SIZE_LIMIT:
         with io.BytesIO(str.encode(final_output)) as out_file:
             out_file.name = "eval.text"
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,

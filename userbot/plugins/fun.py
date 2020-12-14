@@ -1,6 +1,6 @@
 from telethon import events
 import random, re
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 METOOSTR = [
     "`Me too thanks`",

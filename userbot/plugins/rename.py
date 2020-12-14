@@ -56,7 +56,7 @@ async def _(event):
        # c_time = time.time()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await borg.download_media(
+        downloaded_file_name = await @mellow.download_media(
             reply_message,
             downloaded_file_name
         )
@@ -87,7 +87,7 @@ async def _(event):
         reply_message = await event.get_reply_message()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await borg.download_media(
+        downloaded_file_name = await @mellow.download_media(
             reply_message,
             downloaded_file_name
         )
@@ -95,7 +95,7 @@ async def _(event):
         ms_one = (end - start).seconds
         if os.path.exists(downloaded_file_name):
             c_time = time.time()
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 downloaded_file_name,
                 force_document=False,
@@ -130,7 +130,7 @@ async def _(event):
         c_time = time.time()
         to_download_directory = Config.TMP_DOWNLOAD_DIRECTORY
         downloaded_file_name = os.path.join(to_download_directory, file_name)
-        downloaded_file_name = await borg.download_media(
+        downloaded_file_name = await @mellow.download_media(
             reply_message,
             downloaded_file_name
         )
@@ -163,7 +163,7 @@ async def _(event):
             # Bad Request: VIDEO_CONTENT_TYPE_INVALID
            # c_time = time.time()
             try:
-                await borg.send_file(
+                await @mellow.send_file(
                     event.chat_id,
                     downloaded_file_name,
                     thumb=thumb,

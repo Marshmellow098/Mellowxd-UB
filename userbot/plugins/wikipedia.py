@@ -5,7 +5,7 @@
 Syntax: .wikipedia Query"""
 from telethon import events
 import wikipedia
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd(pattern="wikipedia (.*)"))

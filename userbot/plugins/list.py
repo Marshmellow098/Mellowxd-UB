@@ -7,7 +7,7 @@ By:- @Zero_cool7870
 
 """
 
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 import asyncio
 import os
 
@@ -32,7 +32,7 @@ async def lst(event):
 		out = 'filesList.txt'
 		with open(out,'w') as f:
 			f.write(f)
-		await borg.send_file(
+		await @mellow.send_file(
 				event.chat_id,
 				out,
 				force_document=True,

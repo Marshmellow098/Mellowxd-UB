@@ -35,47 +35,47 @@ async def _(event):
     await asyncio.sleep(0.9)
     x=(random.randrange(1,15))
     if x==1:
-        await borg.send_file(event.chat_id,img1)
+        await @mellow.send_file(event.chat_id,img1)
         await event.delete()
     if x==2:
-        await borg.send_file(event.chat_id,img2)
+        await @mellow.send_file(event.chat_id,img2)
         await event.delete()
     if x==3:
-        await borg.send_file(event.chat_id,img3)
+        await @mellow.send_file(event.chat_id,img3)
         await event.delete()
     if x==4:
-        await borg.send_file(event.chat_id,img3)
+        await @mellow.send_file(event.chat_id,img3)
         await event.delete()        
     if x==5:
-        await borg.send_file(event.chat_id,img4)
+        await @mellow.send_file(event.chat_id,img4)
         await event.delete()
     if x==6:
-        await borg.send_file(event.chat_id,img5)
+        await @mellow.send_file(event.chat_id,img5)
         await event.delete()
     if x==7:
-        await borg.send_file(event.chat_id,img6)
+        await @mellow.send_file(event.chat_id,img6)
         await event.delete()
     if x==8:
-        await borg.send_file(event.chat_id,img7)
+        await @mellow.send_file(event.chat_id,img7)
         await event.delete()        
     if x==9:
-        await borg.send_file(event.chat_id,img9)
+        await @mellow.send_file(event.chat_id,img9)
         await event.delete()        
     if x==10:
-        await borg.send_file(event.chat_id,img10)
+        await @mellow.send_file(event.chat_id,img10)
         await event.delete()
     if x==11:
-        await borg.send_file(event.chat_id,img11)
+        await @mellow.send_file(event.chat_id,img11)
         await event.delete()
     if x==12:
-        await borg.send_file(event.chat_id,img12)
+        await @mellow.send_file(event.chat_id,img12)
         await event.delete()
     if x==13:
-        await borg.send_file(event.chat_id,img13)
+        await @mellow.send_file(event.chat_id,img13)
         await event.delete()         
     if x==14:
-        await borg.send_file(event.chat_id,img14)
+        await @mellow.send_file(event.chat_id,img14)
         await event.delete()
     if x==15:
-        await borg.send_file(event.chat_id,img15)
+        await @mellow.send_file(event.chat_id,img15)
         await event.delete()

@@ -19,7 +19,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 
 
 import spotify_token as st
-from userbot.uniborgConfig import Config
+from userbot.uni@mellowConfig import Config
 
 # =================== CONSTANT ===================
 SPO_BIO_ENABLED = "```Spotify Current Music to Name enabled.```"
@@ -73,7 +73,7 @@ async def update_spotify_info():
                 oldartist = artist
                 environ["oldsong"] = song
                 spobio = " 🎧:-" + song + " - " + artist
-                await borg(UpdateProfileRequest(first_name=spobio))
+                await @mellow(UpdateProfileRequest(first_name=spobio))
                 environ["errorcheck"] = "0"
         except KeyError:
             errorcheck = environ.get("errorcheck", None)
@@ -81,16 +81,16 @@ async def update_spotify_info():
                 await update_token()
             elif errorcheck == 1:
                 SPOTIFYCHECK = False
-                await borg(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
+                await @mellow(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
                 print(ERROR_MSG)
                 if Config.LOGGER:
-                    await borg.send_message(
+                    await @mellow.send_message(
                         Config.PM_LOGGR_BOT_API_ID,
                         ERROR_MSG)
         except JSONDecodeError:
             OLDEXCEPT = True
             await sleep(6)
-            await borg(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
+            await @mellow(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
         except TypeError:
             await dirtyfix()
         SPOTIFYCHECK = False
@@ -136,5 +136,5 @@ async def set_biodgraph(setdbio):
     global RUNNING
     SPOTIFYCHECK = False
     RUNNING = False
-    await borg(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
+    await @mellow(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
     await setdbio.edit(SPO_BIO_DISABLED)

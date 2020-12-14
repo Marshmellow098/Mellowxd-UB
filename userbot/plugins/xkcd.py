@@ -5,7 +5,7 @@ import asyncio
 import json
 import requests
 from urllib.parse import quote
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 @mellow.on(admin_cmd(pattern="xkcd ?(.*)"))

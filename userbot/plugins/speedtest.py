@@ -50,7 +50,7 @@ Ping: {}
 Internet Service Provider: {}
 ISP Rating: {}""".format(ms, convert_from_bytes(download_speed), convert_from_bytes(upload_speed), ping_time, i_s_p, i_s_p_rating))
         else:
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 speedtest_image,
                 caption="**SpeedTest** completed in {} seconds".format(ms),

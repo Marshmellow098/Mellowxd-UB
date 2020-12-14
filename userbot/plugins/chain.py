@@ -14,7 +14,7 @@ async def _(event):
     while message:
         reply = await message.get_reply_message()
         if reply is None:
-            await borg(SaveDraftRequest(
+            await @mellow(SaveDraftRequest(
                 await event.get_input_chat(),
                 "",
                 reply_to_msg_id=message.id

@@ -41,7 +41,7 @@ async def _(event):
         # check if media message
         await event.edit("Ooh Analysing this pic...")
         try:
-            downloaded_file_name = await borg.download_media(
+            downloaded_file_name = await @mellow.download_media(
                 reply_message,
                 Config.TMP_DOWNLOAD_DIRECTORY
             )
@@ -62,7 +62,7 @@ async def _(event):
     if "image" in contentType:
         with io.BytesIO(output_file_name.content) as remove_bg_image:
             remove_bg_image.name = "DARKCOBRA_RM_BG.png"
-            await borg.send_file(
+            await @mellow.send_file(
                 event.chat_id,
                 remove_bg_image,
                 force_document=True,

@@ -508,7 +508,7 @@ async def _(event):
             "**State changed from up to starting**",    
             "**Stopping all processes with SIGTERM**",
             "**Process exited with** `status 143`",
-            "**Starting process with command** `python3 -m stdborg`",
+            "**Starting process with command** `python3 -m std@mellow`",
             "**State changed from starting to up**",
             "__INFO:Userbot:Logged in as 557667062__",
             "__INFO:Userbot:Successfully loaded all plugins__",

@@ -1,7 +1,7 @@
 """ Plugin By @chsaiujwal on telegram """
 """ Plugin By @chsaiujwal on telegram """
 
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 from asyncio import wait
 

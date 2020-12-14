@@ -12,7 +12,7 @@ Available Commands:
 from telethon import events
 import asyncio
 from collections import deque
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 @mellow.on(admin_cmd(pattern=r"candy"))
 async def _(event):

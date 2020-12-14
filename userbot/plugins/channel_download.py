@@ -9,7 +9,7 @@ import asyncio
 import os
 import subprocess
 import sys
-from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
+from uni@mellow.util import admin_cmd, humanbytes, progress, time_formatter
 
 @mellow.on(admin_cmd(pattern=r"getc"))
 async def get_media(event):
@@ -27,12 +27,12 @@ async def get_media(event):
     channel_username = channel_username[11: ]
     print(channel_username)
     await event.edit("Downloading Media From this Channel.")
-    msgs = await borg.get_messages(channel_username, limit=int(limit))
+    msgs = await @mellow.get_messages(channel_username, limit=int(limit))
     with open('log.txt','w') as f:
     	f.write(str(msgs))
     for msg in msgs:
        if msg.media is not None:
-	        await borg.download_media(
+	        await @mellow.download_media(
                 msg,dir)
     ps = subprocess.Popen(('ls', 'temp'), stdout=subprocess.PIPE)
     output = subprocess.check_output(('wc', '-l'), stdin=ps.stdout)
@@ -63,12 +63,12 @@ async def get_media(event):
    
     print(channel_username)
     await event.edit("Downloading All Media From this Channel.")
-    msgs = await borg.get_messages(channel_username,limit=3000)
+    msgs = await @mellow.get_messages(channel_username,limit=3000)
     with open('log.txt','w') as f:
     	f.write(str(msgs))
     for msg in msgs:
        if msg.media is not None:
-	        await borg.download_media(
+	        await @mellow.download_media(
                 msg,dir)          
     ps = subprocess.Popen(('ls', 'temp'), stdout=subprocess.PIPE)
     output = subprocess.check_output(('wc', '-l'), stdin=ps.stdout)

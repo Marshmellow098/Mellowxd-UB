@@ -1,7 +1,7 @@
 import re
 import bs4
 import requests
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 @mellow.on(admin_cmd(pattern="giz ?(.*)"))
 async def gizoogle(event):

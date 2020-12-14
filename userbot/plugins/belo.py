@@ -15,7 +15,7 @@ import sys
 
 import random
 
-from uniborg.util import admin_cmd
+from uni@mellow.util import admin_cmd
 
 
 
