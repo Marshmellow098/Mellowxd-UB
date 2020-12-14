@@ -20,9 +20,9 @@ jobs:
 
         with:
 
-          find: "borg"
+          find: "admin_cmd"
 
-          replace: "@mellow"
+          replace: "mellow_cmd"
 
       - name: Create Pull Request
 
