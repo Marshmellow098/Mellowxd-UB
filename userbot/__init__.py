@@ -13,7 +13,7 @@ if Var.STRING_SESSION:
 
     
 
-    mellow = TelegramClient(StringSession(session-name), Var.APP_ID,
+    mellow = TelegramClient(StringSession(session_name), Var.APP_ID,
                             Var.API_HASH)
 
 else:
