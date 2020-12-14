@@ -13,7 +13,7 @@ import requests
 import math
 from userbot.utils import mellow_cmd
 from userbot import CMD_HELP
-from userbot.uni@mellowConfig import Config
+from userbot.uniborgConfig import Config
 
 # ================= 
 
