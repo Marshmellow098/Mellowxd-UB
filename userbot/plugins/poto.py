@@ -8,7 +8,7 @@ import logging
 
 
 
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
 
@@ -34,11 +34,11 @@ if 1 == 1:
 
     name = "Profile Photos"
 
-    client = mellow
+    client = borg
 
 
 
-    @mellow.on(mellow_cmd(pattern="poto(.*)"))
+    @borg.on(admin_cmd(pattern="poto(.*)"))
 
     async def potocmd(event):
 
@@ -68,7 +68,7 @@ if 1 == 1:
 
                 photo = await event.client.download_profile_photo(chat)
 
-                await @mellow.send_file(event.chat_id, photo)
+                await borg.send_file(event.chat_id, photo)
 
         else:
 
@@ -92,7 +92,7 @@ if 1 == 1:
 
                 send_photos = await event.client.download_media(photos[id - 1])
 
-                await @mellow.send_file(event.chat_id, send_photos)
+                await borg.send_file(event.chat_id, send_photos)
 
             else:
 

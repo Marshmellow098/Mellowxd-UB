@@ -4,28 +4,28 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
-@mellow.on(mellow_cmd(pattern=r"tagall", outgoing=True))
+@borg.on(admin_cmd(pattern=r"tagall", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
     mentions = "Hello"
     chat = await event.get_input_chat()
-    async for x in @mellow.iter_participants(chat, 100):
+    async for x in borg.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
     await event.reply(mentions)
     await event.delete()
 
 
-@mellow.on(mellow_cmd(pattern=r"administrator", outgoing=True))
+@borg.on(admin_cmd(pattern=r"administrator", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
     mentions = "Administrators : "
     chat = await event.get_input_chat()
-    async for x in @mellow.iter_participants(chat, filter=ChannelParticipantsAdmins):
+    async for x in borg.iter_participants(chat, filter=ChannelParticipantsAdmins):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
     reply_message = None
     if event.reply_to_msg_id:

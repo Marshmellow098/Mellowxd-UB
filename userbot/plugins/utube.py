@@ -6,7 +6,7 @@
 import re
 import random
 from userbot import bot
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 IF_EMOJI = re.compile(
     "["
@@ -28,7 +28,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(IF_EMOJI, '', inputString)
 
 
-@mellow.on(mellow_cmd(pattern="utube(?: |$)(.*)"))
+@borg.on(admin_cmd(pattern="utube(?: |$)(.*)"))
 
 async def nope(doit):
     ok = doit.pattern_match.group(1)

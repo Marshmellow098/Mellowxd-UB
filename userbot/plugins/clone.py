@@ -11,7 +11,7 @@ from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 from telethon.tl import functions
 from telethon import events
 from telethon.errors import ImageProcessFailedError, PhotoCropSizeSmallError
@@ -31,7 +31,7 @@ DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else "Hmm"
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 
-@mellow.on(mellow_cmd(pattern="clone ?(.*)"))
+@borg.on(admin_cmd(pattern="clone ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -60,22 +60,22 @@ async def _(event):
     user_bio = replied_user.about
     if user_bio is not None:
         user_bio = replied_user.about
-    await @mellow(functions.account.UpdateProfileRequest(
+    await borg(functions.account.UpdateProfileRequest(
         first_name=first_name
     ))
-    await @mellow(functions.account.UpdateProfileRequest(
+    await borg(functions.account.UpdateProfileRequest(
         last_name=last_name
     ))
-    await @mellow(functions.account.UpdateProfileRequest(
+    await borg(functions.account.UpdateProfileRequest(
         about=user_bio
     ))
     n = 1
-    pfile = await @mellow.upload_file(profile_pic)  # pylint:disable=E060      
-    await @mellow(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
+    pfile = await borg.upload_file(profile_pic)  # pylint:disable=E060      
+    await borg(functions.photos.UploadProfilePhotoRequest(  # pylint:disable=E0602
         pfile
     ))
     await event.delete()
-    await @mellow.send_message(
+    await borg.send_message(
       event.chat_id,
       "**Who Are You? .. **",
       reply_to=reply_message
@@ -83,16 +83,16 @@ async def _(event):
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, f"#CLONED\nSuccesfulley cloned [{first_name}](tg://user?id={user_id })")
     
-@mellow.on(mellow_cmd(pattern="revert$"))
+@borg.on(admin_cmd(pattern="revert$"))
 async def _(event):
     if event.fwd_from:
         return
     name = f"{DEFAULTUSER}"
     bio = f"{DEFAULTUSERBIO}"
     n = 1
-    await @mellow(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit= n)))    
-    await @mellow(functions.account.UpdateProfileRequest(about=f"{bio}"))
-    await @mellow(functions.account.UpdateProfileRequest(first_name=f"{name}"))
+    await borg(functions.photos.DeletePhotosRequest(await event.client.get_profile_photos("me", limit= n)))    
+    await borg(functions.account.UpdateProfileRequest(about=f"{bio}"))
+    await borg(functions.account.UpdateProfileRequest(first_name=f"{name}"))
     await event.edit("succesfully reverted to your account back")
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, f"#REVERT\nSuccessfully reverted back to your profile")

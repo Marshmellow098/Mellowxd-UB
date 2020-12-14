@@ -8,10 +8,10 @@ import traceback
 from datetime import datetime
 from selenium import webdriver
 from telethon import events
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
-@mellow.on(mellow_cmd(pattern="screenshot (.*)"))
+@borg.on(admin_cmd(pattern="screenshot (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -49,7 +49,7 @@ async def _(event):
             message_id = event.reply_to_msg_id
         with io.BytesIO(im_png) as out_file:
             out_file.name = "DARK COBRA.ScreenCapture.PNG"
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 out_file,
                 caption=input_str,

@@ -18,7 +18,7 @@ from glitch_this import ImageGlitcher
 from telethon.tl.types import MessageMediaPhoto
 
 from userbot import CMD_HELP
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 glitcher = ImageGlitcher()
 DURATION = 100  # Set this to however many centiseconds each frame should be visible for
@@ -29,14 +29,14 @@ if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
 
 
-@bot.on(mellow_cmd(pattern=r"glitch"))
+@bot.on(admin_cmd(pattern=r"glitch"))
 async def glitch(event):
     sed = await event.get_reply_message()
     okbruh = await event.edit("`Gli, Glitchiiingggg.....`")
     if isinstance(sed.media, MessageMediaPhoto):
-        photolove = await @mellow.download_media(sed.media, sedpath)
+        photolove = await borg.download_media(sed.media, sedpath)
     elif "image" in response.media.document.mime_type.split("/"):
-        photolove = await @mellow.download_media(sed.media, sedpath)
+        photolove = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("`Reply To Image`")
         return
@@ -51,7 +51,7 @@ async def glitch(event):
         duration=DURATION,
         loop=LOOP,
     )
-    await @mellow.send_file(event.chat_id, pathsn)
+    await borg.send_file(event.chat_id, pathsn)
     await okbruh.delete()
     for starky in (pathsn, photolove):
         if starky and os.path.exists(starky):

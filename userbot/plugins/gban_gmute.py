@@ -6,7 +6,7 @@
 
 from userbot import bot, CMD_HELP
 from telethon.tl.functions.contacts import BlockRequest, UnblockRequest
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 import html
 from telethon import events
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -55,7 +55,7 @@ async def get_user_from_id(user, event):
         return None
     return user_obj
 
-@mellow.on(mellow_cmd(pattern="gben ?(.*)"))
+@borg.on(admin_cmd(pattern="gben ?(.*)"))
 async def gben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -121,7 +121,7 @@ async def gben(userbot):
     )
 
 
-@mellow.on(mellow_cmd(pattern="ungben ?(.*)"))
+@borg.on(admin_cmd(pattern="ungben ?(.*)"))
 async def gunben(userbot):
     dc = userbot
     sender = await dc.get_sender()
@@ -187,7 +187,7 @@ async def gunben(userbot):
 
 
 
-@mellow.on(ChatAction)
+@borg.on(ChatAction)
 async def handler(rkG): 
    if rkG.user_joined or rkG.user_added:      
        try:       	

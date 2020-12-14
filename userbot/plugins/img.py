@@ -17,13 +17,13 @@ import shutil
 
 from re import findall
 
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
 
 
 
-@mellow.on(mellow_cmd(pattern="img ?(.*)"))
+@borg.on(admin_cmd(pattern="img ?(.*)"))
 
 async def img_sampler(event):
 

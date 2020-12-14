@@ -2,10 +2,10 @@
 Syntax: .invite <User(s)>"""
 
 from telethon import functions
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
-@mellow.on(mellow_cmd(pattern="invite ?(.*)"))
+@borg.on(admin_cmd(pattern="invite ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -18,7 +18,7 @@ async def _(event):
             # https://lonamiwebs.github.io/Telethon/methods/messages/add_chat_user.html
             for user_id in to_add_users.split(" "):
                 try:
-                    await @mellow(functions.messages.AddChatUserRequest(
+                    await borg(functions.messages.AddChatUserRequest(
                         chat_id=event.chat_id,
                         user_id=user_id,
                         fwd_limit=1000000
@@ -30,7 +30,7 @@ async def _(event):
             # https://lonamiwebs.github.io/Telethon/methods/channels/invite_to_channel.html
             for user_id in to_add_users.split(" "):
                 try:
-                    await @mellow(functions.channels.InviteToChannelRequest(
+                    await borg(functions.channels.InviteToChannelRequest(
                         channel=event.chat_id,
                         users=[user_id]
                     ))

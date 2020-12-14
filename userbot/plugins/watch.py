@@ -1,14 +1,14 @@
-# Uni@mellow Plugin for getting list of sites where you can watch a particular Movie or TV-Show
+# Uniborg Plugin for getting list of sites where you can watch a particular Movie or TV-Show
 # Author: Sumanjay (https://github.com/cyberboysumanjay) (@cyberboysumanjay)
 # All rights reserved.
 
-#imported from uni@mellow
+#imported from uniborg
 
 
 
 from telethon import events
 import requests
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 from justwatch import JustWatch
 
 def get_stream_data(query):
@@ -69,7 +69,7 @@ def get_provider(url):
     url = url.split(".")[0]
     return url
 
-@mellow.on(mellow_cmd(pattern="watch (.*)"))
+@borg.on(admin_cmd(pattern="watch (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -107,5 +107,5 @@ async def _(event):
             link = link.replace(" ","%20")
         output_ += f"[{pretty(provider)}]({link})\n"
     
-    await @mellow.send_file(event.chat_id, caption=output_, file=thumb_link,force_document=False,allow_cache=False, silent=True)
+    await borg.send_file(event.chat_id, caption=output_, file=thumb_link,force_document=False,allow_cache=False, silent=True)
     await event.delete()

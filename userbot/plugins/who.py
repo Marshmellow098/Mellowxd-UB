@@ -17,7 +17,7 @@ def get_who_string(who):
     return who_string
 
 
-@mellow.on(events.NewMessage(pattern=r"\.urid", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.urid", outgoing=True))
 async def _(event):
     if not event.message.is_reply:
         who = await event.get_chat()
@@ -25,7 +25,7 @@ async def _(event):
         msg = await event.message.get_reply_message()
         if msg.forward:
           	# FIXME forward privacy memes
-            who = await @mellow.get_entity(
+            who = await borg.get_entity(
                 msg.forward.from_id or msg.forward.channel_id)
         else:
             who = await msg.get_sender()
@@ -33,10 +33,10 @@ async def _(event):
     await event.edit(get_who_string(who), parse_mode='html')
 
 
-@mellow.on(events.NewMessage(pattern=r"\.members", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.members", outgoing=True))
 async def _(event):
     members = [
-        get_who_string(m) async for m in @mellow.iter_participants(event.chat_id)
+        get_who_string(m) async for m in borg.iter_participants(event.chat_id)
     ]
 
     await event.edit("\n".join(members), parse_mode='html')

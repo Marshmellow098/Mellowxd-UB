@@ -9,9 +9,9 @@ import asyncio
 import os
 import subprocess
 import sys
-from uni@mellow.util import mellow_cmd, humanbytes, progress, time_formatter
+from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
 
-@mellow.on(mellow_cmd(pattern=r"getc"))
+@borg.on(admin_cmd(pattern=r"getc"))
 async def get_media(event):
     if event.fwd_from:
         return
@@ -27,12 +27,12 @@ async def get_media(event):
     channel_username = channel_username[11: ]
     print(channel_username)
     await event.edit("Downloading Media From this Channel.")
-    msgs = await @mellow.get_messages(channel_username, limit=int(limit))
+    msgs = await borg.get_messages(channel_username, limit=int(limit))
     with open('log.txt','w') as f:
     	f.write(str(msgs))
     for msg in msgs:
        if msg.media is not None:
-	        await @mellow.download_media(
+	        await borg.download_media(
                 msg,dir)
     ps = subprocess.Popen(('ls', 'temp'), stdout=subprocess.PIPE)
     output = subprocess.check_output(('wc', '-l'), stdin=ps.stdout)
@@ -47,7 +47,7 @@ async def get_media(event):
              
              
              
-@mellow.on(mellow_cmd(pattern=r"geta"))
+@borg.on(admin_cmd(pattern=r"geta"))
 async def get_media(event):
     if event.fwd_from:
         return
@@ -63,12 +63,12 @@ async def get_media(event):
    
     print(channel_username)
     await event.edit("Downloading All Media From this Channel.")
-    msgs = await @mellow.get_messages(channel_username,limit=3000)
+    msgs = await borg.get_messages(channel_username,limit=3000)
     with open('log.txt','w') as f:
     	f.write(str(msgs))
     for msg in msgs:
        if msg.media is not None:
-	        await @mellow.download_media(
+	        await borg.download_media(
                 msg,dir)          
     ps = subprocess.Popen(('ls', 'temp'), stdout=subprocess.PIPE)
     output = subprocess.check_output(('wc', '-l'), stdin=ps.stdout)

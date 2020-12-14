@@ -6,10 +6,10 @@ from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
-@mellow.on(mellow_cmd(pattern="ppg ?(.*)"))
+@borg.on(admin_cmd(pattern="ppg ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -17,7 +17,7 @@ async def _(event):
     if replied_user is None:
         await event.edit(str(error_i_a))
         return False
-    replied_user_profile_photos = await @mellow(GetUserPhotosRequest(
+    replied_user_profile_photos = await borg(GetUserPhotosRequest(
         user_id=replied_user.user.id,
         offset=42,
         max_id=0,
@@ -63,7 +63,7 @@ Person: <a href='tg://user?id={}'>{}</a>
     message_id_to_reply = event.message.reply_to_msg_id
     if not message_id_to_reply:
         message_id_to_reply = event.message.id
-    await @mellow.send_message(
+    await borg.send_message(
         event.chat_id,
         caption,
         reply_to=message_id_to_reply,

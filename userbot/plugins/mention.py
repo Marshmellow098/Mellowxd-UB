@@ -1,11 +1,11 @@
-# For Uni@mellow
+# For Uniborg
 # (c) @INF1N17Y
 
 from telethon import events
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 
 
-@mellow.on(mellow_cmd("mention (.*)"))
+@borg.on(admin_cmd("mention (.*)"))
 async def _(event):
 	if event.fwd_from:
 		return	

@@ -10,7 +10,7 @@ from telethon.tl.functions.messages import SendMediaRequest
 
 
 
-@mellow.on(utils.mellow_cmd(pattern=r"filetoimage"))
+@borg.on(utils.admin_cmd(pattern=r"filetoimage"))
 async def on_file_to_photo(event):
     await event.edit("processing.....")
     await asyncio.sleep(2)
@@ -26,13 +26,13 @@ async def on_file_to_photo(event):
     if image.size > 10 * 1024 * 1024:
         return  # We'd get PhotoSaveFileInvalidError otherwise
 
-    file = await @mellow.download_media(target, file=BytesIO())
+    file = await borg.download_media(target, file=BytesIO())
     file.seek(0)
-    img = await @mellow.upload_file(file)
+    img = await borg.upload_file(file)
     img.name = 'image.png'
 
     try:
-        await @mellow(SendMediaRequest(
+        await borg(SendMediaRequest(
             peer=await event.get_input_chat(),
             media=types.InputMediaUploadedPhoto(img),
             message=target.message,

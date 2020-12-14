@@ -17,7 +17,7 @@ from hachoir.parser import createParser
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
 from telethon.tl.types import DocumentAttributeAudio
-from userbot.utils import progress, mellow_cmd
+from userbot.utils import progress, admin_cmd
 
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
@@ -33,7 +33,7 @@ def get_lst_of_files(input_directory, output_lst):
     return output_lst
 
 
-@mellow.on(mellow_cmd("uploadir (.*)"))
+@borg.on(admin_cmd("uploadir (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -106,7 +106,7 @@ async def _(event):
                     supports_streaming = True
                     force_document = False
                 try:
-                    await @mellow.send_file(
+                    await borg.send_file(
                         event.chat_id,
                         single_file,
                         caption=caption_rts,
@@ -121,7 +121,7 @@ async def _(event):
                         # )
                     )
                 except Exception as e:
-                    await @mellow.send_message(
+                    await borg.send_message(
                         event.chat_id,
                         "{} caused `{}`".format(caption_rts, str(e)),
                         reply_to=event.message.id
@@ -141,7 +141,7 @@ async def _(event):
         await event.edit("404: Directory Not Found")
 
 
-@mellow.on(mellow_cmd(pattern="upload (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="upload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -153,7 +153,7 @@ async def _(event):
     if os.path.exists(input_str):
         start = datetime.now()
         c_time = time.time()
-        await @mellow.send_file(
+        await borg.send_file(
             event.chat_id,
             input_str,
             force_document=True,
@@ -186,7 +186,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@mellow.on(mellow_cmd(pattern="uploadsstream (.*)", allow_sudo=True))
+@borg.on(admin_cmd(pattern="uploadsstream (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -224,7 +224,7 @@ async def _(event):
         # Bad Request: VIDEO_CONTENT_TYPE_INVALID
         c_time = time.time()
         try:
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 file_name,
                 thumb=thumb,

@@ -11,7 +11,7 @@ By:- git: jaskaranSM tg: @Zero_cool7870
 
 
 
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 from random import choice
 from urllib import parse
 from os import remove
@@ -31,7 +31,7 @@ PAT_IMAGE = "pat.jpg"
 
 
 
-@mellow.on(mellow_cmd(pattern="pat ?(.*)", outgoing =True))
+@borg.on(admin_cmd(pattern="pat ?(.*)", outgoing =True))
 async def lastfm(event):
     if event.fwd_from:
         return
@@ -50,7 +50,7 @@ async def lastfm(event):
     with open(PAT_IMAGE,'wb') as f:
         f.write(requests.get(pat).content)
     if username:
-        await @mellow.send_file(event.chat_id,PAT_IMAGE,caption=username)
+        await borg.send_file(event.chat_id,PAT_IMAGE,caption=username)
     else:
-        await @mellow.send_file(event.chat_id,PAT_IMAGE,reply_to=event.reply_to_msg_id) 
+        await borg.send_file(event.chat_id,PAT_IMAGE,reply_to=event.reply_to_msg_id) 
     remove(PAT_IMAGE)

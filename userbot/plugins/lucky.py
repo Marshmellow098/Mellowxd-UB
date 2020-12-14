@@ -8,12 +8,12 @@ Available Commands:
 from telethon import events
 
 import asyncio
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 
 
 
 
-@mellow.on(mellow_cmd(pattern="lucky"))
+@borg.on(admin_cmd(pattern="lucky"))
 
 async def _(event):
 

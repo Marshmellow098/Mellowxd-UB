@@ -13,9 +13,9 @@ from time import sleep
 import asyncio
 import os
 import random
-from userbot.utils import mellow_cmd
-#@mellow.on(events.NewMessage(pattern=r"\.karb ", outgoing=True))
-@mellow.on(mellow_cmd(pattern="karb"))
+from userbot.utils import admin_cmd
+#@borg.on(events.NewMessage(pattern=r"\.karb ", outgoing=True))
+@borg.on(admin_cmd(pattern="karb"))
 async def carbon_api(e):
  RED = random.randint(0,256)
  GREEN = random.randint(0,256)

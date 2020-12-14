@@ -5,13 +5,13 @@
 
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 import asyncio
 
  
 
-@mellow.on(mellow_cmd(pattern="gaana ?(.*)"))
+@borg.on(admin_cmd(pattern="gaana ?(.*)"))
 
 async def FindMusicPleaseBot(gaana):
 

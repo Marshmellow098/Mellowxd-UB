@@ -2,11 +2,11 @@
 Syntax: .userlist"""
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins, ChannelParticipantAdmin, ChannelParticipantCreator
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 from telethon.errors.rpcerrorlist import (UserIdInvalidError,
                                           MessageTooLongError)
                                           
-@mellow.on(events.NewMessage(pattern=r"\.userlist ?(.*)", outgoing=True))
+@borg.on(events.NewMessage(pattern=r"\.userlist ?(.*)", outgoing=True))
 async def get_users(show):
     """ For .userslist command, list all of the users of the chat. """
     if not show.text[0].isalpha() and show.text[0] not in ("/", "#", "@", "!"):

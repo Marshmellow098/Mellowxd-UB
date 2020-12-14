@@ -5,10 +5,10 @@
 
 from telethon.tl.types import MessageMediaPhoto
 import os, urllib, requests, asyncio
-from userbot.uni@mellowConfig import Config
-from userbot.utils import mellow_cmd
+from userbot.uniborgConfig import Config
+from userbot.utils import admin_cmd
 
-@mellow.on(mellow_cmd(pattern="colp$", outgoing=True))
+@borg.on(admin_cmd(pattern="colp$", outgoing=True))
 async def detect(event):
     if Config.DEEP_AI is None:
         return await event.edit(
@@ -46,7 +46,7 @@ async def detect(event):
     result = f"{r_json}"
     
     await devent.delete()
-    await @mellow.send_message(
+    await borg.send_message(
         event.chat_id,
         file=result
     )

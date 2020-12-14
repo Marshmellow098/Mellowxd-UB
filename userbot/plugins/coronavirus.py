@@ -3,11 +3,11 @@ Syntax: .corona <country>"""
 
 from covid import Covid
 
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
 
-@mellow.on(mellow_cmd(pattern="corona (.*)"))
+@borg.on(admin_cmd(pattern="corona (.*)"))
 
 async def _(event):
 

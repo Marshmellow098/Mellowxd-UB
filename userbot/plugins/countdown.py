@@ -4,7 +4,7 @@ from telethon import events
 
 from datetime import datetime
 
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 
 import importlib.util
 
@@ -18,7 +18,7 @@ import importlib.util
 
 
 
-@mellow.on(mellow_cmd(pattern='(f?c)d '))
+@borg.on(admin_cmd(pattern='(f?c)d '))
 
 async def timer_blankx(e):
 
@@ -45,7 +45,7 @@ async def timer_blankx(e):
   await e.edit(txt + 'NaN')
 
 
-@mellow.on(mellow_cmd(pattern='(f?s)cd '))
+@borg.on(admin_cmd(pattern='(f?s)cd '))
 
 async def timer_blankx(e):
 
@@ -74,7 +74,7 @@ async def timer_blankx(e):
 
 
 
-@mellow.on(events.NewMessage(outgoing=True, pattern='^\.(f?p)an '))
+@borg.on(events.NewMessage(outgoing=True, pattern='^\.(f?p)an '))
 
 async def timer_blankx(e):
 

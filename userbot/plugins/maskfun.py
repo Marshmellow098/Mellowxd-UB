@@ -6,7 +6,7 @@ thanks to hellboy atul and his team
 from PIL import Image
 import sys
 import os
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 from userbot import bot 
 
 if not os.path.isdir("./dcobra/"):
@@ -14,7 +14,7 @@ if not os.path.isdir("./dcobra/"):
 
 #made by  @THE_B_LACK_HAT Some errors solved by Sh1vam
 
-@bot.on(mellow_cmd(pattern=r"cmask"))
+@bot.on(admin_cmd(pattern=r"cmask"))
 async def scan(event):
     path = "dcobra"
      
@@ -23,7 +23,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
     linc= event.text
     link=linc[7:]
     pic=linc[31:]
@@ -61,7 +61,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -75,7 +75,7 @@ async def scan(event):
 
 
 
-@bot.on(mellow_cmd(pattern=r"thug"))
+@bot.on(admin_cmd(pattern=r"thug"))
 async def scan(event):
     path = "dcobra"
      
@@ -83,7 +83,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
     import cv2
 
@@ -119,7 +119,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -133,7 +133,7 @@ async def scan(event):
 
    
 
-@bot.on(mellow_cmd(pattern=r"pro"))
+@bot.on(admin_cmd(pattern=r"pro"))
 async def scan(event):
     path = "dcobra"
      
@@ -141,7 +141,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -178,7 +178,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -192,7 +192,7 @@ async def scan(event):
 
 
 
-@bot.on(mellow_cmd(pattern=r"oxy"))
+@bot.on(admin_cmd(pattern=r"oxy"))
 async def scan(event):
     path = "dcobra"
      
@@ -201,7 +201,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -238,7 +238,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -250,7 +250,7 @@ async def scan(event):
 
 
 
-@bot.on(mellow_cmd(pattern=r"gold"))
+@bot.on(admin_cmd(pattern=r"gold"))
 async def scan(event):
     path = "dcobra"
      
@@ -259,7 +259,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -296,7 +296,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -308,7 +308,7 @@ async def scan(event):
 
 
 
-@bot.on(mellow_cmd(pattern=r"old"))
+@bot.on(admin_cmd(pattern=r"old"))
 async def scan(event):
     path = "dcobra"
      
@@ -317,7 +317,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -354,7 +354,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -366,7 +366,7 @@ async def scan(event):
 
 
 
-@bot.on(mellow_cmd(pattern=r"krish"))
+@bot.on(admin_cmd(pattern=r"krish"))
 async def scan(event):
     path = "dcobra"
      
@@ -375,7 +375,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -412,7 +412,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):
@@ -424,7 +424,7 @@ async def scan(event):
     
     
     
-@bot.on(mellow_cmd(pattern=r"cprotect"))
+@bot.on(admin_cmd(pattern=r"cprotect"))
 async def scan(event):
     path = "dcobra"
      
@@ -433,7 +433,7 @@ async def scan(event):
 
     reply = await event.get_reply_message()
     
-    lol = await @mellow.download_media(reply.media, path)
+    lol = await borg.download_media(reply.media, path)
 
 
     import cv2
@@ -470,7 +470,7 @@ async def scan(event):
    
     background.save(hehe, "PNG")
    
-    await @mellow.send_file(event.chat_id, hehe)
+    await borg.send_file(event.chat_id, hehe)
    
 
     for files in (hehe, lol):

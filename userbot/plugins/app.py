@@ -17,9 +17,9 @@ from userbot import CMD_HELP
 from userbot.events import register
 
 
-@mellow.on(events.NewMessage(pattern='.app (.*)'))
+@borg.on(events.NewMessage(pattern='.app (.*)'))
 
-@mellow.on(events.MessageEdited(pattern='.app (.*)'))
+@borg.on(events.MessageEdited(pattern='.app (.*)'))
 
 async def apk(e):
     try:
@@ -48,9 +48,9 @@ async def apk(e):
     except Exception as err:
         await e.edit("Exception Occured:- "+str(err))
 
-@mellow.on(events.NewMessage(pattern='.appr (.*)'))
+@borg.on(events.NewMessage(pattern='.appr (.*)'))
 
-@mellow.on(events.MessageEdited(pattern='.appr (.*)'))
+@borg.on(events.MessageEdited(pattern='.appr (.*)'))
 
 async def apkr(e):
     try:

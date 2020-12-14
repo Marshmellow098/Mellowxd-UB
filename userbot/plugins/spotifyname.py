@@ -11,7 +11,7 @@ from json import loads
 from json.decoder import JSONDecodeError
 from os import environ
 from sys import setrecursionlimit
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 from requests import get
 from telethon import events
 from telethon.tl import functions, types
@@ -19,7 +19,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 
 
 import spotify_token as st
-from userbot.uni@mellowConfig import Config
+from userbot.uniborgConfig import Config
 
 # =================== CONSTANT ===================
 SPO_BIO_ENABLED = "```Spotify Current Music to Name enabled.```"
@@ -73,7 +73,7 @@ async def update_spotify_info():
                 oldartist = artist
                 environ["oldsong"] = song
                 spobio = " 🎧:-" + song + " - " + artist
-                await @mellow(UpdateProfileRequest(first_name=spobio))
+                await borg(UpdateProfileRequest(first_name=spobio))
                 environ["errorcheck"] = "0"
         except KeyError:
             errorcheck = environ.get("errorcheck", None)
@@ -81,16 +81,16 @@ async def update_spotify_info():
                 await update_token()
             elif errorcheck == 1:
                 SPOTIFYCHECK = False
-                await @mellow(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
+                await borg(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
                 print(ERROR_MSG)
                 if Config.LOGGER:
-                    await @mellow.send_message(
+                    await borg.send_message(
                         Config.PM_LOGGR_BOT_API_ID,
                         ERROR_MSG)
         except JSONDecodeError:
             OLDEXCEPT = True
             await sleep(6)
-            await @mellow(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
+            await borg(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
         except TypeError:
             await dirtyfix()
         SPOTIFYCHECK = False
@@ -115,8 +115,8 @@ async def dirtyfix():
 
 
 
-@mellow.on(mellow_cmd(pattern=f"ensp", allow_sudo=True))
-@mellow.on(events.NewMessage(pattern=r"\.ensp ?(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=f"ensp", allow_sudo=True))
+@borg.on(events.NewMessage(pattern=r"\.ensp ?(.*)", outgoing=True))
 async def set_biostgraph(setstbio):
     setrecursionlimit(700000)
     if not SPOTIFYCHECK:
@@ -129,12 +129,12 @@ async def set_biostgraph(setstbio):
 
 
 
-@mellow.on(mellow_cmd(pattern=f"disp", allow_sudo=True))
-@mellow.on(events.NewMessage(pattern=r"\.disp ?(.*)", outgoing=True))
+@borg.on(admin_cmd(pattern=f"disp", allow_sudo=True))
+@borg.on(events.NewMessage(pattern=r"\.disp ?(.*)", outgoing=True))
 async def set_biodgraph(setdbio):
     global SPOTIFYCHECK
     global RUNNING
     SPOTIFYCHECK = False
     RUNNING = False
-    await @mellow(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
+    await borg(UpdateProfileRequest(first_name=Config.DEFAULT_NAME))
     await setdbio.edit(SPO_BIO_DISABLED)

@@ -23,7 +23,7 @@ import telethon
 
 from PIL import Image
 from io import BytesIO
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 
 logger = logging.getLogger(__name__)
 
@@ -55,9 +55,9 @@ if 1 == 1:
                                           "username_colors": ["#fb6169", "#faa357", "#b48bf2", "#85de85",
                                                               "#62d4e3", "#65bdf3", "#ff5694"],
                                           "default_username_color": "#b48bf2"})
-    client = mellow 
+    client = borg
 
-    @mellow.on(mellow_cmd(pattern="chat(.*)"))
+    @borg.on(admin_cmd(pattern="chat(.*)"))
     async def quotecmd(message):  # noqa: C901
         """Quote a message.
         Usage: .quote [template]

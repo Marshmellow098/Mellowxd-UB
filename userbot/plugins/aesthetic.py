@@ -1,7 +1,7 @@
 """COMMAND : .ae"""
 
 from telethon import events
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 PRINTABLE_ASCII = range(0x21, 0x7f)
 
@@ -16,8 +16,8 @@ def aesthetify(string):
         yield chr(c)
 
 
-@mellow.on(mellow_cmd(pattern="ae ?(.*)"))
-@mellow.on(events.MessageEdited(pattern=r'.ae\s+(.+)', outgoing=True))
+@borg.on(admin_cmd(pattern="ae ?(.*)"))
+@borg.on(events.MessageEdited(pattern=r'.ae\s+(.+)', outgoing=True))
 async def _(event):
     text = event.pattern_match.group(1)
     text = "".join(aesthetify(text))

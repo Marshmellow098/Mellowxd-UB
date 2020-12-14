@@ -5,20 +5,20 @@ from asyncio import sleep
 from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID, bot
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 from os import remove
 from telethon import events
 import asyncio
 from datetime import datetime
 import time
-from userbot.utils import register, errors_handler, mellow_cmd
+from userbot.utils import register, errors_handler, admin_cmd
 import asyncio
 import logging
 import os
 import sys
 from telethon.tl import functions, types
 from telethon.tl.types import Channel, Chat, User
-from userbot.uni@mellowConfig import Config
+from userbot.uniborgConfig import Config
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.WARN)
@@ -50,15 +50,15 @@ async def log(log_text):
     await log_text.delete()
 
 
-@mellow.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
+@borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 async def monito_p_m_s(event):
     sender = await event.get_sender()
     if Config.NC_LOG_P_M_S and not sender.bot:
         chat = await event.get_chat()
-        if chat.id not in NO_PM_LOG_USERS and chat.id != mellow.uid:
+        if chat.id not in NO_PM_LOG_USERS and chat.id != borg.uid:
             try:
-                e = await mellow.get_entity(int(Config.PM_LOGGR_BOT_API_ID))             
-                fwd_message = await mellow.forward_messages(
+                e = await borg.get_entity(int(Config.PM_LOGGR_BOT_API_ID))             
+                fwd_message = await borg.forward_messages(
                     e,
                     event.message,
                     silent=True
@@ -70,7 +70,7 @@ async def monito_p_m_s(event):
                 print(exc_type, fname, exc_tb.tb_lineno)
                 print(e) 
 
-@mellow.on(mellow_cmd(pattern="elog ?(.*)"))
+@borg.on(admin_cmd(pattern="elog ?(.*)"))
 async def set_no_log_p_m(event):
     if Config.PM_LOGGR_BOT_API_ID is not None:
         reason = event.pattern_match.group(1)
@@ -83,7 +83,7 @@ async def set_no_log_p_m(event):
                 await event.delete()
                 
                 
-@mellow.on(mellow_cmd(pattern="nlog ?(.*)"))
+@borg.on(admin_cmd(pattern="nlog ?(.*)"))
 async def set_no_log_p_m(event):
     if Config.PM_LOGGR_BOT_API_ID is not None:
         reason = event.pattern_match.group(1)

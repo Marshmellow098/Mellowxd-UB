@@ -17,7 +17,7 @@ from userbot.utils import admin_cmd
 
 GIT_TEMP_DIR = "./userbot/temp/"
 #@command(pattern="^.commit", outgoing=True)
-@mellow.on(admin_cmd(pattern=r"commit"))
+@borg.on(admin_cmd(pattern=r"commit"))
 async def download(event):
     if event.fwd_from:
         return	

@@ -13,7 +13,7 @@ from telethon import events
 from telethon.tl import functions, types
 import asyncio
 from telethon import utils
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 import html
 from html import *
 from telethon.tl.functions.photos import GetUserPhotosRequest
@@ -33,9 +33,9 @@ logger = logging.getLogger(__name__)
 
 if 1 == 1:
     name = "Profile Photos"
-    client = @mellow
+    client = borg
 
-    @mellow.on(mellow_cmd(pattern="PPS(.*)"))
+    @borg.on(admin_cmd(pattern="PPS(.*)"))
     async def PPScmd(event):
 #        """Gets the profile photos of replied users, channels or chats"""
         id = "".join(event.raw_text.split(maxsplit=2)[1:])
@@ -50,7 +50,7 @@ if 1 == 1:
                 await event.client.send_file(event.chat_id, photos)
             except a:
                 photo = await event.client.download_profile_photo(chat)
-                await @mellow.send_file(event.chat_id, photo)
+                await borg.send_file(event.chat_id, photo)
         else:
             try:
                 id = int(id)
@@ -62,7 +62,7 @@ if 1 == 1:
                  return
             if int(id) <= (len(photos)):
                 send_photos = await event.client.download_media(photos[id - 1])
-                await @mellow.send_file(event.chat_id, send_photos)
+                await borg.send_file(event.chat_id, send_photos)
             else:
                 await event.edit("<code>No photo found with that id</code>")
                 return

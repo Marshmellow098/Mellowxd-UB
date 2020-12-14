@@ -5,10 +5,10 @@ from telethon import events
 from datetime import datetime
 import io
 import speedtest
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
-@mellow.on(mellow_cmd("speedtest ?(.*)"))
+@borg.on(admin_cmd("speedtest ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -50,7 +50,7 @@ Ping: {}
 Internet Service Provider: {}
 ISP Rating: {}""".format(ms, convert_from_bytes(download_speed), convert_from_bytes(upload_speed), ping_time, i_s_p, i_s_p_rating))
         else:
-            await @mellow.send_file(
+            await borg.send_file(
                 event.chat_id,
                 speedtest_image,
                 caption="**SpeedTest** completed in {} seconds".format(ms),

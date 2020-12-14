@@ -4,10 +4,10 @@ from telethon import events
 import asyncio
 from datetime import datetime
 import requests
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 
 
-@mellow.on(mellow_cmd(pattern="currency (.*)"))
+@borg.on(admin_cmd(pattern="currency (.*)"))
 async def _(event):
     if event.fwd_from:
         return

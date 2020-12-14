@@ -5,7 +5,7 @@ import requests
 from userbot.utils import admin_cmd
 
 
-@mellow.on(admin_cmd("github (.*)"))
+@borg.on(admin_cmd("github (.*)"))
 async def _(event):
     if event.fwd_from:
         return

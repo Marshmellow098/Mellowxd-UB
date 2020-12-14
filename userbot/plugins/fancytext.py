@@ -4,37 +4,37 @@
 
 
 import random, re
-from uni@mellow.util import mellow_cmd
+from uniborg.util import admin_cmd
 import asyncio
 from telethon import events
 
-@mellow.on(mellow_cmd(pattern="mst ?(.*)"))
+@borg.on(admin_cmd(pattern="mst ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("mst hu bbro ")
         await asyncio.sleep(1)
         await event.edit("╔═╦═╗╔══╗╔══╗\n║║║║║║══╣╚╗╔╝\n║║║║║╠══║─║║─\n╚╩═╩╝╚══╝─╚╝─")
 
-@mellow.on(mellow_cmd(pattern="gm ?(.*)"))
+@borg.on(admin_cmd(pattern="gm ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("good morning ")
         await asyncio.sleep(1)
         await event.edit("╔══╗╔═╦═╗\n║╔═╣║║║║║\n║╚╗║║║║║║\n╚══╝╚╩═╩╝")
 
-@mellow.on(mellow_cmd(pattern="good ?(.*)"))
+@borg.on(admin_cmd(pattern="good ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔══╗╔═╗╔═╗╔══╗\n║╔═╣║║║║║║╚╗╗║\n║╚╗║║║║║║║╔╩╝║\n╚══╝╚═╝╚═╝╚══╝")
 
-@mellow.on(mellow_cmd(pattern="hhlo ?(.*)"))
+@borg.on(admin_cmd(pattern="hhlo ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("hello,how r u")
         await asyncio.sleep(1)
         await event.edit("╔╗╔╗╔╗─╔═╗\n║╚╝║║║─║║║\n║╔╗║║╚╗║║║\n╚╝╚╝╚═╝╚═╝")
 
-@mellow.on(mellow_cmd(pattern="sry ?(.*)"))
+@borg.on(admin_cmd(pattern="sry ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("i'm sorry")
@@ -43,26 +43,26 @@ async def _(event):
         await asyncio.sleep(1)
         await event.edit("╔══╗╔═╗╔═╗╔═╗╔═╦╗\n║══╣║║║║╬║║╬║╚╗║║\n╠══║║║║║╗╣║╗╣╔╩╗║\n╚══╝╚═╝╚╩╝╚╩╝╚══╝")
 
-@mellow.on(mellow_cmd(pattern="thnq ?(.*)"))
+@borg.on(admin_cmd(pattern="thnq ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("thanks for your help")
         await asyncio.sleep(1)
         await event.edit("╔══╗╔╗╔╗╔══╗╔═╦╗╔╦╗╔══╗\n╚╗╔╝║╚╝║║╔╗║║║║║║╔╝║══╣\n─║║─║╔╗║║╠╣║║║║║║╚╗╠══║\n─╚╝─╚╝╚╝╚╝╚╝╚╩═╝╚╩╝╚══╝")
 
-@mellow.on(mellow_cmd(pattern="ok ?(.*)"))
+@borg.on(admin_cmd(pattern="ok ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("▒▐█▀▀█▌▒▐█▒▐▀\n▒▐█▄▒█▌▒▐██▌░\n▒▐██▄█▌▒▐█▒▐▄")
 
-@mellow.on(mellow_cmd(pattern="smile ?(.*)"))
+@borg.on(admin_cmd(pattern="smile ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("how sad ")
         await asyncio.sleep(1)
         await event.edit("╔══╗╔═╦═╗╔══╗╔╗─╔═╗\n║══╣║║║║║╚║║╝║║─║╦╝\n╠══║║║║║║╔║║╗║╚╗║╩╗\n╚══╝╚╩═╩╝╚══╝╚═╝╚═╝")
 
-@mellow.on(mellow_cmd(pattern="lal ?(.*)"))
+@borg.on(admin_cmd(pattern="lal ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("╔╗─╔═╗╔╗─\n║╚╗║╬║║╚╗\n╚═╝╚═╝╚═╝")

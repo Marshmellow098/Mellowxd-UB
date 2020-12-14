@@ -9,9 +9,9 @@ from PIL import Image
 from telegraph import upload_file
 from telethon.tl.types import MessageMediaPhoto
 import re
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 from userbot import bot 
-from userbot import bot as mellow
+from userbot import bot as borg
 sedpath = "./shivam/"
 if not os.path.isdir(sedpath):
     os.makedirs(sedpath)
@@ -20,15 +20,15 @@ if not os.path.isdir(sedpath):
 
 
 
-@bot.on(mellow_cmd(pattern=r"tig"))
+@bot.on(admin_cmd(pattern=r"tig"))
 
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -38,21 +38,21 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.gif", "wb").write(r.content)
     lolbruh = "shivam.gif"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="Triggered....😬", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"wst"))
+@bot.on(admin_cmd(pattern=r"wst"))
 
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -62,20 +62,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="⚰️ Wasted... 😵", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"rmbow"))
+@bot.on(admin_cmd(pattern=r"rmbow"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -85,20 +85,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="The Rainbow Efect WOW", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"glass"))
+@bot.on(admin_cmd(pattern=r"glass"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -108,20 +108,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="You got Into the Glass", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"gry"))
+@bot.on(admin_cmd(pattern=r"gry"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -131,20 +131,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="You got grey coloured", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"invert"))
+@bot.on(admin_cmd(pattern=r"invert"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -154,20 +154,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="i made u inverted ", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"ig"))
+@bot.on(admin_cmd(pattern=r"ig"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -177,20 +177,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="no reactions found 🙄 ", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"brght"))
+@bot.on(admin_cmd(pattern=r"brght"))
 async def lolmetrg(event):
     await event.edit("`hmm let me see what i can do to this`")
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -200,20 +200,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="brightness.....seems to be exploited ig 😶", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"bow"))
+@bot.on(admin_cmd(pattern=r"bow"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -223,20 +223,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="choose your which side", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"sepia"))
+@bot.on(admin_cmd(pattern=r"sepia"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -246,20 +246,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="See this is called sepia ", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"red"))
+@bot.on(admin_cmd(pattern=r"red"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -269,20 +269,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="bloody red u r now ", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"green"))
+@bot.on(admin_cmd(pattern=r"green"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -292,20 +292,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="Go Green....Go Green...😂😂😂 ", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"blue"))
+@bot.on(admin_cmd(pattern=r"blue"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -315,20 +315,20 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="blue huh hmm what can i tell about this 🤔 ", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"pixlte"))
+@bot.on(admin_cmd(pattern=r"pixlte"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -338,13 +338,13 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="pixelate it is u kno 🤣🤣🤣", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(mellow_cmd(pattern=r"ytc"))
+@bot.on(admin_cmd(pattern=r"ytc"))
 async def lolmetrg(event):
     givenvar=event.text
     text = givenvar[5:]
@@ -356,9 +356,9 @@ async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -368,22 +368,22 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="This is A Youtube Commment 👀", reply_to=sed
     )
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-'''@bot.on(mellow_cmd(pattern=r"clr"))
+'''@bot.on(admin_cmd(pattern=r"clr"))
 async def lolmetrg(event):
     givenvar=event.text
     color = givenvar[5:]
     await event.edit("`hmm let me see what i can do to this hope u replied it with hex colour code and also put %23 instead of #`")
     sed = await event.get_reply_message()
     if isinstance(sed.media, MessageMediaPhoto):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     elif "image" in sed.media.document.mime_type.split("/"):
-        img = await @mellow.download_media(sed.media, sedpath)
+        img = await borg.download_media(sed.media, sedpath)
     else:
         await event.edit("Reply To Image")
         return
@@ -393,7 +393,7 @@ async def lolmetrg(event):
     r = requests.get(lolul)
     open("shivam.png", "wb").write(r.content)
     lolbruh = "shivam.png"
-    await @mellow.send_file(
+    await borg.send_file(
         event.chat_id, lolbruh, caption="Coloured", reply_to=sed
     )
     for files in (lolbruh, img):

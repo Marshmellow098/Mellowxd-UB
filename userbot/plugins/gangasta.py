@@ -1,11 +1,11 @@
 from telethon import events
 import random, re
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 import asyncio 
 
 
 
-@mellow.on(mellow_cmd("gangasta ?(.*)"))
+@borg.on(admin_cmd("gangasta ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("EVERyBOdy")

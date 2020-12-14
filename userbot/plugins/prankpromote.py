@@ -7,11 +7,11 @@ import asyncio
 from datetime import datetime
 from telethon.tl.functions.channels import EditAdminRequest
 from telethon.tl.types import ChatAdminRights
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
 """
-@mellow.on(mellow_cmd(pattern="promote ?(.*)"))
+@borg.on(admin_cmd(pattern="promote ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -35,14 +35,14 @@ async def _(event):
     elif input_str:
         to_promote_id = input_str
     try:
-        await @mellow(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
+        await borg(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
     except (Exception) as exc:
         await event.edit(str(exc))
     else:
         await event.edit("AJ SA TU MARA CHALA")
 """
 
-@mellow.on(mellow_cmd(pattern="prankpromote ?(.*)"))
+@borg.on(admin_cmd(pattern="prankpromote ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -59,7 +59,7 @@ async def _(event):
     elif input_str:
         to_promote_id = input_str
     try:
-        await @mellow(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
+        await borg(EditAdminRequest(event.chat_id, to_promote_id, rights, ""))
     except (Exception) as exc:
         await event.edit(str(exc))
     else:

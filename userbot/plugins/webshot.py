@@ -9,13 +9,13 @@ import requests
 
 from telethon import events
 
-from userbot.utils import mellow_cmd
+from userbot.utils import admin_cmd
 
 
 
 
 
-@mellow.on(mellow_cmd("screencapture (.*)"))
+@borg.on(admin_cmd("screencapture (.*)"))
 
 async def _(event):
 
@@ -63,7 +63,7 @@ async def _(event):
 
             try:
 
-                await @mellow.send_file(
+                await borg.send_file(
 
                     event.chat_id,
 
