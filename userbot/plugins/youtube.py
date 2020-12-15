@@ -36,7 +36,7 @@ async def yutup(event):
     r = get(json, allow_redirects=True)
     open('phantom.png', 'wb').write(r.content)
 
-    await event.client.send_file(event.chat_id, 'phantom.png', caption="Commented By **PHANTOM Userbot** ©️", reply_to=reply)
+    await event.client.send_file(event.chat_id, 'phantom.png', caption="Commented By **Marahmellow Userbot** ©️", reply_to=reply)
     await event.delete()
     remove(foto)
     remove('phantom.png')
