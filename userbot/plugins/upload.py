@@ -17,7 +17,7 @@ from hachoir.parser import createParser
 from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
 from telethon.tl.types import DocumentAttributeAudio
-from userbot.utils import progress, admin_cmd
+from userbot.utils import progress, mellow_cmd
 
 
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
@@ -33,7 +33,7 @@ def get_lst_of_files(input_directory, output_lst):
     return output_lst
 
 
-@borg.on(admin_cmd("uploadir (.*)"))
+@borg.on(mellow_cmd("uploadir (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -141,7 +141,7 @@ async def _(event):
         await event.edit("404: Directory Not Found")
 
 
-@borg.on(admin_cmd(pattern="upload (.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="upload (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -186,7 +186,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@borg.on(admin_cmd(pattern="uploadsstream (.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="uploadsstream (.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

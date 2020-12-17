@@ -6,9 +6,9 @@
 """ Userbot plugin_info command """
 
 from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd(outgoing=True, pattern="plinfo(?: |$)(.*)"))
+@borg.on(mellow_cmd(outgoing=True, pattern="plinfo(?: |$)(.*)"))
 async def info(event):
     """ For .plinfo command,"""
     args = event.pattern_match.group(1).lower()

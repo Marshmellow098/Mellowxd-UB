@@ -20,7 +20,7 @@ import os
 import time
 from datetime import datetime
 from telethon import events
-from userbot.utils import admin_cmd, progress, humanbytes
+from userbot.utils import mellow_cmd, progress, humanbytes
 from mimetypes import guess_type
 from apiclient.discovery import build
 from apiclient.http import MediaFileUpload
@@ -46,7 +46,7 @@ G_DRIVE_F_PARENT_ID = None
 G_DRIVE_DIR_MIME_TYPE = "application/vnd.google-apps.folder"
 
 
-@borg.on(admin_cmd(pattern="gdrive ?(.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="gdrive ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -116,7 +116,7 @@ async def _(event):
         await mone.edit("File Not found in local server. Give me a file path :((")
 
 
-@borg.on(admin_cmd(pattern="dfolder https?://drive\.google\.com/drive/u/\d/folders/([-\w]{25,})", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="dfolder https?://drive\.google\.com/drive/u/\d/folders/([-\w]{25,})", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -130,7 +130,7 @@ async def _(event):
         await mone.edit("Send `.gdrivesp https://drive.google.com/drive/u/X/folders/Y` to set the folder to upload new files to")
 
 
-@borg.on(admin_cmd(pattern="gclear", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="gclear", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -140,7 +140,7 @@ async def _(event):
     await event.delete()
 
 
-@borg.on(admin_cmd(pattern="gdir ?(.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="gdir ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -173,7 +173,7 @@ async def _(event):
         await mone.edit(f"directory {input_str} does not seem to exist")
 
 
-@borg.on(admin_cmd(pattern="drive (delete|get) ?(.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="drive (delete|get) ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -205,7 +205,7 @@ async def _(event):
     await mone.edit(response_from_svc)
 
 
-@borg.on(admin_cmd(pattern="sdrive ?(.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="sdrive ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

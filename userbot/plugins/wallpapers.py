@@ -3,7 +3,7 @@ import urllib , os
 from telethon.tl import functions
 from datetime import datetime
 from PIL import Image, ImageDraw, ImageFont
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import asyncio
 from time import sleep
 
@@ -54,7 +54,7 @@ async def animepp():
     if not os.path.exists("f.ttf"):
         urllib.request.urlretrieve("https://github.com/rebel6969/mym/raw/master/Rebel-robot-Regular.ttf","f.ttf")
     urllib.request.urlretrieve(fy,"donottouch.jpg")
-@borg.on(admin_cmd(pattern="wallpapers ?(.*)"))
+@borg.on(mellow_cmd(pattern="wallpapers ?(.*)"))
 async def main(event):
     await event.edit("**uploading wallpapers \ndone check ur DP.**") 
     while True:

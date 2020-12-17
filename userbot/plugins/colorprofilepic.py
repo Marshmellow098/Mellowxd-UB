@@ -12,7 +12,7 @@ from telethon.tl import functions
 
 from userbot import ALIVE_NAME
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 import asyncio
 
@@ -30,7 +30,7 @@ DEFAULTUSER = str(ALIVE_NAME)
 
 
 
-@borg.on(admin_cmd(pattern="cpp ?(.*)"))
+@borg.on(mellow_cmd(pattern="cpp ?(.*)"))
 
 async def autopic(event): 
 

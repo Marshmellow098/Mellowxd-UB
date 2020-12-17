@@ -9,7 +9,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import time
 from userbot import ALIVE_NAME
 
@@ -17,7 +17,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@MissRose_bot"
 
-@borg.on(admin_cmd("fstat ?(.*)"))
+@borg.on(mellow_cmd("fstat ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return    

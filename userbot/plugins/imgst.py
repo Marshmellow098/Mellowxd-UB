@@ -2,10 +2,10 @@ import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import bot 
 
-@borg.on(admin_cmd(pattern="itos ?(.*)"))
+@borg.on(mellow_cmd(pattern="itos ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 
@@ -33,7 +33,7 @@ async def _(event):
              await event.client.send_message(event.chat_id, response.message)
           await bot.send_read_acknowledge(conv.chat_id)
             
-@borg.on(admin_cmd(pattern="stoi ?(.*)"))
+@borg.on(mellow_cmd(pattern="stoi ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

@@ -5,13 +5,13 @@ from asyncio import sleep
 from userbot import CMD_HELP, BOTLOG, BOTLOG_CHATID, bot
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from os import remove
 from telethon import events
 import asyncio
 from datetime import datetime
 import time
-from userbot.utils import register, errors_handler, admin_cmd
+from userbot.utils import register, errors_handler, mellow_cmd
 import asyncio
 import logging
 import os
@@ -70,7 +70,7 @@ async def monito_p_m_s(event):
                 print(exc_type, fname, exc_tb.tb_lineno)
                 print(e) 
 
-@borg.on(admin_cmd(pattern="elog ?(.*)"))
+@borg.on(mellow_cmd(pattern="elog ?(.*)"))
 async def set_no_log_p_m(event):
     if Config.PM_LOGGR_BOT_API_ID is not None:
         reason = event.pattern_match.group(1)
@@ -83,7 +83,7 @@ async def set_no_log_p_m(event):
                 await event.delete()
                 
                 
-@borg.on(admin_cmd(pattern="nlog ?(.*)"))
+@borg.on(mellow_cmd(pattern="nlog ?(.*)"))
 async def set_no_log_p_m(event):
     if Config.PM_LOGGR_BOT_API_ID is not None:
         reason = event.pattern_match.group(1)

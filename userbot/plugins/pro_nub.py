@@ -11,13 +11,13 @@ from telethon import events
 
 import asyncio
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 
 
 
-@borg.on(admin_cmd("unoob"))
+@borg.on(mellow_cmd("unoob"))
 
 async def _(event):
 
@@ -51,7 +51,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
             
             
-@borg.on(admin_cmd("menoob"))
+@borg.on(mellow_cmd("menoob"))
 
 async def _(event):
 
@@ -84,7 +84,7 @@ async def _(event):
         await event.edit(animation_chars[i % 9])
         await asyncio.sleep(animation_interval) 
             
-@borg.on(admin_cmd("upro"))
+@borg.on(mellow_cmd("upro"))
 
 async def _(event):
 
@@ -116,7 +116,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
         await asyncio.sleep(animation_interval)  
             
-@borg.on(admin_cmd("mepro"))
+@borg.on(mellow_cmd("mepro"))
 
 async def _(event):
 

@@ -28,7 +28,7 @@ from telethon.tl.types import (ChannelParticipantsAdmins, ChatAdminRights,
                                MessageMediaPhoto)
 
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot 
-from userbot.utils import register, errors_handler, admin_cmd
+from userbot.utils import register, errors_handler, mellow_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "`The image is too small`"
@@ -72,7 +72,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ===========================Consts.=====================
 
 
-@borg.on(admin_cmd(pattern="(ban|unban) ?(.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="(ban|unban) ?(.*)", allow_sudo=True))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".unban"
@@ -103,7 +103,7 @@ async def _(event):
         await event.edit(f"{input_cmd}ned Successfully!")
 
 
-@borg.on(admin_cmd(pattern="pgs ?(.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="pgs ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -133,7 +133,7 @@ async def _(event):
             await event.edit("**PURGE** Failed!")
 
 
-@borg.on(admin_cmd(pattern="(ban|unban) ?(.*)"))
+@borg.on(mellow_cmd(pattern="(ban|unban) ?(.*)"))
 async def _(event):
     # Space weirdness in regex required because argument is optional and other
     # commands start with ".unban"

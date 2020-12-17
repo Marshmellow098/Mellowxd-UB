@@ -7,10 +7,10 @@ from userbot.google_imgs import googleimagesdownload
 import os
 import shutil
 from re import findall
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="img ?(.*)"))
+@borg.on(mellow_cmd(pattern="img ?(.*)"))
 async def img_sampler(event):
     await event.edit("`Processing...`")
     reply = await event.get_reply_message()

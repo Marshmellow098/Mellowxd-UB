@@ -12,10 +12,10 @@ import os
 import requests
 import time
 from datetime import datetime
-from uniborg.util import admin_cmd, progress
+from uniborg.util import mellow_cmd, progress
 
 
-@borg.on(admin_cmd(pattern="verystream ?(.*)", allow_sudo=True))
+@borg.on(mellow_cmd(pattern="verystream ?(.*)", allow_sudo=True))
 async def _(event):
     if event.fwd_from:
         return

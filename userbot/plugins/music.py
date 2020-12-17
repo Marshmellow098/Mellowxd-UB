@@ -6,11 +6,11 @@ from telethon import events
 
 import asyncio
 
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"music"))
+@borg.on(mellow_cmd(pattern=r"music"))
 
 async def _(event):
 

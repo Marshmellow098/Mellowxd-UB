@@ -9,13 +9,13 @@ from telethon.errors import MessageEmptyError, MessageTooLongError, MessageNotMo
 import io
 import asyncio
 import time
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import glob
 import os
 import spotdl
 import subprocess
 
-@borg.on(admin_cmd(pattern="getsong ?(.*)"))
+@borg.on(mellow_cmd(pattern="getsong ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -2,7 +2,7 @@ from telethon import events
 import asyncio
 import os
 import sys
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import random
 #Fuckboys
 img1=("https://telegra.ph/file/d8e36bd381b070df21bf1.mp4")
@@ -24,7 +24,7 @@ img14=("https://telegra.ph/file/c66f5023373b2b9cbd86e.mp4")
 img15=("https://telegra.ph/file/bc4a93c3f35e982ce9977.mp4")
 
 
-@borg.on(admin_cmd(outgoing=True, pattern="sadstatus"))
+@borg.on(mellow_cmd(outgoing=True, pattern="sadstatus"))
 async def _(event):
     if event.fwd_from:
         return

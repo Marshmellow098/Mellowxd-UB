@@ -3,10 +3,10 @@ Syntax: .meaning <word>"""
 
 import requests
 from telethon import events
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="meaning (.*)"))
+@borg.on(mellow_cmd(pattern="meaning (.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -8,10 +8,10 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import CMD_HELP 
 
-@borg.on(admin_cmd("tti ?(.*)"))
+@borg.on(mellow_cmd("tti ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -39,7 +39,7 @@ async def _(event):
             await event.edit("**Error:** `unblock` @HK_tiktok_BOT `and retry!`")
             
 
-@borg.on(admin_cmd("ttv ?(.*)"))
+@borg.on(mellow_cmd("ttv ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -67,7 +67,7 @@ async def _(event):
             await event.edit("**Error:** `unblock` @HK_tiktok_BOT `and retry!`")
             
 
-@borg.on(admin_cmd("wttv ?(.*)"))
+@borg.on(mellow_cmd("wttv ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

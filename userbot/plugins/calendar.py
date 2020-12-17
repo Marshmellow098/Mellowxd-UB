@@ -5,10 +5,10 @@ import asyncio
 from datetime import datetime
 import requests
 import json
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="calendar (.*)"))
+@borg.on(mellow_cmd(pattern="calendar (.*)"))
 async def _(event):
     if event.fwd_from:
         return

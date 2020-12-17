@@ -8,10 +8,10 @@ import traceback
 from datetime import datetime
 from selenium import webdriver
 from telethon import events
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="screenshot (.*)"))
+@borg.on(mellow_cmd(pattern="screenshot (.*)"))
 async def _(event):
     if event.fwd_from:
         return

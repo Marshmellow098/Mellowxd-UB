@@ -1,8 +1,8 @@
 import random
 import requests
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
-@borg.on(admin_cmd(pattern="quote ?(.*)"))
+@borg.on(mellow_cmd(pattern="quote ?(.*)"))
 async def quote_search(event):
     if event.fwd_from:
         return

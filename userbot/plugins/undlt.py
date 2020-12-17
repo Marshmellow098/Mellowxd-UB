@@ -1,9 +1,9 @@
 from telethon import events
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 import asyncio
 
 
-@borg.on(admin_cmd(pattern="undlt"))
+@borg.on(mellow_cmd(pattern="undlt"))
 async def _(event):
     if event.fwd_from:
         return

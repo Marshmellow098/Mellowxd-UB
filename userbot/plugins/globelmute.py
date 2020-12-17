@@ -4,10 +4,10 @@ Fixed for userbot.. By @hellboi_atul.
 '''
 from userbot.plugins.sql_helper.mute_sql import is_muted, mute, unmute
 import asyncio
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from telethon import events
 #@command(outgoing=True, pattern=r"^.gmute ?(\d+)?")
-@borg.on(admin_cmd(pattern=r"gmute ?(\d+)?"))
+@borg.on(mellow_cmd(pattern=r"gmute ?(\d+)?"))
 async def startgmute(event):
     private = False
     if event.fwd_from:
@@ -43,7 +43,7 @@ async def startgmute(event):
         await event.edit("Successfully putted Duct Tape on that person's mouth😷")
 
 #@command(outgoing=True, pattern=r"^.ungmute ?(\d+)?")
-@borg.on(admin_cmd(pattern=r"ungmute ?(\d+)?"))
+@borg.on(mellow_cmd(pattern=r"ungmute ?(\d+)?"))
 async def endgmute(event):
     private = False
     if event.fwd_from:

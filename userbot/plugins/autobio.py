@@ -11,7 +11,7 @@ import random
 import time
 from telethon.tl import functions
 from telethon.errors import FloodWaitError
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import ALIVE_NAME
 
 
@@ -35,7 +35,7 @@ if BIO_MSG is None:
 
 DEL_TIME_OUT = 60
 
-@borg.on(admin_cmd(pattern="autobio"))  # pylint:disable=E0602
+@borg.on(mellow_cmd(pattern="autobio"))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

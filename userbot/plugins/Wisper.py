@@ -1,11 +1,11 @@
 #Made by @Kraken_The_BadASS for @HellBot_Official
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from var import Var
 
 
 
-@borg.on(admin_cmd(pattern="wspr ?(.*)"))
+@borg.on(mellow_cmd(pattern="wspr ?(.*)"))
 async def wspr(event):
     if event.fwd_from:
         return

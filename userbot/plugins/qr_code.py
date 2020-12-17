@@ -6,7 +6,7 @@ from telethon import events
 import asyncio
 from datetime import datetime
 import os
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 import qrcode
 from bs4 import BeautifulSoup
 
@@ -15,7 +15,7 @@ def progress(current, total):
     logger.info("Downloaded {} of {}\nCompleted {}".format(current, total, (current / total) * 100))
 
 
-@borg.on(admin_cmd(pattern="getqr"))
+@borg.on(mellow_cmd(pattern="getqr"))
 async def _(event):
     if event.fwd_from:
         return
@@ -59,7 +59,7 @@ async def _(event):
     await event.edit(qr_contents)
 
 
-@borg.on(admin_cmd(pattern="makeqr ?(.*)"))
+@borg.on(mellow_cmd(pattern="makeqr ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

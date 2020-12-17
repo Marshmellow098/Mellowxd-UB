@@ -9,10 +9,10 @@ from youtubesearchpython import SearchVideos
 
 from userbot import CMD_HELP
 from userbot.uniborgConfig import Config
-from userbot.utils import edit_or_reply, admin_cmd
+from userbot.utils import edit_or_reply, mellow_cmd
 
 
-@bot.on(admin_cmd(pattern="ytmusic ?(.*)"))
+@bot.on(mellow_cmd(pattern="ytmusic ?(.*)"))
 
 async def _(event):
     if event.fwd_from:

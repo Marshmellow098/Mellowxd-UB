@@ -8,7 +8,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 import asyncio
 
@@ -49,7 +49,7 @@ async def animepp():
 
     urllib.request.urlretrieve(fy,"friday.jpg")
 
-@borg.on(admin_cmd(pattern="spacedp ?(.*)"))
+@borg.on(mellow_cmd(pattern="spacedp ?(.*)"))
 
 async def main(event):
 

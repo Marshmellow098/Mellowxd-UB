@@ -9,7 +9,7 @@ import re
 import json
 import asyncio
 from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 async def callAPI(search_str):
     query = '''
@@ -75,7 +75,7 @@ async def formatJSON(outData):
         msg += " __" + re.sub("<br>", '\n', cat) +"__"
         return msg
 
-@borg.on(admin_cmd(pattern="anilist ?(.*)"))
+@borg.on(mellow_cmd(pattern="anilist ?(.*)"))
 async def anilist(event):
 	if event.fwd_from:
 		return

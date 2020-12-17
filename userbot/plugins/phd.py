@@ -25,9 +25,9 @@ from telethon.tl.functions.account import UpdateNotifySettingsRequest
 
 from telethon.tl.functions.messages import ImportChatInviteRequest
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd("phd ?(.*)"))
+@borg.on(mellow_cmd("phd ?(.*)"))
 
 async def _(event):
 

@@ -11,7 +11,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 import userbot.plugins.sql_helper.pmpermit_sql as pmpermit_sql
 from telethon import events, errors, functions, types
 from userbot import ALIVE_NAME
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Set ALIVE_NAME in heroku vars"

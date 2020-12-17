@@ -14,11 +14,11 @@ document
 cancel"""
 
 import asyncio
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import CMD_HELP
 
  
-@borg.on(admin_cmd(pattern="fake ?(.*)"))
+@borg.on(mellow_cmd(pattern="fake ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -6,7 +6,7 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError, UserAlreadyParticipantError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
 from telethon.tl.functions.messages import ImportChatInviteRequest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import time
 from userbot import ALIVE_NAME
 
@@ -14,7 +14,7 @@ naam = str(ALIVE_NAME)
 
 bot = "@jarvisofficialsecuritybot"
 
-@borg.on(admin_cmd("fedban ?(.*)"))
+@borg.on(mellow_cmd("fedban ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return    
@@ -62,7 +62,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd("unfedban ?(.*)"))
+@borg.on(mellow_cmd("unfedban ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return    

@@ -10,7 +10,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 from userbot import CMD_HELP, bot
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 UPSTREAM_REPO_URL = "https://github.com/Marshmellow098/MARSHMELLOW-USERBOT"
 HEROKU_API_KEY = Var.HEROKU_API_KEY
@@ -38,7 +38,7 @@ async def update_requirements():
     except Exception as e:
         return repr(e)
 
-@borg.on(admin_cmd(pattern="update ?(.*)", outgoing=True))
+@borg.on(mellow_cmd(pattern="update ?(.*)", outgoing=True))
 async def upstream(ups):
     "For .update command, check if the bot is up to date, update if specified"
     conf = ups.pattern_match.group(1)

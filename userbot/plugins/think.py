@@ -8,9 +8,9 @@ from telethon import events
 
 import asyncio
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd("think"))
+@borg.on(mellow_cmd("think"))
 async def _(event):
     if event.fwd_from:
         return

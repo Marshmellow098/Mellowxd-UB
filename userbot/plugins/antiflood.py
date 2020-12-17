@@ -2,7 +2,7 @@ import asyncio
 from telethon import events
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import userbot.plugins.sql_helper.antiflood_sql as sql
 import userbot.utils
 from userbot.utils import humanbytes, progress, time_formatter
@@ -17,7 +17,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@borg.on(admin_cmd(incoming=True))
+@borg.on(mellow_cmd(incoming=True))
 async def _(event):
     # logger.info(CHAT_FLOOD)
     if not CHAT_FLOOD:
@@ -58,7 +58,7 @@ because he reached the defined flood limit.""".format(event.message.from_id),
         )
 
 
-@borg.on(admin_cmd(pattern="setflood (.*)"))
+@borg.on(mellow_cmd(pattern="setflood (.*)"))
 async def _(event):
     if event.fwd_from:
         return

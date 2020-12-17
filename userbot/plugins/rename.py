@@ -17,7 +17,7 @@ from telethon import events
 from telethon.tl.types import DocumentAttributeVideo
 from telethon.errors import MessageNotModifiedError
 import time
-from userbot.utils import progress, humanbytes, time_formatter, admin_cmd
+from userbot.utils import progress, humanbytes, time_formatter, mellow_cmd
 import io
 import math
 import os
@@ -41,7 +41,7 @@ def get_video_thumb(file, output=None, width=90):
         return output
 
 
-@borg.on(admin_cmd("rename (.*)"))
+@borg.on(mellow_cmd("rename (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -70,7 +70,7 @@ async def _(event):
         await event.edit("Syntax // `.rename file.name` as reply to a Telegram media")
 
 
-@borg.on(admin_cmd("rnupload (.*)"))
+@borg.on(mellow_cmd("rnupload (.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -115,7 +115,7 @@ async def _(event):
         await event.edit("Syntax // .rnupload file.name as reply to a Telegram media")
 
 
-@borg.on(admin_cmd("rnstreamupload (.*)"))
+@borg.on(mellow_cmd("rnstreamupload (.*)"))
 async def _(event):
     if event.fwd_from:
         return

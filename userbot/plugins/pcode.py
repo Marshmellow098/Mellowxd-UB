@@ -1,11 +1,11 @@
 #Ported from Nana remix by @buddhhu
-#imported admin_cmd for DC by @hellboi_atul
+#imported mellow_cmd for DC by @hellboi_atul
 import pygments, os, asyncio
 from pygments.lexers import Python3Lexer
 from pygments.formatters import ImageFormatter
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd(pattern="pcode ?(.*)"))
+@borg.on(mellow_cmd(pattern="pcode ?(.*)"))
 async def coder_print(event):
 	cmd = event.text
 	a = await event.get_reply_message()

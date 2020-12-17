@@ -31,14 +31,14 @@ import sys
 import random
 
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 
 
 
 
-@borg.on(admin_cmd(pattern=r"qt"))
+@borg.on(mellow_cmd(pattern=r"qt"))
 
 
 

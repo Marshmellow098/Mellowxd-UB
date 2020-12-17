@@ -4,7 +4,7 @@
 import random, re
 import asyncio
 from telethon import events
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from platform import uname
 from userbot import ALIVE_NAME
 
@@ -513,21 +513,21 @@ AA = ("███████▄▄███████████▄\n"
 
 
 
-@borg.on(admin_cmd(pattern="flower ?(.*)"))
+@borg.on(mellow_cmd(pattern="flower ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit(".........▒▒▒▒▒▒▒▒▒\n      ▒▒▒▒▒▒▒▒▒▒▒▒\n  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\n▒▒▒▒▒▒▓▓▓▓▓▒▒▒▒▒▒\n▒▒▒▒▒▓▓▓▓▓▓▓▒▒▒▒▒\n▒▒▒▒▓▓▓▓▓▓▓▓▓▒▒▒▒\n▒▒▒▒▒▓▓▓▓▓▓▓▒▒▒▒▒\n  ▒▒▒▒▒▒▓▓▓▓▓▒▒▒▒▒\n    ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒\n       ▒▒▒▒▒▒▒▒▒▒▒▒▒\n         ▒▒▒▒▒▒▒▒▒▒\n              ▒▒▒▒▒▒\n                     ▓\n     ▓▓▓       ▓\n ▓▓▓▓▓▓  ▓\n▓▓            ▓▓\n ▓                 ▓     ▓▓▓▓▓\n ▓                 ▓     ▓▓▓▓▓\n                     ▓   ▓▓▓▓▓▓\n                     ▓▓           ▓▓\n                     ▓               ▓\n                     ▓\n     ████████████\n         █████████\n            ███████\n             ██████\n.................███..............\n")
         
         
         
-@borg.on(admin_cmd(pattern="vheart ?(.*)"))
+@borg.on(mellow_cmd(pattern="vheart ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
        await event.edit("..........###########\n......##############\n....################\n..##################.............########\n...##################.......#############\n....##################.....##############\n.....#################...################\n.......#################################\n.........###############################\n...........#############################\n..............##########################\n................########################\n...................#####################\n.....................##################\n.......................###############\n........................#############\n..........................##########\n...........................########\n............................######\n.............................#####\n..............................###\n...............................#")
    
  
  
-@borg.on(admin_cmd(pattern="luvart ?(.*)"))
+@borg.on(mellow_cmd(pattern="luvart ?(.*)"))
 async def _(event):
      if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit(" 📺📺📺📺📺📺📺📺📺📺📺📺📺\n 📺📺📺💖💖💖💖💖💖💖📺📺📺\n 📺📺📺📺📺💖💖💖📺📺📺📺📺\n 📺📺📺📺📺💖💖💖📺📺📺📺📺\n 📺📺📺📺📺💖💖💖📺📺📺📺📺\n 📺📺📺📺📺💖💖💖📺📺📺📺📺\n 📺📺📺💖💖💖💖💖💖💖📺📺📺\n 📺📺📺📺📺📺📺📺📺📺📺📺📺\n 💖💖💖💖💖💖💖💖💖💖💖💖💖\n 💖💖📺📺📺💖💖💖📺📺📺💖💖\n 💖📺📺📺📺📺💖📺📺📺📺📺💖\n 💖📺📺📺📺📺📺📺📺📺📺📺💖\n 💖💖📺📺📺📺📺📺📺📺📺💖💖\n 💖💖💖📺📺📺📺📺📺📺💖💖💖\n 💖💖💖💖📺📺📺📺📺💖💖💖💖\n 💖💖💖💖💖📺📺📺💖💖💖💖💖\n 💖💖💖💖💖💖📺💖💖💖💖💖💖\n 💖💖💖💖💖💖💖💖💖💖💖💖💖\n 📺📺📺📺📺📺📺📺📺📺📺📺📺\n 📺📺💖💖📺📺📺📺📺💖💖📺📺\n 📺📺💖💖📺📺📺📺📺💖💖📺📺\n 📺📺💖💖📺📺📺📺📺💖💖📺📺\n 📺📺💖💖📺📺📺📺📺💖💖📺📺\n 📺📺💖💖💖📺📺📺💖💖💖📺📺\n 📺📺💖💖💖💖💖💖💖💖💖📺📺\n 📺📺📺💖💖💖💖💖💖💖📺📺📺\n 📺📺📺📺📺📺📺📺📺📺📺📺📺\n")
@@ -535,114 +535,114 @@ async def _(event):
  
 
  
-@borg.on(admin_cmd(pattern=r"spika"))
+@borg.on(mellow_cmd(pattern=r"spika"))
 async def kakashi(pikachu):
     await pikachu.edit(A)
     
-@borg.on(admin_cmd(pattern=r"sshit"))
+@borg.on(mellow_cmd(pattern=r"sshit"))
 async def kakashi(shit):
     await shit.edit(B)
     
-@borg.on(admin_cmd(pattern=r"sxx"))
+@borg.on(mellow_cmd(pattern=r"sxx"))
 async def kakashi(saxy):
     await saxy.edit(C)
     
-@borg.on(admin_cmd(pattern=r"sporn"))
+@borg.on(mellow_cmd(pattern=r"sporn"))
 async def kakashi(pornhub):
     await pornhub.edit(D)
     
-@borg.on(admin_cmd(pattern=r"sthink"))
+@borg.on(mellow_cmd(pattern=r"sthink"))
 async def kakashi(think):
     await think.edit(E)
     
-@borg.on(admin_cmd(pattern=r"sdick"))
+@borg.on(mellow_cmd(pattern=r"sdick"))
 async def kakashi(dick):
     await dick.edit(F)
     
-@borg.on(admin_cmd(pattern=r"sfrog"))
+@borg.on(mellow_cmd(pattern=r"sfrog"))
 async def kakashi(frog):
     await frog.edit(G)
     
-@borg.on(admin_cmd(pattern=r"sputin"))
+@borg.on(mellow_cmd(pattern=r"sputin"))
 async def kakashi(putin):
     await putin.edit(H)
     
-@borg.on(admin_cmd(pattern=r"sdead"))
+@borg.on(mellow_cmd(pattern=r"sdead"))
 async def kakashi(dead):
     await dead.edit(I)
     
-@borg.on(admin_cmd(pattern=r"strump"))
+@borg.on(mellow_cmd(pattern=r"strump"))
 async def kakashi(trump):
     await trump.edit(J)
     
-@borg.on(admin_cmd(pattern=r"schina"))
+@borg.on(mellow_cmd(pattern=r"schina"))
 async def kakashi(china):
     await china.edit(K)
     
-@borg.on(admin_cmd(pattern=r"india"))
+@borg.on(mellow_cmd(pattern=r"india"))
 async def kakashi(india):
     await india.edit(L)
     
-@borg.on(admin_cmd(pattern=r"monster"))
+@borg.on(mellow_cmd(pattern=r"monster"))
 async def bluedevilmonster(monster):
     await monster.edit(N)
     
-@borg.on(admin_cmd(pattern=r"pig"))
+@borg.on(mellow_cmd(pattern=r"pig"))
 async def bluedevilpig(pig):
     await pig.edit(O)
     
-@borg.on(admin_cmd(pattern=r"killer"))
+@borg.on(mellow_cmd(pattern=r"killer"))
 async def bluedevilkiller(killer):
     await killer.edit(M)
     
-@borg.on(admin_cmd(pattern=r"gun"))
+@borg.on(mellow_cmd(pattern=r"gun"))
 async def bluedevilgun(gun):
     await gun.edit(P)
     
-@borg.on(admin_cmd(pattern=r"dog"))
+@borg.on(mellow_cmd(pattern=r"dog"))
 async def bluedevildog(dog):
     await dog.edit(Q)    
     
-@borg.on(admin_cmd(pattern=r"hello"))
+@borg.on(mellow_cmd(pattern=r"hello"))
 async def bluedevilhello(hello):
     await hello.edit(R)
     
-@borg.on(admin_cmd(pattern=r"hmf"))
+@borg.on(mellow_cmd(pattern=r"hmf"))
 async def bluedevilhmf(hmf):
     await hmf.edit(S)
     
-@borg.on(admin_cmd(pattern=r"couple"))
+@borg.on(mellow_cmd(pattern=r"couple"))
 async def bluedevilcouple(couple):
     await couple.edit(T)
     
-@borg.on(admin_cmd(pattern=r"sup"))
+@borg.on(mellow_cmd(pattern=r"sup"))
 async def bluedevilsupreme(supreme):
     await supreme.edit(U)
     
-@borg.on(admin_cmd(pattern=r"india"))
+@borg.on(mellow_cmd(pattern=r"india"))
 async def bluedevilindia(india):
     await india.edit(J)
     
-@borg.on(admin_cmd(pattern=r"wc"))
+@borg.on(mellow_cmd(pattern=r"wc"))
 async def bluedevilwelcome(welcome):
     await welcome.edit(W)
     
-@borg.on(admin_cmd(pattern=r"snk"))
+@borg.on(mellow_cmd(pattern=r"snk"))
 async def bluedevilsnake(snake):
     await snake.edit(X) 
     
-@borg.on(admin_cmd(pattern=r"ded"))
+@borg.on(mellow_cmd(pattern=r"ded"))
 async def bluedevilded(ded):
     await ded.edit(L)
     
-@borg.on(admin_cmd(pattern=r"bye"))
+@borg.on(mellow_cmd(pattern=r"bye"))
 async def bluedevilbye(bye):
     await bye.edit(Y)
     
-@borg.on(admin_cmd(pattern=r"shitos"))
+@borg.on(mellow_cmd(pattern=r"shitos"))
 async def bluedevilshitos(shitos):
     await shitos.edit(Z)
     
-@borg.on(admin_cmd(pattern=r"dislike"))
+@borg.on(mellow_cmd(pattern=r"dislike"))
 async def bluedevildislike(dislike):
     await dislike.edit(AA)

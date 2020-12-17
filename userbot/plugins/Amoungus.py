@@ -6,13 +6,13 @@
 
 import asyncio
 
-from userbot.utils import admin_cmd, edit_or_reply
+from userbot.utils import mellow_cmd, edit_or_reply
 from userbot import ALIVE_NAME, CMD_HELP
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Marsh mellow"
 
 
-@bot.on(admin_cmd(pattern="imp(|n) (.*)", outgoing=True))
+@bot.on(mellow_cmd(pattern="imp(|n) (.*)", outgoing=True))
 async def _(event):
     kraken = bot.uid
     USERNAME = f"tg://user?id={kraken}"
@@ -96,7 +96,7 @@ async def _(event):
         await event.client.send_file(event.chat_id, "CAADAQADQAADnjOcH-WOkB8DEctJAg")
 
 
-@bot.on(admin_cmd(pattern="timp(|n) (.*)", outgoing=True))
+@bot.on(mellow_cmd(pattern="timp(|n) (.*)", outgoing=True))
 async def _(event):
     name = event.pattern_match.group(2)
     cmd = event.pattern_match.group(1).lower()

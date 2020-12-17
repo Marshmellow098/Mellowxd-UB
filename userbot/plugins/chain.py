@@ -4,9 +4,9 @@
 
 from telethon import events
 from telethon.tl.functions.messages import SaveDraftRequest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd(pattern="chain"))
+@borg.on(mellow_cmd(pattern="chain"))
 async def _(event):
     await event.edit("Counting...")
     count = -1

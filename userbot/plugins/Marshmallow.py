@@ -2,7 +2,7 @@ from telethon import events
 import asyncio
 import os
 import sys
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import random
 
 img1="https://telegra.ph/file/a448826301fe63a96684f.jpg"
@@ -27,7 +27,7 @@ img15="https://telegra.ph/file/34ba55eb1543578a1fc92.jpg"
 
 
 
-@borg.on(admin_cmd(outgoing=True, pattern="mmh"))
+@borg.on(mellow_cmd(outgoing=True, pattern="mmh"))
 async def _(event):
     if event.fwd_from:
         return

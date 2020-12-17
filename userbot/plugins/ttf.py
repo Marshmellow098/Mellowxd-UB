@@ -1,9 +1,9 @@
 from telethon import events
 import asyncio
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="ttf ?(.*)"))
+@borg.on(mellow_cmd(pattern="ttf ?(.*)"))
 async def get(event):
     name = event.text[5:]
     m = await event.get_reply_message()

@@ -2,12 +2,12 @@
 # please give credits if you wanna kang this..
 
 from telethon.tl.types import InputMessagesFilterDocument
-from ..utils import remove_plugin, load_module, admin_cmd
+from ..utils import remove_plugin, load_module, mellow_cmd
 from pathlib import Path
 import userbot.utils
 import os
 
-@borg.on(admin_cmd(pattern=r"installall$"))
+@borg.on(mellow_cmd(pattern=r"installall$"))
 async def install(event):
 	if event.fwd_from:
 		return

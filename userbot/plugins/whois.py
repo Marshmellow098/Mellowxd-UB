@@ -14,7 +14,7 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 from .. import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
-from ..utils import admin_cmd, edit_or_reply
+from ..utils import mellow_cmd, edit_or_reply
 
 
 
@@ -37,10 +37,10 @@ from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
 
 from .. import CMD_HELP, LOGS, TEMP_DOWNLOAD_DIRECTORY
-from ..utils import admin_cmd, edit_or_reply
+from ..utils import mellow_cmd, edit_or_reply
 
 
-@borg.on(admin_cmd(pattern="userinfo(?: |$)(.*)"))
+@borg.on(mellow_cmd(pattern="userinfo(?: |$)(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -131,7 +131,7 @@ async def get_full_user(event):
     return None, "No input is found"
 
 
-@borg.on(admin_cmd(pattern="whois(?: |$)(.*)"))
+@borg.on(mellow_cmd(pattern="whois(?: |$)(.*)"))
 async def who(event):
     cat = await edit_or_reply(
         event, "`Sit tight while I steal some data from This guuyyy...`"
@@ -245,7 +245,7 @@ async def fetch_info(replied_user, event):
     return photo, caption
 
 
-@borg.on(admin_cmd(pattern="link(?: |$)(.*)"))
+@borg.on(mellow_cmd(pattern="link(?: |$)(.*)"))
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)

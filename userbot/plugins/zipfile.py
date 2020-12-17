@@ -4,10 +4,10 @@ import zipfile
 from pySmartDL import SmartDL
 import time
 import os
-from uniborg.util import admin_cmd, humanbytes, progress, time_formatter
+from uniborg.util import mellow_cmd, humanbytes, progress, time_formatter
 
 
-@borg.on(admin_cmd(pattern="compress ?(.*)"))
+@borg.on(mellow_cmd(pattern="compress ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

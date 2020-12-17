@@ -15,14 +15,14 @@ import json
 import re
 from bs4 import BeautifulSoup
 from telethon.utils import get_inner_text
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 logger.info(Config.OPEN_LOAD_LOGIN)
 # https://t.me/RoseSupport/33801
 
 
-@borg.on(admin_cmd(pattern="rl"))
+@borg.on(mellow_cmd(pattern="rl"))
 async def _(event):
     if event.fwd_from:
         return

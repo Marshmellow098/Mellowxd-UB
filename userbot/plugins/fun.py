@@ -1,6 +1,6 @@
 from telethon import events
 import random, re
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 METOOSTR = [
     "`Me too thanks`",
@@ -27,7 +27,7 @@ PRO_STRINGS = [
      "`Pros here -_- Time to Leave`",
 ]
 
-@borg.on(admin_cmd(pattern="run ?(.*)"))
+@borg.on(mellow_cmd(pattern="run ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -37,7 +37,7 @@ async def _(event):
     await event.edit(reply_text)
 
 
-@borg.on(admin_cmd(pattern="metoo ?(.*)"))
+@borg.on(mellow_cmd(pattern="metoo ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return
@@ -47,7 +47,7 @@ async def _(event):
     await event.edit(reply_text)
 			  
 			  
-@borg.on(admin_cmd(pattern="proo ?(.*)"))
+@borg.on(mellow_cmd(pattern="proo ?(.*)"))
 async def _(event):
     if event.fwd_from:
          return

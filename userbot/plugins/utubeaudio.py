@@ -10,7 +10,7 @@
 import re
 import random
 from userbot import bot
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 IF_EMOJI = re.compile(
     "["
@@ -32,7 +32,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(IF_EMOJI, '', inputString)
 
 
-@borg.on(admin_cmd(pattern="uta(?: |$)(.*)"))
+@borg.on(mellow_cmd(pattern="uta(?: |$)(.*)"))
 
 async def nope(doit):
     ok = doit.pattern_match.group(1)

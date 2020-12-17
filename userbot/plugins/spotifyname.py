@@ -11,7 +11,7 @@ from json import loads
 from json.decoder import JSONDecodeError
 from os import environ
 from sys import setrecursionlimit
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from requests import get
 from telethon import events
 from telethon.tl import functions, types
@@ -115,7 +115,7 @@ async def dirtyfix():
 
 
 
-@borg.on(admin_cmd(pattern=f"ensp", allow_sudo=True))
+@borg.on(mellow_cmd(pattern=f"ensp", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.ensp ?(.*)", outgoing=True))
 async def set_biostgraph(setstbio):
     setrecursionlimit(700000)
@@ -129,7 +129,7 @@ async def set_biostgraph(setstbio):
 
 
 
-@borg.on(admin_cmd(pattern=f"disp", allow_sudo=True))
+@borg.on(mellow_cmd(pattern=f"disp", allow_sudo=True))
 @borg.on(events.NewMessage(pattern=r"\.disp ?(.*)", outgoing=True))
 async def set_biodgraph(setdbio):
     global SPOTIFYCHECK

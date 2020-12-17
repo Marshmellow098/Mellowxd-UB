@@ -11,7 +11,7 @@ from telethon.tl.functions.photos import GetUserPhotosRequest
 from telethon.tl.functions.users import GetFullUserRequest
 from telethon.tl.types import MessageEntityMentionName
 from telethon.utils import get_input_location
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from telethon.tl import functions
 from telethon import events
 from telethon.errors import ImageProcessFailedError, PhotoCropSizeSmallError
@@ -31,7 +31,7 @@ DEFAULTUSERBIO = str(DEFAULT_BIO) if DEFAULT_BIO else "Hmm"
 BOTLOG_CHATID = Config.PRIVATE_GROUP_BOT_API_ID
 BOTLOG = True
 
-@borg.on(admin_cmd(pattern="clone ?(.*)"))
+@borg.on(mellow_cmd(pattern="clone ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -83,7 +83,7 @@ async def _(event):
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, f"#CLONED\nSuccesfulley cloned [{first_name}](tg://user?id={user_id })")
     
-@borg.on(admin_cmd(pattern="revert$"))
+@borg.on(mellow_cmd(pattern="revert$"))
 async def _(event):
     if event.fwd_from:
         return

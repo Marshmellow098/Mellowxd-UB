@@ -5,10 +5,10 @@
 from telethon import events
 from datetime import datetime
 import requests
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
-@borg.on(admin_cmd("xtools (.*)"))
+@borg.on(mellow_cmd("xtools (.*)"))
 async def _(event):
     if event.fwd_from:
         return

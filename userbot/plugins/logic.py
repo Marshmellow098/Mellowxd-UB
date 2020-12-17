@@ -7,10 +7,10 @@ import asyncio
 import random
 import re
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern=f"logic$", outgoing=True))
+@borg.on(mellow_cmd(pattern=f"logic$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K
 import asyncio
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="type (.*)"))
+@borg.on(mellow_cmd(pattern="type (.*)"))
 async def _(event):
     if event.fwd_from:
         return

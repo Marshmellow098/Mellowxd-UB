@@ -15,11 +15,11 @@ import sys
 
 import random
 
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
 
-@borg.on(admin_cmd(pattern=r"belo"))
+@borg.on(mellow_cmd(pattern=r"belo"))
 
 async def _(event):
 

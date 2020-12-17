@@ -14,13 +14,13 @@ import time
 
 from datetime import tzinfo, datetime
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
 
 
 
-@borg.on(admin_cmd(pattern="weather (.*)"))
+@borg.on(mellow_cmd(pattern="weather (.*)"))
 
 async def _(event):
 
@@ -104,7 +104,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd(pattern="wttr (.*)"))
+@borg.on(mellow_cmd(pattern="wttr (.*)"))
 
 async def _(event):
 

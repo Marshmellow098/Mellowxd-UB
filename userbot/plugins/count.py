@@ -9,13 +9,13 @@ from telethon.events import NewMessage
 from telethon.tl.custom import Dialog
 from telethon.tl.types import Channel, Chat, User
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 logger = logging.getLogger(__name__)
 
-@borg.on(admin_cmd(pattern='status'))  
+@borg.on(mellow_cmd(pattern='status'))  
 async def stats(event: NewMessage.Event) -> None:  # pylint: disable = R0912, R0914, R0915
     """Command to get stats about the account"""
     waiting_message = await event.edit('`Collecting stats, Wait Master`')

@@ -7,12 +7,12 @@ By:-@Zero_cool7870
 """
 import os 
 import asyncio
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 from telethon import events
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern=r"upb"))
+@borg.on(mellow_cmd(pattern=r"upb"))
 async def batch_upload(event):
 	if event.fwd_from:
 		return   

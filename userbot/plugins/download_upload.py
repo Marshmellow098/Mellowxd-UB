@@ -23,11 +23,11 @@ from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
 from userbot import LOGS, CMD_HELP, TEMP_DOWNLOAD_DIRECTORY
 from userbot.utils import register
-from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
+from userbot.utils import mellow_cmd, humanbytes, progress, time_formatter
 from userbot.uniborgConfig import Config
 thumb_image_path = Config.TMP_DOWNLOAD_DIRECTORY + "/thumb_image.jpg"
 import io
-from userbot.utils import admin_cmd, progress
+from userbot.utils import mellow_cmd, progress
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):
     """Generic progress_callback for uploads and downloads."""
@@ -87,7 +87,7 @@ def time_formatter(milliseconds: int) -> str:
     return tmp[:-2]
 
 #@register(pattern=r".download(?: |$)(.*)", outgoing=True)
-@borg.on(admin_cmd(pattern="download(?: |$)(.*)", outgoing=True))
+@borg.on(mellow_cmd(pattern="download(?: |$)(.*)", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -158,7 +158,7 @@ async def _(event):
         
         
 @register(pattern=r".uploadir (.*)", outgoing=True)
-#@borg.on(admin_cmd(pattern="uploadir (.*)", allow_sudo=True))
+#@borg.on(mellow_cmd(pattern="uploadir (.*)", allow_sudo=True))
 async def uploadir(udir_event):
     """ 
 #For .uploadir command, allows you to upload everything from a folder in the server
@@ -235,9 +235,9 @@ async def uploadir(udir_event):
     else:
         await udir_event.edit("404: Directory Not Found")
 
-#@borg.on(admin_cmd(pattern="upload (.*)", allow_sudo=True)
+#@borg.on(mellow_cmd(pattern="upload (.*)", allow_sudo=True)
 #@register(pattern=r".upload (.*)", outgoing=True)
-@borg.on(admin_cmd(pattern="upload (.*)", outgoing=True))                
+@borg.on(mellow_cmd(pattern="upload (.*)", outgoing=True))                
 async def _(event):
     if event.fwd_from:
         return
@@ -320,7 +320,7 @@ def extract_w_h(file):
         height = int(response_json["streams"][0]["height"])
         return width, height
 
-#@borg.on(admin_cmd(pattern="uploadas(stream|vn|all) (.*)", allow_sudo=True))
+#@borg.on(mellow_cmd(pattern="uploadas(stream|vn|all) (.*)", allow_sudo=True))
 @register(pattern=r".uploadas(stream|vn|all) (.*)", outgoing=True)
 async def uploadas(uas_event):
     """

@@ -11,7 +11,7 @@ import asyncio
 import os
 import requests
 import math
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import CMD_HELP
 from userbot.uniborgConfig import Config
 
@@ -29,7 +29,7 @@ heroku_api = "https://api.heroku.com"
 thumb_img_path = "./Resources/PicsArt_12-07-03.35.32.jpg"
 thumb = thumb_img_path
 
-@borg.on(admin_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True))
+@borg.on(mellow_cmd(pattern="(set|get|del) var(?: |$)(.*)(?: |$)([\s\S]*)", outgoing=True))
 async def variable(var):
     """
         Manage most of ConfigVars setting, set new var, get current var,
@@ -106,7 +106,7 @@ async def variable(var):
             return await var.edit(f"**{variable}**  `is not exists`")
 
 
-@borg.on(admin_cmd(pattern="usage(?: |$)", outgoing=True))
+@borg.on(mellow_cmd(pattern="usage(?: |$)", outgoing=True))
 async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
@@ -163,7 +163,7 @@ async def dyno_usage(dyno):
                            f"**|**  [`{percentage}`**%**]"
                            )
 
-@borg.on(admin_cmd(pattern="logs$", outgoing=True))
+@borg.on(mellow_cmd(pattern="logs$", outgoing=True))
 async def _(dyno):        
         try:
              Heroku = heroku3.from_key(HEROKU_API_KEY)                         

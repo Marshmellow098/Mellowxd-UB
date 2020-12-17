@@ -8,7 +8,7 @@ from telethon.tl.functions.users import GetFullUserRequest
 from telethon import events, errors, functions, types
 from userbot import ALIVE_NAME, CUSTOM_PMPERMIT
 from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 DEF_PIC="https://telegra.ph/file/f054368430015a0c65ce1.jpg"
 
@@ -40,7 +40,7 @@ USER_BOT_NO_WARN = (
 
 
 if Var.PRIVATE_GROUP_ID is not None:
-    @borg.on(admin_cmd(pattern="allow ?(.*)"))
+    @borg.on(mellow_cmd(pattern="allow ?(.*)"))
     async def approve_p_m(event):
         if event.fwd_from:
            return

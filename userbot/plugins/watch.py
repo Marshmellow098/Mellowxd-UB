@@ -8,7 +8,7 @@
 
 from telethon import events
 import requests
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from justwatch import JustWatch
 
 def get_stream_data(query):
@@ -69,7 +69,7 @@ def get_provider(url):
     url = url.split(".")[0]
     return url
 
-@borg.on(admin_cmd(pattern="watch (.*)"))
+@borg.on(mellow_cmd(pattern="watch (.*)"))
 async def _(event):
     if event.fwd_from:
         return

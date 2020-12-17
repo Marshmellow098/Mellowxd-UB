@@ -3,9 +3,9 @@ import datetime
 from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.account import UpdateNotifySettingsRequest
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd("grab ?(.*)"))
+@borg.on(mellow_cmd("grab ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return 

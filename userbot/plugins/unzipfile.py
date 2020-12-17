@@ -10,7 +10,7 @@ import zipfile
 
 from telethon import events
 from telethon.tl.types import DocumentAttributeAudio, DocumentAttributeVideo
-from userbot.utils import admin_cmd, humanbytes, progress, time_formatter
+from userbot.utils import mellow_cmd, humanbytes, progress, time_formatter
 import time
 from datetime import datetime
 from pySmartDL import SmartDL
@@ -24,7 +24,7 @@ if not os.path.isdir(extracted):
     os.makedirs(extracted)
 
 
-@borg.on(admin_cmd(pattern="unzip"))
+@borg.on(mellow_cmd(pattern="unzip"))
 async def _(event):
     if event.fwd_from:
         return

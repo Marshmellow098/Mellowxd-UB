@@ -6,12 +6,12 @@ avaliable commands :
 
 from telethon import events
 import asyncio
-from uniborg.util import admin_cmd
-from userbot.utils import admin_cmd
+from uniborg.util import mellow_cmd
+from userbot.utils import mellow_cmd
 from collections import deque
 
 
-@borg.on(admin_cmd(pattern=r"smoon"))
+@borg.on(mellow_cmd(pattern=r"smoon"))
 
 async def _(event):
 
@@ -49,7 +49,7 @@ async def _(event):
 
 
 
-@borg.on(admin_cmd(pattern=r"tmoon"))
+@borg.on(mellow_cmd(pattern=r"tmoon"))
 async def _(event):
     if event.fwd_from:
         return

@@ -13,14 +13,14 @@ import os
 import sys
 import random
 from userbot import ALIVE_NAME, CMD_HELP
-from userbot.utils import admin_cmd, edit_or_reply
+from userbot.utils import mellow_cmd, edit_or_reply
 
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Mellow"
 
 kraken = bot.uid
 
-@bot.on(admin_cmd(pattern=r"shayri$", outgoing=True))
+@bot.on(mellow_cmd(pattern=r"shayri$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -144,7 +144,7 @@ async def _(event):
     if h==58:
         await event.edit(f"Not in mood. Sorry!!!!")
 
-@bot.on(admin_cmd(pattern=r"hflirt$", outgoing=True))
+@bot.on(mellow_cmd(pattern=r"hflirt$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -169,7 +169,7 @@ async def _(event):
         await event.edit(f"📷Aap ek camera ki tarah ho jab bhi aapka photos dekhta hu meri automatic smile aaa jati hain🙈\n\n\n✍️ [{DEFAULTUSER}](tg://user?id={kraken})")
         
         
-@bot.on(admin_cmd(pattern=r"eflirt$", outgoing=True))
+@bot.on(mellow_cmd(pattern=r"eflirt$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -202,7 +202,7 @@ async def _(event):
         await event.edit(f"Can you kiss me on the cheek so I can at least say a cute girl kissed me tonight?\n\n\n✍️ [{DEFAULTUSER}](tg://user?id={kraken})")
         
 
-@bot.on(admin_cmd(pattern=r"attitude$", outgoing=True))
+@bot.on(mellow_cmd(pattern=r"attitude$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -227,7 +227,7 @@ async def _(event):
         await event.edit(f"शेर अपना शिकार करते हैं\n और हम अपने Attitude से वार करते हैं।\n\n\n✍️ [{DEFAULTUSER}](tg://user?id={kraken})")
         
 
-@bot.on(admin_cmd(pattern="gbye ?(.*)"))
+@bot.on(mellow_cmd(pattern="gbye ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

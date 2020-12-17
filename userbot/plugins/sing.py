@@ -3,9 +3,9 @@ import asyncio
 import os
 import sys
 import random
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd(pattern=r"msing$", outgoing=True))
+@borg.on(mellow_cmd(pattern=r"msing$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -101,7 +101,7 @@ async def _(event):
     if x==44:        
         await event.edit("🎶 പണ്ടു പണ്ടേ പൂത്ത മലരുകൾ മിന്നും മിന്നാമിനുങ്ങുകൾ ഒരു കുറി ഇനി വരുമോ...🎶")    
 
-@borg.on(admin_cmd(pattern=r"sing$", outgoing=True))
+@borg.on(mellow_cmd(pattern=r"sing$", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

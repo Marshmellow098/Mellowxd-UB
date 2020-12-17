@@ -9,7 +9,7 @@ from telethon import events
 from telethon.tl import functions, types
 
 from userbot import CMD_HELP
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 global USER_AFK  # pylint:disable=E0602
 global afk_time  # pylint:disable=E0602
@@ -129,7 +129,7 @@ async def on_afk(event):
         last_afk_message[event.chat_id] = msg  # pylint:disable=E0602
 
 
-@borg.on(admin_cmd(pattern=r"afk ?(.*)", outgoing=True))  # pylint:disable=E0602
+@borg.on(mellow_cmd(pattern=r"afk ?(.*)", outgoing=True))  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return

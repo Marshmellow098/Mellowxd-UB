@@ -2,7 +2,7 @@
 
 
 from userbot import *
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 import asyncio, time, io, math, os, logging, asyncio, shutil, re, subprocess, json
 from datetime import datetime
 from hachoir.metadata import extractMetadata
@@ -119,7 +119,7 @@ def user_full_name(user):
 
 
 
-@borg.on(admin_cmd(pattern=r"inviteem ?(.*)"))
+@borg.on(mellow_cmd(pattern=r"inviteem ?(.*)"))
 async def get_users(event):   
     sender = await event.get_sender() ; me = await event.client.get_me()
     if not sender.id == me.id:

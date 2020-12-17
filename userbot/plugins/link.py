@@ -8,13 +8,13 @@ from asyncio import sleep
 from os import remove
 from telethon.errors import BadRequestError, UserAdminInvalidError
 from telethon.errors.rpcerrorlist import UserIdInvalidError
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from telethon.tl.types import (PeerChannel, ChannelParticipantsAdmins,
                                ChatAdminRights, ChatBannedRights,
                                MessageEntityMentionName,
                                ChannelParticipantsBots)
 
-@borg.on(admin_cmd(pattern="link(?: |$)(.*)"))
+@borg.on(mellow_cmd(pattern="link(?: |$)(.*)"))
 async def permalink(mention):
     """ For .link command, generates a link to the user's PM with a custom text. """
     user, custom = await get_user_from_event(mention)

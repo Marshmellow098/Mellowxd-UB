@@ -6,7 +6,7 @@
 import random
 import asyncio
 from telethon import events
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from telethon import events
 from userbot import ALIVE_NAME
 
@@ -124,7 +124,7 @@ opeo=random.choice([txt31,txt32,txt33,txt34,])
 hmm=random.choice([txt36,txt37,txt38,txt39,txt1,txt12,txt20])
 water=random.choice([mac,serve,opeo,hmm,stark,pm])
 
-@borg.on(admin_cmd(pattern="hdiwali", outgoing=True))
+@borg.on(mellow_cmd(pattern="hdiwali", outgoing=True))
 async def hmm(event):
     await event.delete()
     x=random.randrange(1,60)
@@ -250,7 +250,7 @@ async def hmm(event):
         await borg.send_file(event.chat_id,file=img60,caption=water)
     
     
-@borg.on(admin_cmd(pattern="wdiwali",outgoing=True))
+@borg.on(mellow_cmd(pattern="wdiwali",outgoing=True))
 async def busy(event):
     trans=random.randrange(1,43)
     if trans==1:

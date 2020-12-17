@@ -4,7 +4,7 @@ import asyncio
 import datetime
 from telethon import events
 from telethon.tl import functions, types
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import ALIVE_NAME
 
 global USER_night  # pylint:disable=E0602
@@ -39,7 +39,7 @@ async def set_not_night(event):
         USER_night = {}  # pylint:disable=E0602
         night_time = None  # pylint:disable=E0602
 
-@borg.on(admin_cmd(pattern=r"night ?(.*)"))
+@borg.on(mellow_cmd(pattern=r"night ?(.*)"))
 
 async def _(event):
     if event.fwd_from:

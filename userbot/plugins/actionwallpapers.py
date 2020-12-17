@@ -10,7 +10,7 @@ from datetime import datetime
 
 from PIL import Image, ImageDraw, ImageFont
 
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 import asyncio
 
@@ -56,7 +56,7 @@ async def animepp():
 
     urllib.request.urlretrieve(fy,"donottouch.jpg")
 
-@borg.on(admin_cmd(pattern="fire ?(.*)"))
+@borg.on(mellow_cmd(pattern="fire ?(.*)"))
 
 async def main(event):
 

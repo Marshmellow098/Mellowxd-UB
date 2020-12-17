@@ -4,10 +4,10 @@ Syntax: .fwd as reply to any message"""
 from telethon import events
 from telethon import sync
 from telethon.tl import types, functions
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="frwd"))
+@borg.on(mellow_cmd(pattern="frwd"))
 async def _(event):
     if event.fwd_from:
         return

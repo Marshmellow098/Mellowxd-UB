@@ -9,10 +9,10 @@ from telethon.tl.types import UserStatusEmpty, UserStatusLastMonth, UserStatusLa
 from telethon.tl import functions, types
 from time import sleep
 import asyncio
-from uniborg.util import admin_cmd
+from uniborg.util import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern="unbanall ?(.*)"))
+@borg.on(mellow_cmd(pattern="unbanall ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return
@@ -41,7 +41,7 @@ async def _(event):
         await event.edit("{}: {} unbanned".format(event.chat_id, p))
 
 
-@borg.on(admin_cmd(pattern="ikuck ?(.*)"))
+@borg.on(mellow_cmd(pattern="ikuck ?(.*)"))
 async def _(event):
     if event.fwd_from:
         return

@@ -4,10 +4,10 @@
 import asyncio
 from telethon import events
 from telethon.tl.types import ChannelParticipantsAdmins
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@borg.on(admin_cmd(pattern=r"tagall", outgoing=True))
+@borg.on(mellow_cmd(pattern=r"tagall", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return
@@ -19,7 +19,7 @@ async def _(event):
     await event.delete()
 
 
-@borg.on(admin_cmd(pattern=r"administrator", outgoing=True))
+@borg.on(mellow_cmd(pattern=r"administrator", outgoing=True))
 async def _(event):
     if event.fwd_from:
         return

@@ -9,7 +9,7 @@ from PIL import Image
 from telegraph import upload_file
 from telethon.tl.types import MessageMediaPhoto
 import re
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 from userbot import bot 
 from userbot import bot as borg
 sedpath = "./shivam/"
@@ -20,7 +20,7 @@ if not os.path.isdir(sedpath):
 
 
 
-@bot.on(admin_cmd(pattern=r"tig"))
+@bot.on(mellow_cmd(pattern=r"tig"))
 
 async def lolmetrg(event):
     await event.delete()
@@ -44,7 +44,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"wst"))
+@bot.on(mellow_cmd(pattern=r"wst"))
 
 async def lolmetrg(event):
     await event.delete()
@@ -68,7 +68,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"rmbow"))
+@bot.on(mellow_cmd(pattern=r"rmbow"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -91,7 +91,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"glass"))
+@bot.on(mellow_cmd(pattern=r"glass"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -114,7 +114,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"gry"))
+@bot.on(mellow_cmd(pattern=r"gry"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -137,7 +137,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"invert"))
+@bot.on(mellow_cmd(pattern=r"invert"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -160,7 +160,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"ig"))
+@bot.on(mellow_cmd(pattern=r"ig"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -183,7 +183,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"brght"))
+@bot.on(mellow_cmd(pattern=r"brght"))
 async def lolmetrg(event):
     await event.edit("`hmm let me see what i can do to this`")
     sed = await event.get_reply_message()
@@ -206,7 +206,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"bow"))
+@bot.on(mellow_cmd(pattern=r"bow"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -229,7 +229,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"sepia"))
+@bot.on(mellow_cmd(pattern=r"sepia"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -252,7 +252,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"red"))
+@bot.on(mellow_cmd(pattern=r"red"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -275,7 +275,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"green"))
+@bot.on(mellow_cmd(pattern=r"green"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -298,7 +298,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"blue"))
+@bot.on(mellow_cmd(pattern=r"blue"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -321,7 +321,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"pixlte"))
+@bot.on(mellow_cmd(pattern=r"pixlte"))
 async def lolmetrg(event):
     await event.delete()
     sed = await event.get_reply_message()
@@ -344,7 +344,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-@bot.on(admin_cmd(pattern=r"ytc"))
+@bot.on(mellow_cmd(pattern=r"ytc"))
 async def lolmetrg(event):
     givenvar=event.text
     text = givenvar[5:]
@@ -374,7 +374,7 @@ async def lolmetrg(event):
     for files in (lolbruh, img):
         if files and os.path.exists(files):
             os.remove(files)
-'''@bot.on(admin_cmd(pattern=r"clr"))
+'''@bot.on(mellow_cmd(pattern=r"clr"))
 async def lolmetrg(event):
     givenvar=event.text
     color = givenvar[5:]

@@ -2,10 +2,10 @@
 Syntax: .get_id"""
 from telethon import events
 from telethon.utils import pack_bot_file_id
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 
-@borg.on(admin_cmd("get_id"))
+@borg.on(mellow_cmd("get_id"))
 async def _(event):
     if event.fwd_from:
         return

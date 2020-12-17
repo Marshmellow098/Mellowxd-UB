@@ -21,10 +21,10 @@ import io
 import os
 import requests
 from telethon import events
-from userbot.utils import progress, admin_cmd
+from userbot.utils import progress, mellow_cmd
 
 
-@borg.on(admin_cmd("rmbg ?(.*)"))
+@borg.on(mellow_cmd("rmbg ?(.*)"))
 async def _(event):
     HELP_STR = "`.rmbg` as reply to a media, or give a link as an argument to this command"
     if event.fwd_from:
