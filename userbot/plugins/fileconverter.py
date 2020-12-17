@@ -7,10 +7,10 @@
 #  Added Paste System by @danish_00
 
 import os, requests, re
-from userbot import CMD_HELP, bot
-from userbot.utils import admin_cmd
+from userbot import bot
+from userbot.utils import mellow_cmd
 
-@borg.on(admin_cmd(pattern=r"open", outgoing=True))
+@mellow.on(mellow_cmd(pattern=r"open", outgoing=True))
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
     a = open(b, "r")
@@ -32,7 +32,7 @@ async def _(event):
     os.remove(b)
 
 
-@borg.on(admin_cmd(pattern="doc ?(.*)"))
+@mellow.on(mellow_cmd(pattern="doc ?(.*)"))
 async def get(event):
     name = event.text[5:]
     if name is None:
@@ -49,12 +49,3 @@ async def get(event):
         await event.edit("reply to text message as .doc <file name.extension>")
 
 
-CMD_HELP.update(
-    {
-        "fileconverter": "PLUGIN NAME : fileconverter\
-    \n\n📌 CMD ★ .open\
-    \nUSAGE   ★  open files as text (id the amount of words r resonable)\
-    \n\n📌 CMD ★ .doc <file name.extension> <reply to any text/media>\
-    \nUSAGE   ★  Create a document of anything (example:- .doc dc.mp4, .doc dc.txt, .doc dc.webp)"
-    }
-)
