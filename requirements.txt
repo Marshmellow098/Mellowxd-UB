@@ -1,5 +1,5 @@
 mpmath
-telethon==1.15.0
+telethon==1.18.2
 -r requirements-startup.txt
 
 
