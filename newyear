@@ -2,12 +2,12 @@
 # If you steal this without credits You will be the geyest gey ever in the world that you will suck cat's dick.
 import asyncio
 from  userbot import ALIVE_NAME
-from userbot.utils import admin_cmd
+from userbot.utils import mellow_cmd
 
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "Unknown"
 
 
-@borg.on(admin_cmd(pattern="hppy$"))
+@borg.on(mellow_cmd(pattern="hny$"))
 async def _(event):
     if event.fwd_from:
         return
