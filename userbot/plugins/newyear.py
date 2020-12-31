@@ -36,7 +36,7 @@ async def _(event):
 
         "**Here's to a bright New Year 😘 and a fond farewell to the old**",
 
-        "**[Here's to the things that are yet to come, and to the memories that we hold*](https://media.giphy.com/media/8It0HNrGjcTT2/giphy.gif)",
+        "**[Here's to the things that are yet to come, and to the memories that we hold**](https://media.giphy.com/media/8It0HNrGjcTT2/giphy.gif)",
 
         "**May you have a prosperous New Year.🥳**",
 
