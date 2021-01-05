@@ -29,7 +29,7 @@ async def kek(mellow):
        "╲┃┈┈┈┈╭━┳━━━━╯\n"
        "╲┣━━━━━━┫\n")
        
-@mellow.on(mellow_cmd(pattern=r"dog"))
+@mellow.on(mellow_cmd(pattern=r"kutta"))
 async def dog(dog):
   await dog.edit(D)
   P = ("┈┏━╮╭━┓┈╭━━━━╮\n"
