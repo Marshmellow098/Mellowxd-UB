@@ -134,7 +134,7 @@ def load_module(shortname):
         mod.borg = bot
         #support me in @marshmellowsupport
         mod.mellow = bot 
-        mod.friday = bot
+        mod.fridaybot = bot
         # support for paperplaneextended
         sys.modules["userbot.events"] = userbot.utils
         spec.loader.exec_module(mod)
